@@ -310,7 +310,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -963,6 +963,21 @@
               <FileName>bsp_mpu.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\mpu\bsp_mpu.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\key\bsp_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_sdio_sd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\sd_card\bsp_sdio_sd.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_debug_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\usart\bsp_debug_usart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1936,6 +1951,21 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\mpu\bsp_mpu.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\key\bsp_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_sdio_sd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\sd_card\bsp_sdio_sd.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_debug_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\usart\bsp_debug_usart.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -2907,6 +2937,21 @@
               <FileName>bsp_mpu.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\mpu\bsp_mpu.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\key\bsp_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_sdio_sd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\sd_card\bsp_sdio_sd.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_debug_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\usart\bsp_debug_usart.c</FilePath>
             </File>
           </Files>
         </Group>

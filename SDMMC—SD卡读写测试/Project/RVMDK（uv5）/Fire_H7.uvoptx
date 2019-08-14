@@ -150,18 +150,50 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>1124</LineNumber>
+          <LineNumber>367</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>-1879046790</Address>
+          <Address>134231912</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>H:\stm32H750\base_code\5-GPIO杈撳嚭鈥斾娇鐢ㄥ浐浠跺簱鐐逛寒LED鐏?Project\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c</Filename>
+          <Filename>E:\H750寮€鍙戞澘\base_code_rev_v\SDMMC鈥擲D鍗¤鍐欐祴璇?Project\User\sd_card\bsp_sdio_sd.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Fire_H7\../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c\1124</Expression>
+          <Expression>\\Fire_H7\../../User/sd_card/bsp_sdio_sd.c\367</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>374</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134231900</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\H750寮€鍙戞澘\base_code_rev_v\SDMMC鈥擲D鍗¤鍐欐祴璇?Project\User\sd_card\bsp_sdio_sd.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Fire_H7\../../User/sd_card/bsp_sdio_sd.c\374</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>188</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134233868</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\H750寮€鍙戞澘\base_code_rev_v\SDMMC鈥擲D鍗¤鍐欐祴璇?Project\User\stm32h7xx_it.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Fire_H7\../../User/stm32h7xx_it.c\188</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -187,7 +219,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>0</aLwin>
+        <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
@@ -219,12 +251,6 @@
       <pszMrule></pszMrule>
       <pSingCmds></pSingCmds>
       <pMultCmds></pMultCmds>
-      <SystemViewers>
-        <Entry>
-          <Name>System Viewer\RCC</Name>
-          <WinId>35905</WinId>
-        </Entry>
-      </SystemViewers>
       <DebugDescription>
         <Enable>1</Enable>
         <EnableLog>0</EnableLog>
@@ -1994,7 +2020,7 @@
 
   <Group>
     <GroupName>USER</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -2058,6 +2084,42 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>115</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\User\key\bsp_key.c</PathWithFileName>
+      <FilenameWithoutPath>bsp_key.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>116</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\User\sd_card\bsp_sdio_sd.c</PathWithFileName>
+      <FilenameWithoutPath>bsp_sdio_sd.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>117</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\User\usart\bsp_debug_usart.c</PathWithFileName>
+      <FilenameWithoutPath>bsp_debug_usart.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
   </Group>
 
   <Group>
@@ -2068,7 +2130,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>5</GroupNumber>
-      <FileNumber>115</FileNumber>
+      <FileNumber>118</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
