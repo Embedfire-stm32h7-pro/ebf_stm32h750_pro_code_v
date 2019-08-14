@@ -1,0 +1,193 @@
+// <<< Use Configuration Wizard in Context Menu >>>
+
+// <h> DBGMCU configuration register (DBGMCU_CR)
+//   <o0.28>    TRGOEN
+//     <i> External trigger output enable
+//     <i> This bit controls the direction of the bi-directional trigger pin, TRGIO.
+//     <i> 0: Input - TRGIO is connected to TRGIN
+//     <i> 1: Output - TRGIO is connected to TRGOUT
+//   <o0.8>     DBGSTBY_D3
+//     <i> Allow debug in D3 Standby mode
+//     <i> 0: Normal operation - all clocks are disabled and the domain powered down automatically in Standby mode(1).
+//     <i> 1: Automatic clock stop/power-down disabled - all active clocks and oscillators continue to run during Standby mode, and the domain supply is maintained, allowing full debug capability. On exit from Standby mode, a system reset is performed.
+//   <o0.7>     DBGSTOP_D3
+//     <i> Allow debug in D3 Stop mode
+//     <i> 0: Normal operation - domain clocks are disabled automatically in Stop mode(2)
+//     <i> 1: Automatic clock stop/power-down disabled - all active clocks and oscillators continue to run during Stop mode. On exit from Stop mode, the clock settings is set to the Stop mode exit state.
+//   <o0.2>     DBGSTBY_D1
+//     <i> Allow D1 domain debug in Standby mode
+//     <i> 0: Normal operation - all clocks is disabled and the domain powered down automatically in Standby mode.
+//     <i> 1: Automatic clock stop/power-down disabled - all active clocks and oscillators continue to run during Standby mode, and the domain supply is maintained, allowing full debug capability. On exit from Standby mode, a domain reset is performed.
+//   <o0.1>     DBGSTOP_D1
+//     <i> Allow D1 domain debug in Stop mode
+//     <i> 0: Normal operation - all clocks are disabled automatically in Stop mode
+//     <i> 1: Automatic clock stop disabled - all active clocks and oscillators continue to run during Stop mode, allowing full debug capability. On exit from Stop mode, the clock settings is set to the Stop mode exit state.
+//   <o0.0>     DBGSLEEP_D1
+//     <i> Allow D1 domain debug in Sleep mode
+//     <i> 0: Normal operation - processor clock is stopped automatically in Sleep mode
+//     <i> 1: Automatic clock stop disabled - processor clock continues to run, allowing full debug capability
+// </h>
+DbgMCU_CR = 0x00000000;
+
+// <h> DBGMCU D1APB1 peripheral freeze register (DBGMCU_D1APB1FZ1)
+//   <o0.6>     WWDG1
+//     <i> WWDG1 stop in debug
+//     <i> 0: Normal operation - WWDG1 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - WWDG1 is frozen while Cortex-M7 is in debug mode
+// </h>
+DbgMCU_D1APB1_Fz = 0x00000000;
+
+// <h> DBGMCU D2APB1L peripheral freeze register (DBGMCU_D2APB1LFZ1)
+//   <o0.23>    I2C3
+//     <i> I2C3 SMBUS timeout stop in debug
+//     <i> 0: Normal operation - I2C3 SMBUS timeout continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - I2C3 SMBUS timeout is frozen while Cortex-M7 is in debug mode
+//   <o0.22>    I2C2
+//     <i> I2C2 SMBUS timeout stop in debug
+//     <i> 0: Normal operation - I2C2 SMBUS timeout continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - I2C2 SMBUS timeout is frozen while Cortex-M7 is in debug mode
+//   <o0.21>    I2C1
+//     <i> I2C1 SMBUS timeout stop in debug
+//     <i> 0: Normal operation - I2C1 SMBUS timeout continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - I2C1 SMBUS timeout is frozen while Cortex-M7 is in debug mode
+//   <o0.9>     LPTIM1
+//     <i> LPTIM1 stop in debug
+//     <i> 0: Normal operation - LPTIM1 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - LPTIM1 is frozen while Cortex-M7 is in debug mode
+//   <o0.8>     TIM14
+//     <i> TIM14 stop in debug
+//     <i> 0: Normal operation - TIM14 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM14 is frozen while Cortex-M7 is in debug mode
+//   <o0.7>     TIM13
+//     <i> TIM13 stop in debug
+//     <i> 0: Normal operation - TIM13 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM13 is frozen while Cortex-M7 is in debug mode
+//   <o0.6>     TIM12
+//     <i> TIM12 stop in debug
+//     <i> 0: Normal operation - TIM12 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM12 is frozen while Cortex-M7 is in debug mode
+//   <o0.5>     TIM7
+//     <i> TIM7 stop in debug
+//     <i> 0: Normal operation - TIM7 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM7 is frozen while Cortex-M7 is in debug mode
+//   <o0.4>     TIM6
+//     <i> TIM6 stop in debug
+//     <i> 0: Normal operation - TIM6 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM6 is frozen while Cortex-M7 is in debug mode
+//   <o0.3>     TIM5
+//     <i> TIM5 stop in debug
+//     <i> 0: Normal operation - TIM5 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM5 is frozen while Cortex-M7 is in debug mode
+//   <o0.2>     TIM4
+//     <i> TIM4 stop in debug
+//     <i> 0: Normal operation - TIM4 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM4 is frozen while Cortex-M7 is in debug mode
+//   <o0.1>     TIM3
+//     <i> TIM3 stop in debug
+//     <i> 0: Normal operation - TIM3 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM3 is frozen while Cortex-M7 is in debug mode
+//   <o0.0>     TIM2
+//     <i> TIM2 stop in debug
+//     <i> 0: Normal operation - TIM2 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM2 is frozen while Cortex-M7 is in debug mode
+// </h>
+DbgMCU_D2APB1L_Fz = 0x00000000;
+
+// <h> DBGMCU D2APB1H peripheral freeze register (DBGMCU_D2APB1HFZ1)
+//   <o0.8>     FDCAN
+//     <i> FDCAN stop in debug
+//     <i> 0: Normal operation - FDCAN continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - FDCAN is frozen while Cortex-M7 is in debug mode
+// </h>
+DbgMCU_D2APB1H_Fz = 0x00000000;
+
+// <h> DBGMCU D2APB2 peripheral freeze register (DBGMCU_D2APB2FZ1)
+//   <o0.29>    HRTIM
+//     <i> HRTIM stop in debug
+//     <i> 0: Normal operation - HRTIM continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - HRTIM is frozen while Cortex-M7 is in debug mode
+//   <o0.18>    TIM17
+//     <i> TIM17 stop in debug
+//     <i> 0: Normal operation - TIM17 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM17 is frozen and TIM17 outputs are disabled while Cortex-M7 is in debug mode
+//   <o0.17>    TIM16
+//     <i> TIM16 stop in debug
+//     <i> 0: Normal operation - TIM16 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM16 is frozen and TIM16 outputs are disabled while Cortex-M7 is in debug mode
+//   <o0.16>    TIM15
+//     <i> TIM15 stop in debug
+//     <i> 0: Normal operation - TIM15 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM15 is frozen and TIM15 outputs are disabled while Cortex-M7 is in debug mode
+//   <o0.1>     TIM8
+//     <i> TIM8 stop in debug
+//     <i> 0: Normal operation - TIM8 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM8 is frozen and TIM8 outputs are disabled while Cortex-M7 is in debug mode
+//   <o0.0>     TIM1
+//     <i> TIM1 stop in debug
+//     <i> 0: Normal operation - TIM1 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - TIM1 is frozen and TIM1 outputs are disabled while Cortex-M7 is in debug mode.
+// </h>
+DbgMCU_D2APB2_Fz = 0x00000000;
+
+// <h> DBGMCU D3APB4 peripheral freeze register (DBGMCU_D3APB4FZ1)
+//   <o0.19>    WDGLSD2
+//     <i> LS watchdog for D2 stop in debug
+//     <i> 0: Normal operation - watchdog continues to count while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - watchdog is frozen while Cortex-M7 is in debug mode
+//   <o0.18>    WDGLSD1
+//     <i> LS watchdog for D1 stop in debug
+//     <i> 0: Normal operation - watchdog continues to count while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - watchdog is frozen while Cortex-M7 is in debug mode
+//   <o0.16>    RTC
+//     <i> RTC stop in debug
+//     <i> 0: Normal operation - RTC continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - RTC is frozen while Cortex-M7 is in debug mode
+//   <o0.12>    LPTIM5
+//     <i> LPTIM5 stop in debug
+//     <i> 0: Normal operation - LPTIM5 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - LPTIM5 is frozen while Cortex-M7 is in debug mode
+//   <o0.11>    LPTIM4
+//     <i> LPTIM4 stop in debug
+//     <i> 0: Normal operation - LPTIM4 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - LPTIM4 is frozen while Cortex-M7 is in debug mode
+//   <o0.10>    LPTIM3
+//     <i> LPTIM2 stop in debug
+//     <i> 0: Normal operation - LPTIM2 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - LPTIM2 is frozen while Cortex-M7 is in debug mode
+//   <o0.9>     LPTIM2
+//     <i> LPTIM2 stop in debug
+//     <i> 0: Normal operation - LPTIM2 continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - LPTIM2 is frozen while Cortex-M7 is in debug mode
+//   <o0.7>     I2C4
+//     <i> I2C4 SMBUS timeout stop in debug
+//     <i> 0: Normal operation - I2C4 SMBUS timeout continues to operate while Cortex-M7 is in debug mode
+//     <i> 1: Stop in debug - 2C4 SMBUS timeout is frozen while Cortex-M7 is in debug mode
+// </h>
+DbgMCU_D3APB4_Fz = 0x00000000;
+
+// <h> TPIU Pin Routing (TRACECLK fixed on Pin PE2)
+//   <o0> TRACED0
+//     <i> ETM Trace Data 0
+//       <0=> Pin PC1
+//       <1=> Pin PE3
+//       <2=> Pin PG13
+//   <o1> TRACED1
+//     <i> ETM Trace Data 1
+//       <0=> Pin PC8
+//       <1=> Pin PE4
+//       <2=> Pin PG14
+//   <o2> TRACED2
+//     <i> ETM Trace Data 2
+//       <0=> Pin PD2
+//       <1=> Pin PE5
+//   <o3> TRACED3
+//     <i> ETM Trace Data 3
+//       <0=> Pin PC12
+//       <1=> Pin PE6
+ETMTrace_D0 = 1;
+ETMTrace_D1 = 1;
+ETMTrace_D2 = 1;
+ETMTrace_D3 = 1;
+// </h>
+
+// <<< end of configuration section >>>

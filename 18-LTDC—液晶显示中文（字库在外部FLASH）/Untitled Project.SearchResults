@@ -1,0 +1,4 @@
+---- QSPI_FLASH_Init Matches (3 in 3 files) ----
+GetGBKCode_from_EXFlash in bsp_lcd.c (User\lcd) : 		QSPI_FLASH_Init();
+bsp_qspi_flash.c (User\flash) line 28 : void QSPI_FLASH_Init(void)
+bsp_qspi_flash.h (User\flash) line 188 : void QSPI_FLASH_Init(void);
