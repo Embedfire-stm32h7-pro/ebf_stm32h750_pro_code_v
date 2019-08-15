@@ -19,7 +19,7 @@
 #include "./led/bsp_led.h"
 #include "./delay/core_delay.h" 
 #include "./mpu/bsp_mpu.h" 
-
+#include "./usart/bsp_debug_usart.h"
 
 void SystemClock_Config(void);
 /**
@@ -29,6 +29,7 @@ void SystemClock_Config(void);
   */
 int main(void)
 {  
+	
 	/* 系统时钟初始化成480MHz */
 	SystemClock_Config();
   
@@ -40,7 +41,6 @@ int main(void)
   
   SCB_EnableICache();    // 使能指令 Cache
 //  SCB_EnableDCache();    // 使能数据 Cache
-  
 	/* LED 端口初始化 */
 	LED_GPIO_Config();	
 	/* 控制LED灯 */
@@ -83,6 +83,7 @@ int main(void)
 		
 		LED_RGBOFF;
 		HAL_Delay(1000);
+		
 	}
 }
 
@@ -90,8 +91,8 @@ int main(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)

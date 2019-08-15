@@ -1,0 +1,4 @@
+把这两个下载算法都复制并放在keil安装目录这个路径下：Keil_v5\ARM\Flash
+
+文件路径说明
+       embedFire-H750V-W25Q256-SDRAM.FLM
