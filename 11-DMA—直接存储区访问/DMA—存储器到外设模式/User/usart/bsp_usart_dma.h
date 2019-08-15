@@ -22,7 +22,8 @@
 #define DEBUG_USART_TX_PIN                      GPIO_PIN_9
 #define DEBUG_USART_TX_AF                       GPIO_AF7_USART1
 
-
+#define DEBUG_USART_IRQHandler                  USART1_IRQHandler
+#define DEBUG_USART_IRQ                 		    USART1_IRQn
 /************************************************************/
 //DMA
 #define SENDBUFF_SIZE                     		  5000	//发送的数据量

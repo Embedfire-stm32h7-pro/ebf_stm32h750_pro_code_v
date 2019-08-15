@@ -22,7 +22,7 @@
 #include "./usart/bsp_usart_dma.h"
 
 extern DMA_HandleTypeDef DMA_Handle;
-uint8_t SendBuff[SENDBUFF_SIZE];  
+uint8_t SendBuff[SENDBUFF_SIZE]  __attribute__((at(0x30000000)));  
 
 /**
   * @brief  主函数
@@ -42,7 +42,7 @@ int main(void)
 //  Board_MPU_Config(1, MPU_Normal_WT, 0x24000000, MPU_512KB);
   
   SCB_EnableICache();    // 使能指令 Cache
-  //SCB_EnableDCache();    // 使能数据 Cache
+//  SCB_EnableDCache();    // 使能数据 Cache
   
 	/* LED 端口初始化 */
 	LED_GPIO_Config();	
@@ -77,8 +77,8 @@ int main(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)
@@ -88,7 +88,7 @@ int main(void)
 	*            PLL_M                = 5
 	*            PLL_N                = 192
 	*            PLL_P                = 2
-	*            PLL_Q                = 4
+	*            PLL_Q                = 2
 	*            PLL_R                = 2
 	*            VDD(V)               = 3.3
 	*            Flash Latency(WS)    = 4
@@ -104,7 +104,7 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /** 启用电源配置更新
+  /** 启用电源配置更新 
   */
   HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
   /** 配置主内稳压器输出电压
@@ -128,7 +128,6 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLFRACN = 0;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
-		while(1);
   }
   /** 初始化CPU、AHB和APB总线时钟
   */
@@ -145,7 +144,6 @@ void SystemClock_Config(void)
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
-		while(1);
   }
 }
 /****************************END OF FILE***************************/

@@ -11,20 +11,20 @@ void SwitchSystemClock(void)
   if (__HAL_RCC_GET_PLL_OSCSOURCE() == RCC_PLLSOURCE_HSI)
   {
     /* PLL源是HSI振荡器 */
-    /* 将SYSCLK频率设置为400000000Hz，来自由CSI时钟源产生的PLL  */
+    /* 将SYSCLK频率设置为480000000Hz，来自由CSI时钟源产生的PLL  */
     SystemClockCSI_Config();
   }
   else if (__HAL_RCC_GET_PLL_OSCSOURCE() == RCC_PLLSOURCE_HSE)
   {
     /* PLL源是HSE振荡器 */
-    /* 将SYSCLK频率设置为400000000Hz，来自由HSI时钟源产生的PLL */
+    /* 将SYSCLK频率设置为480000000Hz，来自由HSI时钟源产生的PLL */
     SystemClockHSI_Config();
   }
   
   else if (__HAL_RCC_GET_PLL_OSCSOURCE() == RCC_PLLSOURCE_CSI)
   {
     /* PLL源是CSI振荡器 */
-    /* 将SYSCLK频率设置为400000000Hz，来自由HSE时钟源产生的PLL */
+    /* 将SYSCLK频率设置为480000000Hz，来自由HSE时钟源产生的PLL */
     SystemClockHSE_Config();
   }
 
@@ -34,16 +34,16 @@ void SwitchSystemClock(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
-	*            D1 APB3 Prescaler    = 2 (APB3 Clock  100MHz)
-	*            D2 APB1 Prescaler    = 2 (APB1 Clock  100MHz)
-	*            D2 APB2 Prescaler    = 2 (APB2 Clock  100MHz)
-	*            D3 APB4 Prescaler    = 2 (APB4 Clock  100MHz)
+	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
+	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)
+	*            D2 APB2 Prescaler    = 2 (APB2 Clock  120MHz)
+	*            D3 APB4 Prescaler    = 2 (APB4 Clock  120MHz)
 	*            HSE Frequency(Hz)    = 25000000
 	*            PLL_M                = 5
-	*            PLL_N                = 160
+	*            PLL_N                = 192
 	*            PLL_P                = 2
 	*            PLL_Q                = 4
 	*            PLL_R                = 2
@@ -76,7 +76,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
 
   RCC_OscInitStruct.PLL.PLLM = 5;
-  RCC_OscInitStruct.PLL.PLLN = 160;
+  RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
@@ -113,16 +113,16 @@ void SystemClock_Config(void)
   * @brief  将PLL源从CSI切换到HSE，并选择PLL作为SYSCLK源
 	*         system Clock 配置如下: 
   *            System Clock source            = PLL (HSE)
-  *            SYSCLK(Hz)                     = 400000000 (CPU Clock)
-  *            HCLK(Hz)                       = 200000000 (AXI and AHBs Clock)
+  *            SYSCLK(Hz)                     = 480000000 (CPU Clock)
+  *            HCLK(Hz)                       = 240000000 (AXI and AHBs Clock)
   *            AHB Prescaler                  = 2
-  *            D1 APB3 Prescaler              = 2 (APB3 Clock  100MHz)
-  *            D2 APB1 Prescaler              = 2 (APB1 Clock  100MHz)
-  *            D2 APB2 Prescaler              = 2 (APB2 Clock  100MHz)
-  *            D3 APB4 Prescaler              = 2 (APB4 Clock  100MHz)
+  *            D1 APB3 Prescaler              = 2 (APB3 Clock  120MHz)
+  *            D2 APB1 Prescaler              = 2 (APB1 Clock  120MHz)
+  *            D2 APB2 Prescaler              = 2 (APB2 Clock  120MHz)
+  *            D3 APB4 Prescaler              = 2 (APB4 Clock  120MHz)
   *            HSE Frequency(Hz)              = 25000000
   *            PLL_M                          = 5
-  *            PLL_N                          = 160
+  *            PLL_N                          = 92
   *            PLL_P                          = 2
   *            PLL_Q                          = 4
   *            PLL_R                          = 2
@@ -153,7 +153,7 @@ void SystemClockHSE_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 5;
-  RCC_OscInitStruct.PLL.PLLN = 160;
+  RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
@@ -197,16 +197,16 @@ void SystemClockHSE_Config(void)
   * @brief  将PLL源从HSE切换到HSI，并选择PLL作为SYSCLK源
 	*				  system Clock 配置如下: 
   *            System Clock source            = PLL (HSI)
-  *            SYSCLK(Hz)                     = 400000000 (CPU Clock)
-  *            HCLK(Hz)                       = 200000000 (AXI and AHBs Clock)
+  *            SYSCLK(Hz)                     = 480000000 (CPU Clock)
+  *            HCLK(Hz)                       = 240000000 (AXI and AHBs Clock)
   *            AHB Prescaler                  = 2
-  *            D1 APB3 Prescaler              = 2 (APB3 Clock  100MHz)
-  *            D2 APB1 Prescaler              = 2 (APB1 Clock  100MHz)
-  *            D2 APB2 Prescaler              = 2 (APB2 Clock  100MHz)
-  *            D3 APB4 Prescaler              = 2 (APB4 Clock  100MHz)
+  *            D1 APB3 Prescaler              = 2 (APB3 Clock  120MHz)
+  *            D2 APB1 Prescaler              = 2 (APB1 Clock  120MHz)
+  *            D2 APB2 Prescaler              = 2 (APB2 Clock  120MHz)
+  *            D3 APB4 Prescaler              = 2 (APB4 Clock  120MHz)
   *            HSI Frequency(Hz)              = 64000000
   *            PLL_M                          = 16
-  *            PLL_N                          = 200
+  *            PLL_N                          = 240
   *            PLL_P                          = 2
   *            PLL_Q                          = 4
   *            PLL_R                          = 2
@@ -237,7 +237,7 @@ void SystemClockHSI_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 16;
-  RCC_OscInitStruct.PLL.PLLN = 200;
+  RCC_OscInitStruct.PLL.PLLN = 240;
   RCC_OscInitStruct.PLL.PLLP = 2;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
@@ -282,16 +282,16 @@ void SystemClockHSI_Config(void)
   * @brief  将PLL源从HSI切换到CSI，并选择PLL作为SYSCLK源
 	*				  system Clock 配置如下:
   *            System Clock source            = PLL (CSI)
-  *            SYSCLK(Hz)                     = 400000000 (CPU Clock)
-  *            HCLK(Hz)                       = 200000000 (AXI and AHBs Clock)
+  *            SYSCLK(Hz)                     = 480000000 (CPU Clock)
+  *            HCLK(Hz)                       = 240000000 (AXI and AHBs Clock)
   *            AHB Prescaler                  = 2
-  *            D1 APB3 Prescaler              = 2 (APB3 Clock  100MHz)
-  *            D2 APB1 Prescaler              = 2 (APB1 Clock  100MHz)
-  *            D2 APB2 Prescaler              = 2 (APB2 Clock  100MHz)
-  *            D3 APB4 Prescaler              = 2 (APB4 Clock  100MHz)
+  *            D1 APB3 Prescaler              = 2 (APB3 Clock  120MHz)
+  *            D2 APB1 Prescaler              = 2 (APB1 Clock  120MHz)
+  *            D2 APB2 Prescaler              = 2 (APB2 Clock  120MHz)
+  *            D3 APB4 Prescaler              = 2 (APB4 Clock  120MHz)
   *            CSI Frequency(Hz)              = 4000000
   *            PLL_M                          = 1
-  *            PLL_N                          = 200
+  *            PLL_N                          = 240
   *            PLL_P                          = 2
   *            PLL_Q                          = 4
   *            PLL_R                          = 2
@@ -322,7 +322,7 @@ void SystemClockCSI_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_CSI;
   RCC_OscInitStruct.PLL.PLLM = 1;
-  RCC_OscInitStruct.PLL.PLLN = 200;
+  RCC_OscInitStruct.PLL.PLLN = 240;
   RCC_OscInitStruct.PLL.PLLP = 2;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLQ = 4;

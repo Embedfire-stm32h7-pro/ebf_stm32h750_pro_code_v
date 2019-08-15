@@ -38,15 +38,14 @@ int main(void)
 //  Board_MPU_Config(1, MPU_Normal_WT, 0x24000000, MPU_512KB);
   
   SCB_EnableICache();    // 使能指令 Cache
-//  SCB_EnableDCache();    // 使能数据 Cache
-  
-  HAL_Init();
+//SCB_EnableDCache();    // 使能数据 Cache
 	
   DEBUG_USART_Config();
 	/* LED 端口初始化 */
 	LED_GPIO_Config();
   /* 中断初始化 */	
   EXTI_Key_Config();
+	
 	while (1)
 	{
     /* 中断服务函数中翻转 LED */
@@ -57,8 +56,8 @@ int main(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)
@@ -84,15 +83,15 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /** Supply configuration update enable 
+  /** 启用电源配置更新 
   */
   HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
-  /** Configure the main internal regulator output voltage 
+  /** 配置主内稳压器输出电压
   */
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
 
   while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** 初始化CPU、AHB和APB总线时钟
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
@@ -109,7 +108,7 @@ void SystemClock_Config(void)
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
   }
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** 初始化CPU、AHB和APB总线时钟
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2

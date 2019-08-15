@@ -65,6 +65,7 @@ void DEBUG_USART_Config(void)
     UartHandle.Init.HwFlowCtl = UART_HWCONTROL_NONE;
     UartHandle.Init.OverSampling = UART_OVERSAMPLING_16;
     UartHandle.Init.OneBitSampling = UART_ONEBIT_SAMPLING_DISABLED;
+    UartHandle.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
     HAL_UART_Init(&UartHandle);
 }
 
@@ -78,10 +79,9 @@ void USART_DMA_Config(void)
   /*开启DMA时钟*/
   DEBUG_USART_DMA_CLK_ENABLE();
   
-	 /* Deinitialize the stream for new transfer */
-  HAL_DMA_DeInit(&DMA_Handle);
-	
   DMA_Handle.Instance = DEBUG_USART_DMA_STREAM;
+  /* Deinitialize the stream for new transfer */
+  HAL_DMA_DeInit(&DMA_Handle);
   
   /*usart1 tx对应dma2，通道4，数据流7*/	
   DMA_Handle.Init.Request = DMA_REQUEST_USART1_TX; 
