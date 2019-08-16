@@ -96,11 +96,11 @@ int main(void)
 }
 
 /**
-  * @brief  System Clock ??
-  *         system Clock ????: 
+  * @brief  System Clock 配置
+  *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)
@@ -126,15 +126,15 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /** ????????
+  /** 启用电源配置更新
   */
   HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
-  /** ???????????
+  /** 配置主内稳压器输出电压
   */
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
 
   while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
-  /** ???CPU?AHB?APB????
+  /** 初始化CPU、AHB和APB总线时钟
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
@@ -152,7 +152,7 @@ void SystemClock_Config(void)
   {
 		while(1);
   }
-  /** ???CPU?AHB?APB????
+  /** 初始化CPU、AHB和APB总线时钟
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2

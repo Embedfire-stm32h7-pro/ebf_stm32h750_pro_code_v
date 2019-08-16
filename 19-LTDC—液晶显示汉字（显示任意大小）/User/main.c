@@ -250,11 +250,11 @@ void LCD_Test(void)
 }
 
 /**
-  * @brief  System Clock ??
-  *         system Clock ????: 
+  * @brief  System Clock ≈‰÷√
+  *         system Clock ≈‰÷√»Áœ¬: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)

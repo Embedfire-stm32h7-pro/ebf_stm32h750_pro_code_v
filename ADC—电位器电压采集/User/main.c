@@ -36,7 +36,7 @@ static void Delay(__IO uint32_t nCount)
 int main(void)
 {
   
-	/* 系统时钟初始化成400MHz */
+	/* 系统时钟初始化成480MHz */
 	SystemClock_Config();
   
    /* 默认不配置 MPU，若需要更高性能，当配置 MPU 后，使用 
@@ -71,8 +71,8 @@ int main(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)

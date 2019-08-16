@@ -37,6 +37,7 @@
 
 /* USER CODE BEGIN 0 */
 
+extern SD_HandleTypeDef uSdHandle;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -169,6 +170,7 @@ void SysTick_Handler(void)
   /* USER CODE BEGIN SysTick_IRQn 0 */
 
   /* USER CODE END SysTick_IRQn 0 */
+  HAL_IncTick();
   HAL_SYSTICK_IRQHandler();
   /* USER CODE BEGIN SysTick_IRQn 1 */
 
@@ -183,6 +185,9 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /* USER CODE BEGIN 1 */
-
+void SDMMC1_IRQHandler(void)
+{
+  HAL_SD_IRQHandler(&uSdHandle);
+}
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

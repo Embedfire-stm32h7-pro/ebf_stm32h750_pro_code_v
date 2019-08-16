@@ -46,7 +46,7 @@ int main(void)
 //  Board_MPU_Config(1, MPU_Normal_WT, 0x24000000, MPU_512KB);
   
   SCB_EnableICache();    // 使能指令 Cache
-//SCB_EnableDCache();    // 使能数据 Cache
+  SCB_EnableDCache();    // 使能数据 Cache
 
 	/* 配置串口1为：115200 8-N-1 */
 	DEBUG_USART_Config();
@@ -56,14 +56,17 @@ int main(void)
   
   while(1)
 	{	
-      Delay(0xffffee);
+     
       
+		  printf("hello hello \n");
       printf("\r\n The current AD value = 0x%04X \r\n", ADC_ConvertedValue);
 
       printf("\r\n The current AD value = %f V \r\n", ADC_vol);
     
       /* ADC的采样值 / ADC精度 = 电压值 / 3.3 */
       ADC_vol = (float)(ADC_ConvertedValue*3.3/65536);
+		  
+		  Delay(0xffffee);
 	}  
 }
 
@@ -71,8 +74,8 @@ int main(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)

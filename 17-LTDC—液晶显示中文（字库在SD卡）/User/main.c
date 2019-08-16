@@ -33,7 +33,7 @@ void LCD_Test(void);
   */
 int main(void)
 {   
-	/* 系统时钟初始化成400MHz */
+	/* 系统时钟初始化成480MHz */
 	SystemClock_Config();
   
   /* 配置 MPU */
@@ -50,8 +50,7 @@ int main(void)
 	
 	printf("\r\n 欢迎使用野火 STM32 H750 开发板。\r\n");		 
 	printf("\r\n野火 STM32H750 LTDC液晶显示中文测试例程\r\n");
-	/*蓝灯亮*/
-	LED_BLUE;
+	
 	/* LCD 端口初始化 */ 
 	LCD_Init();
 	/* LCD 第一层初始化 */ 
@@ -72,11 +71,15 @@ int main(void)
 
 	/* 第二层清屏，显示全黑 */ 
 	LCD_Clear(LCD_COLOR_TRANSPARENT);
-
+  
+		/*选择字体*/
+	LCD_SetFont(&LCD_DEFAULT_FONT);
 	/* 配置第一和第二层的透明度,最小值为0，最大值为255*/
 	LCD_SetTransparency(0, 255);
 	LCD_SetTransparency(1, 0);
 
+  /*蓝灯亮*/
+	LED_BLUE;
 	while(1)
 	{		
 		LCD_Test(); 
@@ -97,9 +100,7 @@ void LCD_Test(void)
 	LCD_Clear(LCD_COLOR_BLACK);	
 	/*设置字体颜色及字体的背景颜色(此处的背景不是指LCD的背景层！注意区分)*/
 	LCD_SetColors(LCD_COLOR_WHITE,LCD_COLOR_BLACK);
-	/*选择字体*/
-	LCD_SetFont(&LCD_DEFAULT_FONT);
-
+	
 	LCD_DisplayStringLine_EN_CH(1,(uint8_t* )"(野火5.0英寸液晶屏参数)");
 	LCD_DisplayStringLine_EN_CH(2,(uint8_t* )"分辨率:800x480 像素");
 	LCD_DisplayStringLine_EN_CH(3,(uint8_t* )"触摸屏:5点电容触摸屏");
@@ -258,16 +259,16 @@ void LCD_Test(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
-	*            D1 APB3 Prescaler    = 2 (APB3 Clock  100MHz)
-	*            D2 APB1 Prescaler    = 2 (APB1 Clock  100MHz)
-	*            D2 APB2 Prescaler    = 2 (APB2 Clock  100MHz)
-	*            D3 APB4 Prescaler    = 2 (APB4 Clock  100MHz)
+	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
+	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)
+	*            D2 APB2 Prescaler    = 2 (APB2 Clock  120MHz)
+	*            D3 APB4 Prescaler    = 2 (APB4 Clock  120MHz)
 	*            HSE Frequency(Hz)    = 25000000
 	*            PLL_M                = 5
-	*            PLL_N                = 160
+	*            PLL_N                = 192
 	*            PLL_P                = 2
 	*            PLL_Q                = 4
 	*            PLL_R                = 2
@@ -276,63 +277,60 @@ void LCD_Test(void)
   * @param  None
   * @retval None
   */
-static void SystemClock_Config(void)
+/**
+  * @brief System Clock Configuration
+  * @retval None
+  */
+void SystemClock_Config(void)
 {
-  RCC_ClkInitTypeDef RCC_ClkInitStruct;
-  RCC_OscInitTypeDef RCC_OscInitStruct;
-  HAL_StatusTypeDef ret = HAL_OK;
-  
-  /*使能供电配置更新 */
-  MODIFY_REG(PWR->CR3, PWR_CR3_SCUEN, 0);
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /* 当器件的时钟频率低于最大系统频率时，电压调节可以优化功耗，
-		 关于系统频率的电压调节值的更新可以参考产品数据手册。  */
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+  /** 启用电源配置更新
+  */
+  HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
+  /** 配置主内稳压器输出电压
+  */
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
 
   while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
- 
-  /* 启用HSE振荡器并使用HSE作为源激活PLL */
+  /** 初始化CPU、AHB和APB总线时钟
+  */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-  RCC_OscInitStruct.HSIState = RCC_HSI_OFF;
-  RCC_OscInitStruct.CSIState = RCC_CSI_OFF;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-
   RCC_OscInitStruct.PLL.PLLM = 5;
-  RCC_OscInitStruct.PLL.PLLN = 160;
+  RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLQ = 2;
- 
-  RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;
+  RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
-  ret = HAL_RCC_OscConfig(&RCC_OscInitStruct);
-  if(ret != HAL_OK)
+  RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;
+  RCC_OscInitStruct.PLL.PLLFRACN = 0;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
-    while(1) { ; }
+		while(1);
   }
-  
-	/* 选择PLL作为系统时钟源并配置总线时钟分频器 */
-  RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK  | \
-																 RCC_CLOCKTYPE_HCLK    | \
-																 RCC_CLOCKTYPE_D1PCLK1 | \
-																 RCC_CLOCKTYPE_PCLK1   | \
-                                 RCC_CLOCKTYPE_PCLK2   | \
-																 RCC_CLOCKTYPE_D3PCLK1);
+  /** 初始化CPU、AHB和APB总线时钟
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2
+                              |RCC_CLOCKTYPE_D3PCLK1|RCC_CLOCKTYPE_D1PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.SYSCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV2;
-  RCC_ClkInitStruct.APB3CLKDivider = RCC_APB3_DIV2;  
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV2; 
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV2; 
-  RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV2; 
-  ret = HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4);
-  if(ret != HAL_OK)
+  RCC_ClkInitStruct.APB3CLKDivider = RCC_APB3_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV2;
+  RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV2;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
-    while(1) { ; }
+		while(1);
   }
 }
+
 
 void Delay(__IO uint32_t nCount)	 //简单的延时函数
 {

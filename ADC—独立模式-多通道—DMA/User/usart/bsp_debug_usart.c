@@ -66,11 +66,6 @@ void DEBUG_USART_Config(void)
     UartHandle.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
     HAL_UART_Init(&UartHandle);
 
-    /*串口1中断初始化 */
-    HAL_NVIC_SetPriority(DEBUG_USART_IRQ, 0, 0);
-    HAL_NVIC_EnableIRQ(DEBUG_USART_IRQ);
-    /*配置串口接收中断 */
-    __HAL_UART_ENABLE_IT(&UartHandle,UART_IT_RXNE);  
 }
 
 

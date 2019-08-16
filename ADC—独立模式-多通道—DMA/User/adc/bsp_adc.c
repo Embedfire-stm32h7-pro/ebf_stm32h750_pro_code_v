@@ -75,7 +75,7 @@ static void ADC_Mode_Config(void)
     RCC_PeriphClkInit.PLL2.PLL2FRACN = 0;
     RCC_PeriphClkInit.PLL2.PLL2M = 5;
     RCC_PeriphClkInit.PLL2.PLL2N = 160;
-    RCC_PeriphClkInit.PLL2.PLL2P = 25;
+    RCC_PeriphClkInit.PLL2.PLL2P = 32;
     RCC_PeriphClkInit.PLL2.PLL2Q = 2;
     RCC_PeriphClkInit.PLL2.PLL2R = 2;
     RCC_PeriphClkInit.PLL2.PLL2RGE = RCC_PLL2VCIRANGE_2;
@@ -102,7 +102,6 @@ static void ADC_Mode_Config(void)
     __HAL_LINKDMA(&ADC1_Handle,DMA_Handle,hdma_adc1);    
       
     ADC1_Handle.Instance = RHEOSTAT_ADC1;
-//    SYSCFG->PMCR |= (0x02 << 7);
     //ADC时钟1分频
     ADC1_Handle.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV2;
     //使能连续转换模式

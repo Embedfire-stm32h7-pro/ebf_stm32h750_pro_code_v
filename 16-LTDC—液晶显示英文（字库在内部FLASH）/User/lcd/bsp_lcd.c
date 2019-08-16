@@ -1004,8 +1004,7 @@ void LCD_DrawBitmap(uint32_t Xpos, uint32_t Ypos, uint8_t *pbmp)
   for(index=0; index < height; index++)
   {
     /* 像素格式转换 */
-    LL_ConvertLineToARGB8888((uint32_t *)pbmp, (uint32_t *)address, width, 
-    );
+    LL_ConvertLineToARGB8888((uint32_t *)pbmp, (uint32_t *)address, width,input_color_mode);
     
     /* 递增源和目标缓冲区 */
     address+=  (LCD_GetXSize()*4);

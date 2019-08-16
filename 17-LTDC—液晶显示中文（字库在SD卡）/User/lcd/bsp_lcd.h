@@ -88,7 +88,7 @@ typedef enum
 /** 
   * @brief LCD default font 
   */ 
-#define LCD_DEFAULT_FONT        Font24 
+#define LCD_DEFAULT_FONT        Font24
 
 //红色数据线
 #define LTDC_R0_GPIO_PORT        	GPIOI
