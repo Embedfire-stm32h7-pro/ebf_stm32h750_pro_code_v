@@ -3,7 +3,7 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2016-xx-xx
+  * @date    2019-xx-xx
   * @brief   MPU6050 基本数据读
   ******************************************************************************
   * @attention
@@ -176,8 +176,8 @@ int main(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)

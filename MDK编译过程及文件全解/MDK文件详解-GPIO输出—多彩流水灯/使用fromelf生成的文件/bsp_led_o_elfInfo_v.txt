@@ -1,0 +1,7650 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: bsp_led.o
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_REL (Relocatable object) (1)
+    Machine: EM_ARM (ARM)
+
+    Entry offset (in SHF_ENTRYSECT section): 0x00000000
+    Flags: None (0x05000000)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Built with
+    Component: ARM Compiler 5.06 update 3 (build 300) Tool: armasm [4d35c6]
+    Component: ARM Compiler 5.06 update 3 (build 300) Tool: armlink [4d35c9]
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 0 bytes (0x0)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 0
+    Section header entries: 443
+
+    Program header offset: 0 (0x00000000)
+    Section header offset: 979312 (0x000ef170)
+
+    Section header string table index: 440
+
+========================================================================
+
+** Section #1
+
+    Name        : .rev16_text
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_ALLOC + SHF_EXECINSTR (0x00000006)
+    Addr        : 0x00000000
+    File Offset : 52 (0x34)
+    Size        : 4 bytes (0x4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 4
+    Entry Size  : 0
+
+
+====================================
+
+** Section #2
+
+    Name        : .revsh_text
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_ALLOC + SHF_EXECINSTR (0x00000006)
+    Addr        : 0x00000000
+    File Offset : 56 (0x38)
+    Size        : 4 bytes (0x4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 4
+    Entry Size  : 0
+
+
+====================================
+
+** Section #3
+
+    Name        : .rrx_text
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_ALLOC + SHF_EXECINSTR (0x00000006)
+    Addr        : 0x00000000
+    File Offset : 60 (0x3c)
+    Size        : 6 bytes (0x6)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 4
+    Entry Size  : 0
+
+
+====================================
+
+** Section #4
+
+    Name        : i.LED_GPIO_Config
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_ALLOC + SHF_EXECINSTR (0x00000006)
+    Addr        : 0x00000000
+    File Offset : 68 (0x44)
+    Size        : 168 bytes (0xa8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 4
+    Entry Size  : 0
+
+
+====================================
+
+** Section #344
+
+    Name        : .reli.LED_GPIO_Config
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 939832 (0xe5738)
+    Size        : 40 bytes (0x28)
+    Link        : Section 343 (.symtab)
+    Info        : Section 4 (i.LED_GPIO_Config)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #5
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 236 (0xec)
+    Size        : 276 bytes (0x114)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #345
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 939872 (0xe5760)
+    Size        : 48 bytes (0x30)
+    Link        : Section 343 (.symtab)
+    Info        : Section 5 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #6
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 512 (0x200)
+    Size        : 100 bytes (0x64)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #346
+
+    Name        : .rel.debug_line
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 939920 (0xe5790)
+    Size        : 8 bytes (0x8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 6 (.debug_line)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #7
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 612 (0x264)
+    Size        : 276 bytes (0x114)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #347
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 939928 (0xe5798)
+    Size        : 48 bytes (0x30)
+    Link        : Section 343 (.symtab)
+    Info        : Section 7 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #8
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 888 (0x378)
+    Size        : 100 bytes (0x64)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #348
+
+    Name        : .rel.debug_line
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 939976 (0xe57c8)
+    Size        : 8 bytes (0x8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 8 (.debug_line)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #9
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 988 (0x3dc)
+    Size        : 276 bytes (0x114)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #349
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 939984 (0xe57d0)
+    Size        : 48 bytes (0x30)
+    Link        : Section 343 (.symtab)
+    Info        : Section 9 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #10
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 1264 (0x4f0)
+    Size        : 100 bytes (0x64)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #350
+
+    Name        : .rel.debug_line
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940032 (0xe5800)
+    Size        : 8 bytes (0x8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 10 (.debug_line)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #11
+
+    Name        : .debug_frame
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 1364 (0x554)
+    Size        : 116 bytes (0x74)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #351
+
+    Name        : .rel.debug_frame
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940040 (0xe5808)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Section 11 (.debug_frame)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #12
+
+    Name        : .debug_frame
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 1480 (0x5c8)
+    Size        : 116 bytes (0x74)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #352
+
+    Name        : .rel.debug_frame
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940056 (0xe5818)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Section 12 (.debug_frame)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #13
+
+    Name        : .debug_frame
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 1596 (0x63c)
+    Size        : 116 bytes (0x74)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #353
+
+    Name        : .rel.debug_frame
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940072 (0xe5828)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Section 13 (.debug_frame)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #14
+
+    Name        : .debug_frame
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 1712 (0x6b0)
+    Size        : 136 bytes (0x88)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #354
+
+    Name        : .rel.debug_frame
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940088 (0xe5838)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Section 14 (.debug_frame)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #15
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 1848 (0x738)
+    Size        : 240 bytes (0xf0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #355
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940104 (0xe5848)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 15 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #16
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 2088 (0x828)
+    Size        : 416 bytes (0x1a0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #356
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940128 (0xe5860)
+    Size        : 160 bytes (0xa0)
+    Link        : Section 343 (.symtab)
+    Info        : Section 16 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #17
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 2504 (0x9c8)
+    Size        : 60 bytes (0x3c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #18
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 2564 (0xa04)
+    Size        : 184 bytes (0xb8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #357
+
+    Name        : .rel.debug_line
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940288 (0xe5900)
+    Size        : 8 bytes (0x8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 18 (.debug_line)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #19
+
+    Name        : .debug_loc
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 2748 (0xabc)
+    Size        : 56 bytes (0x38)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #20
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 2804 (0xaf4)
+    Size        : 1172 bytes (0x494)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #21
+
+    Name        : .debug_pubnames
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 3976 (0xf88)
+    Size        : 38 bytes (0x26)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #358
+
+    Name        : .rel.debug_pubnames
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940296 (0xe5908)
+    Size        : 8 bytes (0x8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 21 (.debug_pubnames)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #22
+
+    Name        : __ARM_asm.debug_abbrev.1
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 4016 (0xfb0)
+    Size        : 8 bytes (0x8)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_asm.debug_abbrev.1
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_abbrev (23)
+
+====================================
+
+** Section #23
+
+    Name        : .debug_abbrev
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 4024 (0xfb8)
+    Size        : 32 bytes (0x20)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #24
+
+    Name        : __ARM_grp.stdint.h.2_4H1000_rQLou6Y$5Wb_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 4056 (0xfd8)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stdint.h.2_4H1000_rQLou6Y$5Wb_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (25)
+    .debug_line (26)
+    .debug_info (27)
+
+====================================
+
+** Section #25
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 4072 (0xfe8)
+    Size        : 2200 bytes (0x898)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #26
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 6272 (0x1880)
+    Size        : 104 bytes (0x68)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #27
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 6376 (0x18e8)
+    Size        : 800 bytes (0x320)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #359
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940304 (0xe5910)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 27 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #28
+
+    Name        : __ARM_grp.cmsis_armcc.h.2_8Y2000_sPdhgNI8nIf_Q00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 7176 (0x1c08)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.cmsis_armcc.h.2_8Y2000_sPdhgNI8nIf_Q00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (29)
+    .debug_line (30)
+    .debug_info (31)
+
+====================================
+
+** Section #29
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 7192 (0x1c18)
+    Size        : 2968 bytes (0xb98)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #30
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 10160 (0x27b0)
+    Size        : 80 bytes (0x50)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #31
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 10240 (0x2800)
+    Size        : 1396 bytes (0x574)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #360
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940328 (0xe5928)
+    Size        : 392 bytes (0x188)
+    Link        : Section 343 (.symtab)
+    Info        : Section 31 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #32
+
+    Name        : __ARM_grp.core_cmInstr.h.2_Mu0000_28gTu79Dpm6_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 11636 (0x2d74)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.core_cmInstr.h.2_Mu0000_28gTu79Dpm6_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (33)
+    .debug_line (34)
+    .debug_info (35)
+
+====================================
+
+** Section #33
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 11652 (0x2d84)
+    Size        : 32 bytes (0x20)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #34
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 11684 (0x2da4)
+    Size        : 100 bytes (0x64)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #35
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 11784 (0x2e08)
+    Size        : 260 bytes (0x104)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #361
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940720 (0xe5ab0)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 35 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #36
+
+    Name        : __ARM_grp.core_cmFunc.h.2_Eu0000_WC9obG9TST2_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 12044 (0x2f0c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.core_cmFunc.h.2_Eu0000_WC9obG9TST2_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (37)
+    .debug_line (38)
+    .debug_info (39)
+
+====================================
+
+** Section #37
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 12060 (0x2f1c)
+    Size        : 28 bytes (0x1c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #38
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 12088 (0x2f38)
+    Size        : 100 bytes (0x64)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #39
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 12188 (0x2f9c)
+    Size        : 260 bytes (0x104)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #362
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940744 (0xe5ac8)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 39 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #40
+
+    Name        : __ARM_grp.core_cmSimd.h.2_Eu0000_ZMu5h8mgjPa_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 12448 (0x30a0)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.core_cmSimd.h.2_Eu0000_ZMu5h8mgjPa_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (41)
+    .debug_line (42)
+    .debug_info (43)
+
+====================================
+
+** Section #41
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 12464 (0x30b0)
+    Size        : 28 bytes (0x1c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #42
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 12492 (0x30cc)
+    Size        : 100 bytes (0x64)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #43
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 12592 (0x3130)
+    Size        : 260 bytes (0x104)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #363
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940768 (0xe5ae0)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 43 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #44
+
+    Name        : __ARM_grp.core_cm7.h.2_bKb200_paF20BtQ$86_H60000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 12852 (0x3234)
+    Size        : 20 bytes (0x14)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.core_cm7.h.2_bKb200_paF20BtQ$86_H60000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (45)
+    .debug_line (46)
+    .debug_info (47)
+    .debug_pubnames (48)
+
+====================================
+
+** Section #45
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 12872 (0x3248)
+    Size        : 25560 bytes (0x63d8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #46
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 38432 (0x9620)
+    Size        : 200 bytes (0xc8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #47
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 38632 (0x96e8)
+    Size        : 5936 bytes (0x1730)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #364
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 940792 (0xe5af8)
+    Size        : 1152 bytes (0x480)
+    Link        : Section 343 (.symtab)
+    Info        : Section 47 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #48
+
+    Name        : .debug_pubnames
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 44568 (0xae18)
+    Size        : 35 bytes (0x23)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #365
+
+    Name        : .rel.debug_pubnames
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 941944 (0xe5f78)
+    Size        : 8 bytes (0x8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 48 (.debug_pubnames)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #49
+
+    Name        : __ARM_grp.system_stm32f7xx.h.2_ux2000_UVE2frAAF_e_h00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 44604 (0xae3c)
+    Size        : 20 bytes (0x14)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.system_stm32f7xx.h.2_ux2000_UVE2frAAF_e_h00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (50)
+    .debug_line (51)
+    .debug_info (52)
+    .debug_pubnames (53)
+
+====================================
+
+** Section #50
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 44624 (0xae50)
+    Size        : 32 bytes (0x20)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #51
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 44656 (0xae70)
+    Size        : 108 bytes (0x6c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #52
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 44764 (0xaedc)
+    Size        : 372 bytes (0x174)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #366
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 941952 (0xe5f80)
+    Size        : 40 bytes (0x28)
+    Link        : Section 343 (.symtab)
+    Info        : Section 52 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #53
+
+    Name        : .debug_pubnames
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 45136 (0xb050)
+    Size        : 74 bytes (0x4a)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #367
+
+    Name        : .rel.debug_pubnames
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 941992 (0xe5fa8)
+    Size        : 8 bytes (0x8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 53 (.debug_pubnames)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #54
+
+    Name        : __ARM_grp.stm32f767xx.h.2_8vN100_X1EE77Qf3Q1_510000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 45212 (0xb09c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f767xx.h.2_8vN100_X1EE77Qf3Q1_510000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (55)
+    .debug_line (56)
+    .debug_info (57)
+
+====================================
+
+** Section #55
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 45228 (0xb0ac)
+    Size        : 223048 bytes (0x36748)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #56
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 268276 (0x417f4)
+    Size        : 236 bytes (0xec)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #57
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 268512 (0x418e0)
+    Size        : 13724 bytes (0x359c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #368
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 942000 (0xe5fb0)
+    Size        : 528 bytes (0x210)
+    Link        : Section 343 (.symtab)
+    Info        : Section 57 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #58
+
+    Name        : __ARM_grp.stm32f7xx.h.2_UW0000_aRwJTR5xRm2_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 282236 (0x44e7c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx.h.2_UW0000_aRwJTR5xRm2_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (59)
+    .debug_line (60)
+    .debug_info (61)
+
+====================================
+
+** Section #59
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 282252 (0x44e8c)
+    Size        : 796 bytes (0x31c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #60
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 283048 (0x451a8)
+    Size        : 152 bytes (0x98)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #61
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 283200 (0x45240)
+    Size        : 428 bytes (0x1ac)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #369
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 942528 (0xe61c0)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 61 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #62
+
+    Name        : __ARM_grp.stm32_hal_legacy.h.2_E5Q000_A8eEaLqDmx3_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 283628 (0x453ec)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32_hal_legacy.h.2_E5Q000_A8eEaLqDmx3_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (63)
+    .debug_line (64)
+    .debug_info (65)
+
+====================================
+
+** Section #63
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 283644 (0x453fc)
+    Size        : 105708 bytes (0x19cec)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #64
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 389352 (0x5f0e8)
+    Size        : 104 bytes (0x68)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #65
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 389456 (0x5f150)
+    Size        : 284 bytes (0x11c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #370
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 942552 (0xe61d8)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 65 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #66
+
+    Name        : __ARM_grp.stdio.h.2_It1000_FCx4$7ABOZc_700000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 389740 (0x5f26c)
+    Size        : 20 bytes (0x14)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stdio.h.2_It1000_FCx4$7ABOZc_700000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (67)
+    .debug_line (68)
+    .debug_info (69)
+    .debug_pubnames (70)
+
+====================================
+
+** Section #67
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 389760 (0x5f280)
+    Size        : 584 bytes (0x248)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #68
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 390344 (0x5f4c8)
+    Size        : 100 bytes (0x64)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #69
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 390444 (0x5f52c)
+    Size        : 472 bytes (0x1d8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #371
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 942576 (0xe61f0)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 69 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #70
+
+    Name        : .debug_pubnames
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 390916 (0x5f704)
+    Size        : 112 bytes (0x70)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #372
+
+    Name        : .rel.debug_pubnames
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 942600 (0xe6208)
+    Size        : 8 bytes (0x8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 70 (.debug_pubnames)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #71
+
+    Name        : __ARM_grp.stm32f7xx_hal_def.h.2_kZ0000_qdUHTrAfbN8_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 391028 (0x5f774)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_def.h.2_kZ0000_qdUHTrAfbN8_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (72)
+    .debug_line (73)
+    .debug_info (74)
+
+====================================
+
+** Section #72
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 391044 (0x5f784)
+    Size        : 772 bytes (0x304)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #73
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 391816 (0x5fa88)
+    Size        : 260 bytes (0x104)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #74
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 392076 (0x5fb8c)
+    Size        : 416 bytes (0x1a0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #373
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 942608 (0xe6210)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 74 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #75
+
+    Name        : __ARM_grp.stm32f7xx_hal_rcc_ex.h.2_YWK000_XnipifzSIRa_N00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 392492 (0x5fd2c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_rcc_ex.h.2_YWK000_XnipifzSIRa_N00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (76)
+    .debug_line (77)
+    .debug_info (78)
+
+====================================
+
+** Section #76
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 392508 (0x5fd3c)
+    Size        : 92956 bytes (0x16b1c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #77
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 485464 (0x76858)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #78
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 485588 (0x768d4)
+    Size        : 1480 bytes (0x5c8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #374
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 942632 (0xe6228)
+    Size        : 368 bytes (0x170)
+    Link        : Section 343 (.symtab)
+    Info        : Section 78 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #79
+
+    Name        : __ARM_grp.stm32f7xx_hal_rcc.h.2_osx000_rPY_SLA2$z5_010000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 487068 (0x76e9c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_rcc.h.2_osx000_rPY_SLA2$z5_010000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (80)
+    .debug_line (81)
+    .debug_info (82)
+
+====================================
+
+** Section #80
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 487084 (0x76eac)
+    Size        : 18496 bytes (0x4840)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #81
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 505580 (0x7b6ec)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #82
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 505728 (0x7b780)
+    Size        : 588 bytes (0x24c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #375
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 943000 (0xe6398)
+    Size        : 120 bytes (0x78)
+    Link        : Section 343 (.symtab)
+    Info        : Section 82 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #83
+
+    Name        : __ARM_grp.stm32f7xx_hal_gpio_ex.h.2_sV3000_duy21SF0gr5_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 506316 (0x7b9cc)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_gpio_ex.h.2_sV3000_duy21SF0gr5_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (84)
+    .debug_line (85)
+    .debug_info (86)
+
+====================================
+
+** Section #84
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 506332 (0x7b9dc)
+    Size        : 6996 bytes (0x1b54)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #85
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 513328 (0x7d530)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #86
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 513452 (0x7d5ac)
+    Size        : 280 bytes (0x118)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #376
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 943120 (0xe6410)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 86 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #87
+
+    Name        : __ARM_grp.stm32f7xx_hal_gpio.h.2_kF2000__UQBfUsVDnd_b00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 513732 (0x7d6c4)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_gpio.h.2_kF2000__UQBfUsVDnd_b00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (88)
+    .debug_line (89)
+    .debug_info (90)
+
+====================================
+
+** Section #88
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 513748 (0x7d6d4)
+    Size        : 2776 bytes (0xad8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #89
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 516524 (0x7e1ac)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #90
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 516672 (0x7e240)
+    Size        : 440 bytes (0x1b8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #377
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 943144 (0xe6428)
+    Size        : 64 bytes (0x40)
+    Link        : Section 343 (.symtab)
+    Info        : Section 90 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #91
+
+    Name        : __ARM_grp.stm32f7xx_hal_dma_ex.h.2_461000_MwmL$mbEE31_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 517112 (0x7e3f8)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_dma_ex.h.2_461000_MwmL$mbEE31_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (92)
+    .debug_line (93)
+    .debug_info (94)
+
+====================================
+
+** Section #92
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 517128 (0x7e408)
+    Size        : 1228 bytes (0x4cc)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #93
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 518356 (0x7e8d4)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #94
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 518480 (0x7e950)
+    Size        : 336 bytes (0x150)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #378
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 943208 (0xe6468)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 94 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #95
+
+    Name        : __ARM_grp.stm32f7xx_hal_dma.h.2_wD1100_gh0hnOcebnc_s10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 518816 (0x7eaa0)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_dma.h.2_wD1100_gh0hnOcebnc_s10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (96)
+    .debug_line (97)
+    .debug_info (98)
+
+====================================
+
+** Section #96
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 518832 (0x7eab0)
+    Size        : 11988 bytes (0x2ed4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #97
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 530820 (0x81984)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #98
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 530968 (0x81a18)
+    Size        : 1492 bytes (0x5d4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #379
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 943232 (0xe6480)
+    Size        : 160 bytes (0xa0)
+    Link        : Section 343 (.symtab)
+    Info        : Section 98 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #99
+
+    Name        : __ARM_grp.stm32f7xx_hal_cortex.h.2_o44000_BXylCw07LJ6_h00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 532460 (0x81fec)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_cortex.h.2_o44000_BXylCw07LJ6_h00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (100)
+    .debug_line (101)
+    .debug_info (102)
+
+====================================
+
+** Section #100
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 532476 (0x81ffc)
+    Size        : 5664 bytes (0x1620)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #101
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 538140 (0x8361c)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #102
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 538264 (0x83698)
+    Size        : 540 bytes (0x21c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #380
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 943392 (0xe6520)
+    Size        : 112 bytes (0x70)
+    Link        : Section 343 (.symtab)
+    Info        : Section 102 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #103
+
+    Name        : __ARM_grp.stm32f7xx_hal_adc_ex.h.2_414000_CgAD9qhmCn2_i00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 538804 (0x838b4)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_adc_ex.h.2_414000_CgAD9qhmCn2_i00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (104)
+    .debug_line (105)
+    .debug_info (106)
+
+====================================
+
+** Section #104
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 538820 (0x838c4)
+    Size        : 5488 bytes (0x1570)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #105
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 544308 (0x84e34)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #106
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 544432 (0x84eb0)
+    Size        : 680 bytes (0x2a8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #381
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 943504 (0xe6590)
+    Size        : 120 bytes (0x78)
+    Link        : Section 343 (.symtab)
+    Info        : Section 106 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #107
+
+    Name        : __ARM_grp.stm32f7xx_hal_adc.h.2_QU5100_zOr6qrwdxdf_V10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 545112 (0x85158)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_adc.h.2_QU5100_zOr6qrwdxdf_V10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (108)
+    .debug_line (109)
+    .debug_info (110)
+
+====================================
+
+** Section #108
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 545128 (0x85168)
+    Size        : 14140 bytes (0x373c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #109
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 559268 (0x888a4)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #110
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 559416 (0x88938)
+    Size        : 1052 bytes (0x41c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #382
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 943624 (0xe6608)
+    Size        : 232 bytes (0xe8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 110 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #111
+
+    Name        : __ARM_grp.stm32f7xx_hal_can.h.2_kR$000_h3fepG4_6zc_N10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 560468 (0x88d54)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_can.h.2_kR$000_h3fepG4_6zc_N10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (112)
+    .debug_line (113)
+    .debug_info (114)
+
+====================================
+
+** Section #112
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 560484 (0x88d64)
+    Size        : 8416 bytes (0x20e0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #113
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 568900 (0x8ae44)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #114
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 569020 (0x8aebc)
+    Size        : 1384 bytes (0x568)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #383
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 943856 (0xe66f0)
+    Size        : 328 bytes (0x148)
+    Link        : Section 343 (.symtab)
+    Info        : Section 114 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #115
+
+    Name        : __ARM_grp.stm32f7xx_hal_cec.h.2_0C_000_Djuxq28e89b_q10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 570404 (0x8b424)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_cec.h.2_0C_000_Djuxq28e89b_q10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (116)
+    .debug_line (117)
+    .debug_info (118)
+
+====================================
+
+** Section #116
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 570420 (0x8b434)
+    Size        : 6104 bytes (0x17d8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #117
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 576524 (0x8cc0c)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #118
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 576644 (0x8cc84)
+    Size        : 932 bytes (0x3a4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #384
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 944184 (0xe6838)
+    Size        : 144 bytes (0x90)
+    Link        : Section 343 (.symtab)
+    Info        : Section 118 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #119
+
+    Name        : __ARM_grp.stm32f7xx_hal_crc_ex.h.2_s01000_FAuJqUi3Rza_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 577576 (0x8d028)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_crc_ex.h.2_s01000_FAuJqUi3Rza_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (120)
+    .debug_line (121)
+    .debug_info (122)
+
+====================================
+
+** Section #120
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 577592 (0x8d038)
+    Size        : 1076 bytes (0x434)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #121
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 578668 (0x8d46c)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #122
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 578792 (0x8d4e8)
+    Size        : 280 bytes (0x118)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #385
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 944328 (0xe68c8)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 122 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #123
+
+    Name        : __ARM_grp.stm32f7xx_hal_crc.h.2_cBY000_OQbA5PtVzH5_l10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 579072 (0x8d600)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_crc.h.2_cBY000_OQbA5PtVzH5_l10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (124)
+    .debug_line (125)
+    .debug_info (126)
+
+====================================
+
+** Section #124
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 579088 (0x8d610)
+    Size        : 2036 bytes (0x7f4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #125
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 581124 (0x8de04)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #126
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 581272 (0x8de98)
+    Size        : 768 bytes (0x300)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #386
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 944352 (0xe68e0)
+    Size        : 104 bytes (0x68)
+    Link        : Section 343 (.symtab)
+    Info        : Section 126 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #127
+
+    Name        : __ARM_grp.stm32f7xx_hal_cryp.h.2_Uv0000_HHDFQ046MH7_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 582040 (0x8e198)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_cryp.h.2_Uv0000_HHDFQ046MH7_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (128)
+    .debug_line (129)
+    .debug_info (130)
+
+====================================
+
+** Section #128
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 582056 (0x8e1a8)
+    Size        : 36 bytes (0x24)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #129
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 582092 (0x8e1cc)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #130
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 582216 (0x8e248)
+    Size        : 276 bytes (0x114)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #387
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 944456 (0xe6948)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 130 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #131
+
+    Name        : __ARM_grp.stm32f7xx_hal_dma2d.h.2_s6_000_xrgxrrQoo$8_v10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 582492 (0x8e35c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_dma2d.h.2_s6_000_xrgxrrQoo$8_v10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (132)
+    .debug_line (133)
+    .debug_info (134)
+
+====================================
+
+** Section #132
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 582508 (0x8e36c)
+    Size        : 4972 bytes (0x136c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #133
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 587480 (0x8f6d8)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #134
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 587604 (0x8f754)
+    Size        : 1168 bytes (0x490)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #388
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 944480 (0xe6960)
+    Size        : 184 bytes (0xb8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 134 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #135
+
+    Name        : __ARM_grp.stm32f7xx_hal_dac_ex.h.2_YM1000_jnWia6OT4ef_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 588772 (0x8fbe4)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_dac_ex.h.2_YM1000_jnWia6OT4ef_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (136)
+    .debug_line (137)
+    .debug_info (138)
+
+====================================
+
+** Section #136
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 588788 (0x8fbf4)
+    Size        : 2628 bytes (0xa44)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #137
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 591416 (0x90638)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #138
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 591540 (0x906b4)
+    Size        : 280 bytes (0x118)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #389
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 944664 (0xe6a18)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 138 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #139
+
+    Name        : __ARM_grp.stm32f7xx_hal_dac.h.2_8p0100_8v6z3eand98_B10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 591820 (0x907cc)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_dac.h.2_8p0100_8v6z3eand98_B10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (140)
+    .debug_line (141)
+    .debug_info (142)
+
+====================================
+
+** Section #140
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 591836 (0x907dc)
+    Size        : 3084 bytes (0xc0c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #141
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 594920 (0x913e8)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #142
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 595068 (0x9147c)
+    Size        : 656 bytes (0x290)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #390
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 944688 (0xe6a30)
+    Size        : 72 bytes (0x48)
+    Link        : Section 343 (.symtab)
+    Info        : Section 142 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #143
+
+    Name        : __ARM_grp.stm32f7xx_hal_dcmi.h.2_4B1100_rinjHYu2Srb_Q10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 595724 (0x9170c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_dcmi.h.2_4B1100_rinjHYu2Srb_Q10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (144)
+    .debug_line (145)
+    .debug_info (146)
+
+====================================
+
+** Section #144
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 595740 (0x9171c)
+    Size        : 5316 bytes (0x14c4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #145
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 601056 (0x92be0)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #146
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 601180 (0x92c5c)
+    Size        : 1100 bytes (0x44c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #391
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 944760 (0xe6a78)
+    Size        : 192 bytes (0xc0)
+    Link        : Section 343 (.symtab)
+    Info        : Section 146 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #147
+
+    Name        : __ARM_grp.stm32f7xx_hal_eth.h.2_gde100_97_7vzP0IZ2_e20000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 602280 (0x930a8)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_eth.h.2_gde100_97_7vzP0IZ2_e20000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (148)
+    .debug_line (149)
+    .debug_info (150)
+
+====================================
+
+** Section #148
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 602296 (0x930b8)
+    Size        : 37288 bytes (0x91a8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #149
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 639584 (0x9c260)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #150
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 639704 (0x9c2d8)
+    Size        : 2516 bytes (0x9d4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #392
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 944952 (0xe6b38)
+    Size        : 560 bytes (0x230)
+    Link        : Section 343 (.symtab)
+    Info        : Section 150 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #151
+
+    Name        : __ARM_grp.stm32f7xx_hal_flash_ex.h.2_Eq5000_rLtnrrAKQg1_j00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 642220 (0x9ccac)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_flash_ex.h.2_Eq5000_rLtnrrAKQg1_j00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (152)
+    .debug_line (153)
+    .debug_info (154)
+
+====================================
+
+** Section #152
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 642236 (0x9ccbc)
+    Size        : 8392 bytes (0x20c8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #153
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 650628 (0x9ed84)
+    Size        : 128 bytes (0x80)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #154
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 650756 (0x9ee04)
+    Size        : 596 bytes (0x254)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #393
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 945512 (0xe6d68)
+    Size        : 128 bytes (0x80)
+    Link        : Section 343 (.symtab)
+    Info        : Section 154 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #155
+
+    Name        : __ARM_grp.stm32f7xx_hal_flash.h.2_A_2000_Jtz0qzuTtJf_c00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 651352 (0x9f058)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_flash.h.2_A_2000_Jtz0qzuTtJf_c00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (156)
+    .debug_line (157)
+    .debug_info (158)
+
+====================================
+
+** Section #156
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 651368 (0x9f068)
+    Size        : 2656 bytes (0xa60)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #157
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 654024 (0x9fac8)
+    Size        : 152 bytes (0x98)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #158
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 654176 (0x9fb60)
+    Size        : 584 bytes (0x248)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #394
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 945640 (0xe6de8)
+    Size        : 48 bytes (0x30)
+    Link        : Section 343 (.symtab)
+    Info        : Section 158 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #159
+
+    Name        : __ARM_grp.stm32f7xx_ll_fmc.h.2_om8000__ExyD6nDcTf_Y00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 654760 (0x9fda8)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_ll_fmc.h.2_om8000__ExyD6nDcTf_Y00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (160)
+    .debug_line (161)
+    .debug_info (162)
+
+====================================
+
+** Section #160
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 654776 (0x9fdb8)
+    Size        : 13816 bytes (0x35f8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #161
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 668592 (0xa33b0)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #162
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 668712 (0xa3428)
+    Size        : 1780 bytes (0x6f4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #395
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 945688 (0xe6e18)
+    Size        : 456 bytes (0x1c8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 162 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #163
+
+    Name        : __ARM_grp.stm32f7xx_hal_sram.h.2_0M2100_3M8HgbfHLH4_t20000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 670492 (0xa3b1c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_sram.h.2_0M2100_3M8HgbfHLH4_t20000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (164)
+    .debug_line (165)
+    .debug_info (166)
+
+====================================
+
+** Section #164
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 670508 (0xa3b2c)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #165
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 670632 (0xa3ba8)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #166
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 670752 (0xa3c20)
+    Size        : 572 bytes (0x23c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #396
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 946144 (0xe6fe0)
+    Size        : 64 bytes (0x40)
+    Link        : Section 343 (.symtab)
+    Info        : Section 166 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #167
+
+    Name        : __ARM_grp.stm32f7xx_hal_nor.h.2_EY$000_kQSX135Z2Jc_g20000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 671324 (0xa3e5c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_nor.h.2_EY$000_kQSX135Z2Jc_g20000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (168)
+    .debug_line (169)
+    .debug_info (170)
+
+====================================
+
+** Section #168
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 671340 (0xa3e6c)
+    Size        : 1040 bytes (0x410)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #169
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 672380 (0xa427c)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #170
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 672500 (0xa42f4)
+    Size        : 888 bytes (0x378)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #397
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 946208 (0xe7020)
+    Size        : 120 bytes (0x78)
+    Link        : Section 343 (.symtab)
+    Info        : Section 170 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #171
+
+    Name        : __ARM_grp.stm32f7xx_hal_nand.h.2_A60100_PwQdbRJ0jo0_j20000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 673388 (0xa466c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_nand.h.2_A60100_PwQdbRJ0jo0_j20000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (172)
+    .debug_line (173)
+    .debug_info (174)
+
+====================================
+
+** Section #172
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 673404 (0xa467c)
+    Size        : 1392 bytes (0x570)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #173
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 674796 (0xa4bec)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #174
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 674916 (0xa4c64)
+    Size        : 820 bytes (0x334)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #398
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 946328 (0xe7098)
+    Size        : 144 bytes (0x90)
+    Link        : Section 343 (.symtab)
+    Info        : Section 174 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #175
+
+    Name        : __ARM_grp.stm32f7xx_hal_sdram.h.2_EM2100_KpVfMDmBB64_s20000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 675736 (0xa4f98)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_sdram.h.2_EM2100_KpVfMDmBB64_s20000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (176)
+    .debug_line (177)
+    .debug_info (178)
+
+====================================
+
+** Section #176
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 675752 (0xa4fa8)
+    Size        : 128 bytes (0x80)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #177
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 675880 (0xa5028)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #178
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 676004 (0xa50a4)
+    Size        : 596 bytes (0x254)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #399
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 946472 (0xe7128)
+    Size        : 56 bytes (0x38)
+    Link        : Section 343 (.symtab)
+    Info        : Section 178 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #179
+
+    Name        : __ARM_grp.stm32f7xx_hal_hash.h.2_0v0000_6dfCvthvqQ9_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 676600 (0xa52f8)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_hash.h.2_0v0000_6dfCvthvqQ9_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (180)
+    .debug_line (181)
+    .debug_info (182)
+
+====================================
+
+** Section #180
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 676616 (0xa5308)
+    Size        : 32 bytes (0x20)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #181
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 676648 (0xa5328)
+    Size        : 100 bytes (0x64)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #182
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 676748 (0xa538c)
+    Size        : 276 bytes (0x114)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #400
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 946528 (0xe7160)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 182 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #183
+
+    Name        : __ARM_grp.stm32f7xx_hal_i2c_ex.h.2_A51000_IGg_yFrxfYd_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 677024 (0xa54a0)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_i2c_ex.h.2_A51000_IGg_yFrxfYd_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (184)
+    .debug_line (185)
+    .debug_info (186)
+
+====================================
+
+** Section #184
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 677040 (0xa54b0)
+    Size        : 1240 bytes (0x4d8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #185
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 678280 (0xa5988)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #186
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 678404 (0xa5a04)
+    Size        : 280 bytes (0x118)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #401
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 946552 (0xe7178)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 186 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #187
+
+    Name        : __ARM_grp.stm32f7xx_hal_i2c.h.2_Q22100_NRb4U6uQAaa_N10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 678684 (0xa5b1c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_i2c.h.2_Q22100_NRb4U6uQAaa_N10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (188)
+    .debug_line (189)
+    .debug_info (190)
+
+====================================
+
+** Section #188
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 678700 (0xa5b2c)
+    Size        : 6156 bytes (0x180c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #189
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 684856 (0xa7338)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #190
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 685004 (0xa73cc)
+    Size        : 1276 bytes (0x4fc)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #402
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 946576 (0xe7190)
+    Size        : 168 bytes (0xa8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 190 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #191
+
+    Name        : __ARM_grp.stm32f7xx_hal_i2s.h.2_wQ0100_fkUZfwg3SD7_I10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 686280 (0xa78c8)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_i2s.h.2_wQ0100_fkUZfwg3SD7_I10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (192)
+    .debug_line (193)
+    .debug_info (194)
+
+====================================
+
+** Section #192
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 686296 (0xa78d8)
+    Size        : 3848 bytes (0xf08)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #193
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 690144 (0xa87e0)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #194
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 690264 (0xa8858)
+    Size        : 936 bytes (0x3a8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #403
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 946744 (0xe7238)
+    Size        : 128 bytes (0x80)
+    Link        : Section 343 (.symtab)
+    Info        : Section 194 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #195
+
+    Name        : __ARM_grp.stm32f7xx_hal_iwdg.h.2_cPX000_D7cU_o0Pih8_c10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 691200 (0xa8c00)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_iwdg.h.2_cPX000_D7cU_o0Pih8_c10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (196)
+    .debug_line (197)
+    .debug_info (198)
+
+====================================
+
+** Section #196
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 691216 (0xa8c10)
+    Size        : 1356 bytes (0x54c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #197
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 692572 (0xa915c)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #198
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 692696 (0xa91d8)
+    Size        : 424 bytes (0x1a8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #404
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 946872 (0xe72b8)
+    Size        : 56 bytes (0x38)
+    Link        : Section 343 (.symtab)
+    Info        : Section 198 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #199
+
+    Name        : __ARM_grp.stm32f7xx_hal_lptim.h.2_sr$000_kXHxATbBSqb_o10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 693120 (0xa9380)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_lptim.h.2_sr$000_kXHxATbBSqb_o10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (200)
+    .debug_line (201)
+    .debug_info (202)
+
+====================================
+
+** Section #200
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 693136 (0xa9390)
+    Size        : 7788 bytes (0x1e6c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #201
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 700924 (0xab1fc)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #202
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 701048 (0xab278)
+    Size        : 976 bytes (0x3d0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #405
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 946928 (0xe72f0)
+    Size        : 128 bytes (0x80)
+    Link        : Section 343 (.symtab)
+    Info        : Section 202 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #203
+
+    Name        : __ARM_grp.stm32f7xx_hal_ltdc.h.2_wm_000_Ywckgy$Kbs4_G10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 702024 (0xab648)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_ltdc.h.2_wm_000_Ywckgy$Kbs4_G10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (204)
+    .debug_line (205)
+    .debug_info (206)
+
+====================================
+
+** Section #204
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 702040 (0xab658)
+    Size        : 5432 bytes (0x1538)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #205
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 707472 (0xacb90)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #206
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 707596 (0xacc0c)
+    Size        : 1276 bytes (0x4fc)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #406
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 947056 (0xe7370)
+    Size        : 272 bytes (0x110)
+    Link        : Section 343 (.symtab)
+    Info        : Section 206 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #207
+
+    Name        : __ARM_grp.stm32f7xx_hal_pwr_ex.h.2_YV1000_M8lfIaWYms4_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 708872 (0xad108)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_pwr_ex.h.2_YV1000_M8lfIaWYms4_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (208)
+    .debug_line (209)
+    .debug_info (210)
+
+====================================
+
+** Section #208
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 708888 (0xad118)
+    Size        : 2916 bytes (0xb64)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #209
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 711804 (0xadc7c)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #210
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 711928 (0xadcf8)
+    Size        : 280 bytes (0x118)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #407
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 947328 (0xe7480)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 210 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #211
+
+    Name        : __ARM_grp.stm32f7xx_hal_pwr.h.2_s63000_kPAZSEmXgQ4_800000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 712208 (0xade10)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_pwr.h.2_s63000_kPAZSEmXgQ4_800000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (212)
+    .debug_line (213)
+    .debug_info (214)
+
+====================================
+
+** Section #212
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 712224 (0xade20)
+    Size        : 3760 bytes (0xeb0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #213
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 715984 (0xaecd0)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #214
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 716132 (0xaed64)
+    Size        : 336 bytes (0x150)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #408
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 947352 (0xe7498)
+    Size        : 40 bytes (0x28)
+    Link        : Section 343 (.symtab)
+    Info        : Section 214 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #215
+
+    Name        : __ARM_grp.stm32f7xx_hal_qspi.h.2_0W2100_mYL1ArJf_Y6_420000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 716468 (0xaeeb4)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_qspi.h.2_0W2100_mYL1ArJf_Y6_420000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (216)
+    .debug_line (217)
+    .debug_info (218)
+
+====================================
+
+** Section #216
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 716484 (0xaeec4)
+    Size        : 7772 bytes (0x1e5c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #217
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 724256 (0xb0d20)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #218
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 724380 (0xb0d9c)
+    Size        : 1624 bytes (0x658)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #409
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 947392 (0xe74c0)
+    Size        : 320 bytes (0x140)
+    Link        : Section 343 (.symtab)
+    Info        : Section 218 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #219
+
+    Name        : __ARM_grp.stm32f7xx_hal_rng.h.2_84Y000__p8$n132UG9_e10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 726004 (0xb13f4)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_rng.h.2_84Y000__p8$n132UG9_e10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (220)
+    .debug_line (221)
+    .debug_info (222)
+
+====================================
+
+** Section #220
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 726020 (0xb1404)
+    Size        : 1124 bytes (0x464)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #221
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 727144 (0xb1868)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #222
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 727264 (0xb18e0)
+    Size        : 532 bytes (0x214)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #410
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 947712 (0xe7600)
+    Size        : 48 bytes (0x30)
+    Link        : Section 343 (.symtab)
+    Info        : Section 222 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #223
+
+    Name        : __ARM_grp.stm32f7xx_hal_rtc_ex.h.2_019000__zZ1wvi7KFb_g00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 727796 (0xb1af4)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_rtc_ex.h.2_019000__zZ1wvi7KFb_g00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (224)
+    .debug_line (225)
+    .debug_info (226)
+
+====================================
+
+** Section #224
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 727812 (0xb1b04)
+    Size        : 15804 bytes (0x3dbc)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #225
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 743616 (0xb58c0)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #226
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 743740 (0xb593c)
+    Size        : 524 bytes (0x20c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #411
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 947760 (0xe7630)
+    Size        : 104 bytes (0x68)
+    Link        : Section 343 (.symtab)
+    Info        : Section 226 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #227
+
+    Name        : __ARM_grp.stm32f7xx_hal_rtc.h.2_0J0100_Z1cqTI6tfs6_A10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 744264 (0xb5b48)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_rtc.h.2_0J0100_Z1cqTI6tfs6_A10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (228)
+    .debug_line (229)
+    .debug_info (230)
+
+====================================
+
+** Section #228
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 744280 (0xb5b58)
+    Size        : 10304 bytes (0x2840)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #229
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 754584 (0xb8398)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #230
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 754732 (0xb842c)
+    Size        : 1116 bytes (0x45c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #412
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 947864 (0xe7698)
+    Size        : 224 bytes (0xe0)
+    Link        : Section 343 (.symtab)
+    Info        : Section 230 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #231
+
+    Name        : __ARM_grp.stm32f7xx_hal_sai.h.2_w54100_49cUBdmiwda__10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 755848 (0xb8888)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_sai.h.2_w54100_49cUBdmiwda__10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (232)
+    .debug_line (233)
+    .debug_info (234)
+
+====================================
+
+** Section #232
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 755864 (0xb8898)
+    Size        : 10316 bytes (0x284c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #233
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 766180 (0xbb0e4)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #234
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 766300 (0xbb15c)
+    Size        : 1376 bytes (0x560)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #413
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 948088 (0xe7778)
+    Size        : 272 bytes (0x110)
+    Link        : Section 343 (.symtab)
+    Info        : Section 234 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #235
+
+    Name        : __ARM_grp.stm32f7xx_ll_sdmmc.h.2_QE5000_TMZRSJjRpce_n00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 767676 (0xbb6bc)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_ll_sdmmc.h.2_QE5000_TMZRSJjRpce_n00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (236)
+    .debug_line (237)
+    .debug_info (238)
+
+====================================
+
+** Section #236
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 767692 (0xbb6cc)
+    Size        : 8788 bytes (0x2254)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #237
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 776480 (0xbd920)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #238
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 776604 (0xbd99c)
+    Size        : 720 bytes (0x2d0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #414
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 948360 (0xe7888)
+    Size        : 160 bytes (0xa0)
+    Link        : Section 343 (.symtab)
+    Info        : Section 238 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #239
+
+    Name        : __ARM_grp.stm32f7xx_hal_sd.h.2_0O3100_i3HjtthYjXd_220000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 777324 (0xbdc6c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_sd.h.2_0O3100_i3HjtthYjXd_220000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (240)
+    .debug_line (241)
+    .debug_info (242)
+
+====================================
+
+** Section #240
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 777340 (0xbdc7c)
+    Size        : 3896 bytes (0xf38)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #241
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 781236 (0xbebb4)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #242
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 781356 (0xbec2c)
+    Size        : 3336 bytes (0xd08)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #415
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 948520 (0xe7928)
+    Size        : 144 bytes (0x90)
+    Link        : Section 343 (.symtab)
+    Info        : Section 242 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #243
+
+    Name        : __ARM_grp.stm32f7xx_hal_spdifrx.h.2_4m1100_B9vfbf75J1a_R10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 784692 (0xbf934)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_spdifrx.h.2_4m1100_B9vfbf75J1a_R10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (244)
+    .debug_line (245)
+    .debug_info (246)
+
+====================================
+
+** Section #244
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 784708 (0xbf944)
+    Size        : 4776 bytes (0x12a8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #245
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 789484 (0xc0bec)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #246
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 789608 (0xc0c68)
+    Size        : 1220 bytes (0x4c4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #416
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 948664 (0xe79b8)
+    Size        : 200 bytes (0xc8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 246 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #247
+
+    Name        : __ARM_grp.stm32f7xx_hal_spi.h.2_4u2100_23dnc8DW6ic_R10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 790828 (0xc112c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_spi.h.2_4u2100_23dnc8DW6ic_R10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (248)
+    .debug_line (249)
+    .debug_info (250)
+
+====================================
+
+** Section #248
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 790844 (0xc113c)
+    Size        : 7120 bytes (0x1bd0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #249
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 797964 (0xc2d0c)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #250
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 798084 (0xc2d84)
+    Size        : 1148 bytes (0x47c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #417
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 948864 (0xe7a80)
+    Size        : 200 bytes (0xc8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 250 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #251
+
+    Name        : __ARM_grp.stm32f7xx_hal_tim_ex.h.2_kC5000_pNBuEpmOGV2_q00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 799232 (0xc3200)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_tim_ex.h.2_kC5000_pNBuEpmOGV2_q00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (252)
+    .debug_line (253)
+    .debug_info (254)
+
+====================================
+
+** Section #252
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 799248 (0xc3210)
+    Size        : 8624 bytes (0x21b0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #253
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 807872 (0xc53c0)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #254
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 807996 (0xc543c)
+    Size        : 888 bytes (0x378)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #418
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 949064 (0xe7b48)
+    Size        : 184 bytes (0xb8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 254 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #255
+
+    Name        : __ARM_grp.stm32f7xx_hal_tim.h.2_Ypa100_hpScuYWpugf_i20000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 808884 (0xc57b4)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_tim.h.2_Ypa100_hpScuYWpugf_i20000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (256)
+    .debug_line (257)
+    .debug_info (258)
+
+====================================
+
+** Section #256
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 808900 (0xc57c4)
+    Size        : 22892 bytes (0x596c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #257
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 831792 (0xcb130)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #258
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 831940 (0xcb1c4)
+    Size        : 2052 bytes (0x804)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #419
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 949248 (0xe7c00)
+    Size        : 432 bytes (0x1b0)
+    Link        : Section 343 (.symtab)
+    Info        : Section 258 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #259
+
+    Name        : __ARM_grp.stm32f7xx_hal_uart_ex.h.2_sO2000_knT90mZZOj2_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 833992 (0xcb9c8)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_uart_ex.h.2_sO2000_knT90mZZOj2_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (260)
+    .debug_line (261)
+    .debug_info (262)
+
+====================================
+
+** Section #260
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 834008 (0xcb9d8)
+    Size        : 4724 bytes (0x1274)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #261
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 838732 (0xccc4c)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #262
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 838856 (0xcccc8)
+    Size        : 280 bytes (0x118)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #420
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 949680 (0xe7db0)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 262 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #263
+
+    Name        : __ARM_grp.stm32f7xx_hal_uart.h.2_kG5100_p3XYNYXQ64c_W10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 839136 (0xccde0)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_uart.h.2_kG5100_p3XYNYXQ64c_W10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (264)
+    .debug_line (265)
+    .debug_info (266)
+
+====================================
+
+** Section #264
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 839152 (0xccdf0)
+    Size        : 13456 bytes (0x3490)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #265
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 852608 (0xd0280)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #266
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 852756 (0xd0314)
+    Size        : 1492 bytes (0x5d4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #421
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 949704 (0xe7dc8)
+    Size        : 240 bytes (0xf0)
+    Link        : Section 343 (.symtab)
+    Info        : Section 266 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #267
+
+    Name        : __ARM_grp.stm32f7xx_hal_usart_ex.h.2_kZ0000_lk38sJZEeBc_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 854248 (0xd08e8)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_usart_ex.h.2_kZ0000_lk38sJZEeBc_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (268)
+    .debug_line (269)
+    .debug_info (270)
+
+====================================
+
+** Section #268
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 854264 (0xd08f8)
+    Size        : 972 bytes (0x3cc)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #269
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 855236 (0xd0cc4)
+    Size        : 128 bytes (0x80)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #270
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 855364 (0xd0d44)
+    Size        : 280 bytes (0x118)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #422
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 949944 (0xe7eb8)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 270 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #271
+
+    Name        : __ARM_grp.stm32f7xx_hal_usart.h.2_Iy2100_EAWdV68fLsd_N10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 855644 (0xd0e5c)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_usart.h.2_Iy2100_EAWdV68fLsd_N10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (272)
+    .debug_line (273)
+    .debug_info (274)
+
+====================================
+
+** Section #272
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 855660 (0xd0e6c)
+    Size        : 7204 bytes (0x1c24)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #273
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 862864 (0xd2a90)
+    Size        : 152 bytes (0x98)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #274
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 863016 (0xd2b28)
+    Size        : 1212 bytes (0x4bc)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #423
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 949968 (0xe7ed0)
+    Size        : 168 bytes (0xa8)
+    Link        : Section 343 (.symtab)
+    Info        : Section 274 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #275
+
+    Name        : __ARM_grp.stm32f7xx_hal_irda_ex.h.2_IP1000_GwwolZ8zYn7_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 864228 (0xd2fe4)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_irda_ex.h.2_IP1000_GwwolZ8zYn7_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (276)
+    .debug_line (277)
+    .debug_info (278)
+
+====================================
+
+** Section #276
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 864244 (0xd2ff4)
+    Size        : 2716 bytes (0xa9c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #277
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 866960 (0xd3a90)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #278
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 867084 (0xd3b0c)
+    Size        : 280 bytes (0x118)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #424
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 950136 (0xe7f78)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 278 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #279
+
+    Name        : __ARM_grp.stm32f7xx_hal_irda.h.2_o_1100_XOhO04P9_J9_K10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 867364 (0xd3c24)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_irda.h.2_o_1100_XOhO04P9_J9_K10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (280)
+    .debug_line (281)
+    .debug_info (282)
+
+====================================
+
+** Section #280
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 867380 (0xd3c34)
+    Size        : 6076 bytes (0x17bc)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #281
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 873456 (0xd53f0)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #282
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 873604 (0xd5484)
+    Size        : 1152 bytes (0x480)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #425
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 950160 (0xe7f90)
+    Size        : 144 bytes (0x90)
+    Link        : Section 343 (.symtab)
+    Info        : Section 282 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #283
+
+    Name        : __ARM_grp.stm32f7xx_hal_smartcard_ex.h.2_UK1000_UkUwiv9UvW2_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 874756 (0xd5904)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_smartcard_ex.h.2_UK1000_UkUwiv9UvW2_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (284)
+    .debug_line (285)
+    .debug_info (286)
+
+====================================
+
+** Section #284
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 874772 (0xd5914)
+    Size        : 2552 bytes (0x9f8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #285
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 877324 (0xd630c)
+    Size        : 132 bytes (0x84)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #286
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 877456 (0xd6390)
+    Size        : 284 bytes (0x11c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #426
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 950304 (0xe8020)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 286 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #287
+
+    Name        : __ARM_grp.stm32f7xx_hal_smartcard.h.2_w94100_O9faRddsNf8_020000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 877740 (0xd64ac)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_smartcard.h.2_w94100_O9faRddsNf8_020000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (288)
+    .debug_line (289)
+    .debug_info (290)
+
+====================================
+
+** Section #288
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 877756 (0xd64bc)
+    Size        : 10228 bytes (0x27f4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #289
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 887984 (0xd8cb0)
+    Size        : 160 bytes (0xa0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #290
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 888144 (0xd8d50)
+    Size        : 1728 bytes (0x6c0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #427
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 950328 (0xe8038)
+    Size        : 288 bytes (0x120)
+    Link        : Section 343 (.symtab)
+    Info        : Section 290 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #291
+
+    Name        : __ARM_grp.stm32f7xx_hal_wwdg.h.2_sTX000_57gUOrj4sNe_d10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 889872 (0xd9410)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_wwdg.h.2_sTX000_57gUOrj4sNe_d10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (292)
+    .debug_line (293)
+    .debug_info (294)
+
+====================================
+
+** Section #292
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 889888 (0xd9420)
+    Size        : 1484 bytes (0x5cc)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #293
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 891372 (0xd99ec)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #294
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 891496 (0xd9a68)
+    Size        : 440 bytes (0x1b8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #428
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 950616 (0xe8158)
+    Size        : 64 bytes (0x40)
+    Link        : Section 343 (.symtab)
+    Info        : Section 294 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #295
+
+    Name        : __ARM_grp.stm32f7xx_ll_usb.h.2_MO2000_K_sR9CwNEYd_K00000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 891936 (0xd9c20)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_ll_usb.h.2_MO2000_K_sR9CwNEYd_K00000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (296)
+    .debug_line (297)
+    .debug_info (298)
+
+====================================
+
+** Section #296
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 891952 (0xd9c30)
+    Size        : 2548 bytes (0x9f4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #297
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 894500 (0xda624)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #298
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 894620 (0xda69c)
+    Size        : 1556 bytes (0x614)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #429
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 950680 (0xe8198)
+    Size        : 344 bytes (0x158)
+    Link        : Section 343 (.symtab)
+    Info        : Section 298 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #299
+
+    Name        : __ARM_grp.stm32f7xx_hal_pcd_ex.h.2_cx0000_exuvwxHCX03_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 896176 (0xdacb0)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_pcd_ex.h.2_cx0000_exuvwxHCX03_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (300)
+    .debug_line (301)
+    .debug_info (302)
+
+====================================
+
+** Section #300
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 896192 (0xdacc0)
+    Size        : 40 bytes (0x28)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #301
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 896232 (0xdace8)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #302
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 896356 (0xdad64)
+    Size        : 352 bytes (0x160)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #430
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951024 (0xe82f0)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 302 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #303
+
+    Name        : __ARM_grp.stm32f7xx_hal_pcd.h.2_co_000_WDNCADEqjz5_Z10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 896708 (0xdaec4)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_pcd.h.2_co_000_WDNCADEqjz5_Z10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (304)
+    .debug_line (305)
+    .debug_info (306)
+
+====================================
+
+** Section #304
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 896724 (0xdaed4)
+    Size        : 3584 bytes (0xe00)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #305
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 900308 (0xdbcd4)
+    Size        : 148 bytes (0x94)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #306
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 900456 (0xdbd68)
+    Size        : 808 bytes (0x328)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #431
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951048 (0xe8308)
+    Size        : 80 bytes (0x50)
+    Link        : Section 343 (.symtab)
+    Info        : Section 306 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #307
+
+    Name        : __ARM_grp.stm32f7xx_hal_hcd.h.2_Q9Z000_BjPo$GAT_P1_Y10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 901264 (0xdc090)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_hcd.h.2_Q9Z000_BjPo$GAT_P1_Y10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (308)
+    .debug_line (309)
+    .debug_info (310)
+
+====================================
+
+** Section #308
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 901280 (0xdc0a0)
+    Size        : 1164 bytes (0x48c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #309
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 902444 (0xdc52c)
+    Size        : 120 bytes (0x78)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #310
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 902564 (0xdc5a4)
+    Size        : 688 bytes (0x2b0)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #432
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951128 (0xe8358)
+    Size        : 72 bytes (0x48)
+    Link        : Section 343 (.symtab)
+    Info        : Section 310 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #311
+
+    Name        : __ARM_grp.stm32f7xx_hal_dfsdm.h.2_4z3100_OAhVPkgGP1a_a20000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 903252 (0xdc854)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_dfsdm.h.2_4z3100_OAhVPkgGP1a_a20000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (312)
+    .debug_line (313)
+    .debug_info (314)
+
+====================================
+
+** Section #312
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 903268 (0xdc864)
+    Size        : 8116 bytes (0x1fb4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #313
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 911384 (0xde818)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #314
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 911508 (0xde894)
+    Size        : 2188 bytes (0x88c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #433
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951200 (0xe83a0)
+    Size        : 344 bytes (0x158)
+    Link        : Section 343 (.symtab)
+    Info        : Section 314 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #315
+
+    Name        : __ARM_grp.stm32f7xx_hal_dsi.h.2_0v0000_NaicQu0zaRe_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 913696 (0xdf120)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_dsi.h.2_0v0000_NaicQu0zaRe_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (316)
+    .debug_line (317)
+    .debug_info (318)
+
+====================================
+
+** Section #316
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 913712 (0xdf130)
+    Size        : 32 bytes (0x20)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #317
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 913744 (0xdf150)
+    Size        : 100 bytes (0x64)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #318
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 913844 (0xdf1b4)
+    Size        : 276 bytes (0x114)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #434
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951544 (0xe84f8)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 318 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #319
+
+    Name        : __ARM_grp.stm32f7xx_hal_jpeg.h.2_0n0100_zsL$j8Jxlfd_I10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 914120 (0xdf2c8)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_jpeg.h.2_0n0100_zsL$j8Jxlfd_I10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (320)
+    .debug_line (321)
+    .debug_info (322)
+
+====================================
+
+** Section #320
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 914136 (0xdf2d8)
+    Size        : 2848 bytes (0xb20)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #321
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 916984 (0xdfdf8)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #322
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 917108 (0xdfe74)
+    Size        : 1040 bytes (0x410)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #435
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951568 (0xe8510)
+    Size        : 128 bytes (0x80)
+    Link        : Section 343 (.symtab)
+    Info        : Section 322 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #323
+
+    Name        : __ARM_grp.stm32f7xx_hal_mdios.h.2_4e_000_04RvB$CKy66_f10000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 918148 (0xe0284)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_mdios.h.2_4e_000_04RvB$CKy66_f10000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (324)
+    .debug_line (325)
+    .debug_info (326)
+
+====================================
+
+** Section #324
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 918164 (0xe0294)
+    Size        : 5508 bytes (0x1584)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #325
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 923672 (0xe1818)
+    Size        : 124 bytes (0x7c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #326
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 923796 (0xe1894)
+    Size        : 584 bytes (0x248)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #436
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951696 (0xe8590)
+    Size        : 56 bytes (0x38)
+    Link        : Section 343 (.symtab)
+    Info        : Section 326 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #327
+
+    Name        : __ARM_grp.stm32f7xx_hal_conf.h.2_Qu2000_ovbBubWaf1e_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 924380 (0xe1adc)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.stm32f7xx_hal_conf.h.2_Qu2000_ovbBubWaf1e_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (328)
+    .debug_line (329)
+    .debug_info (330)
+
+====================================
+
+** Section #328
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 924396 (0xe1aec)
+    Size        : 3072 bytes (0xc00)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #329
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 927468 (0xe26ec)
+    Size        : 1164 bytes (0x48c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #330
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 928632 (0xe2b78)
+    Size        : 248 bytes (0xf8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #437
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951752 (0xe85c8)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 330 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #331
+
+    Name        : __ARM_grp.bsp_led.h.2_Uh1000_2f8gAcSFco7_300000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 928880 (0xe2c70)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.bsp_led.h.2_Uh1000_2f8gAcSFco7_300000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (332)
+    .debug_line (333)
+    .debug_info (334)
+
+====================================
+
+** Section #332
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 928896 (0xe2c80)
+    Size        : 1644 bytes (0x66c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #333
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 930540 (0xe32ec)
+    Size        : 132 bytes (0x84)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #334
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 930672 (0xe3370)
+    Size        : 244 bytes (0xf4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #438
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951776 (0xe85e0)
+    Size        : 24 bytes (0x18)
+    Link        : Section 343 (.symtab)
+    Info        : Section 334 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #335
+
+    Name        : __ARM_grp.bsp_led.c.2_ce1000_8TrENnCvU$7_700000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 930916 (0xe3464)
+    Size        : 16 bytes (0x10)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp.bsp_led.c.2_ce1000_8TrENnCvU$7_700000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_macinfo (336)
+    .debug_line (337)
+    .debug_info (338)
+
+====================================
+
+** Section #336
+
+    Name        : .debug_macinfo
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 930932 (0xe3474)
+    Size        : 12 bytes (0xc)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #337
+
+    Name        : .debug_line
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 930944 (0xe3480)
+    Size        : 92 bytes (0x5c)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #338
+
+    Name        : .debug_info
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 931036 (0xe34dc)
+    Size        : 248 bytes (0xf8)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #439
+
+    Name        : .rel.debug_info
+    Type        : SHT_REL (0x00000009)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951800 (0xe85f8)
+    Size        : 32 bytes (0x20)
+    Link        : Section 343 (.symtab)
+    Info        : Section 338 (.debug_info)
+    Alignment   : 4
+    Entry Size  : 8
+
+
+====================================
+
+** Section #339
+
+    Name        : __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000
+    Type        : SHT_GROUP (0x00000011)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 931284 (0xe35d4)
+    Size        : 8 bytes (0x8)
+    Link        : Section 343 (.symtab)
+    Info        : Group Signature symbol __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000
+    Alignment   : 4
+    Entry Size  : 4
+
+    Group Flags
+    GRP_COMDAT
+    Group members (section)
+    .debug_abbrev (340)
+
+====================================
+
+** Section #340
+
+    Name        : .debug_abbrev
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : SHF_GROUP (0x00000200)
+    Addr        : 0x00000000
+    File Offset : 931292 (0xe35dc)
+    Size        : 1444 bytes (0x5a4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #341
+
+    Name        : .arm_vfe_header
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 932736 (0xe3b80)
+    Size        : 4 bytes (0x4)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 4
+    Entry Size  : 0
+
+
+====================================
+
+** Section #342
+
+    Name        : .comment
+    Type        : SHT_PROGBITS (0x00000001)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 932740 (0xe3b84)
+    Size        : 1284 bytes (0x504)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+    Component: ARM Compiler 5.06 update 3 (build 300) Tool: armlink [4d35c9]
+    armlink --partial --no_add_relocs_to_undefined --no_generate_mapping_symbols --diag_suppress=9931,9931,6642 --cpu=Cortex-M7.fp.dp --fpu=FPv5_D16 --output=..\..\output\bsp_led.o --vfemode=force
+
+    Input Comments:
+    
+    p340-3
+    
+    Component: ARM Compiler 5.06 update 3 (build 300) Tool: armasm [4d35c6]
+    armasm --debug --diag_suppress=9931,9931,1602,1073 --cpu=Cortex-M7.fp.dp --fpu=FPv5_D16 --apcs=/interwork/interwork --divide 
+    bsp_led.o
+    
+    Component: ARM Compiler 5.06 update 3 (build 300) Tool: ArmCC [4d35f0]
+    ArmCC --split_sections --debug -c -o..\..\output\bsp_led.o --depend=..\..\output\bsp_led.d --cpu=Cortex-M7.fp.dp --apcs=interwork --diag_suppress=9931 -I..\..\Libraries\CMSIS\Include -I..\..\Libraries\CMSIS\Device\ST\STM32F7xx\Include -I..\..\Libraries\STM32F7xx_HAL_Driver\Inc -I..\..\User -I"H:\Git_Project\f767_code\1-HAL库例程 - 副本\5-GPIO输出—使用固件库点亮LED灯-MDK\Project\RVMDK（uv5）\RTE" -I"D:\Program Files (x86)\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include" -I"D:\Program Files (x86)\Keil_v5\ARM\CMSIS\Include" -D__MICROLIB -D__UVISION_VERSION=521 -DSTM32F767xx -DUSE_HAL_DRIVER -DSTM32F767xx --omf_browse=..\..\output\bsp_led.crf ..\..\User\led\bsp_led.c
+    
+    
+    
+
+====================================
+
+** Section #343
+
+    Name        : .symtab
+    Type        : SHT_SYMTAB (0x00000002)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 934024 (0xe4088)
+    Size        : 5808 bytes (0x16b0)
+    Link        : Section 441 (.strtab)
+    Info        : Last local symbol no = 37
+    Alignment   : 4
+    Entry Size  : 16
+
+
+====================================
+
+** Section #440
+
+    Name        : .shstrtab
+    Type        : SHT_STRTAB (0x00000003)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 951832 (0xe8618)
+    Size        : 4849 bytes (0x12f1)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #441
+
+    Name        : .strtab
+    Type        : SHT_STRTAB (0x00000003)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 956681 (0xe9909)
+    Size        : 22503 bytes (0x57e7)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+
+====================================
+
+** Section #442
+
+    Name        : .ARM.attributes
+    Type        : SHT_ARM_ATTRIBUTES (0x70000003)
+    Flags       : None (0x00000000)
+    Addr        : 0x00000000
+    File Offset : 979184 (0xef0f0)
+    Size        : 128 bytes (0x80)
+    Link        : SHN_UNDEF
+    Info        : 0
+    Alignment   : 1
+    Entry Size  : 0
+
+    'aeabi' file build attributes:
+    0x000000:   04 43 6f 72 74 65 78 2d 4d 37 2e 66 70 2e 64 70    .Cortex-M7.fp.dp
+    0x000010:   00 05 43 6f 72 74 65 78 2d 4d 37 00 06 0d 07 4d    ..Cortex-M7....M
+    0x000020:   09 02 0a 08 11 01 14 02 17 01 18 01 19 01 1c 01    ................
+    0x000030:   22 01 24 01                                        ".$.
+        Tag_CPU_raw_name = "Cortex-M7.fp.dp"
+        Tag_CPU_name = "Cortex-M7"
+        Tag_CPU_arch = ARM v7E-M (=13)
+        Tag_CPU_arch_profile = The microcontroller profile 'M' (e.g. for Cortex M3) (=77)
+        Tag_THUMB_ISA_use = Thumb2 instructions were permitted (implies Thumb instructions permitted) (=2)
+        Tag_VFP_arch = Use of the ARM v8-A FP ISA was permitted, but only citing registers D0-D15, S0-S31 (=8)
+        Tag_ABI_PCS_GOT_use = Data are imported directly (=1)
+        Tag_ABI_FP_denormal = This code was permitted to require that the sign of a flushed-to-zero number be preserved in the sign of 0 (=2)
+        Tag_ABI_FP_number_model = This code was permitted to use only IEEE 754 format FP numbers (=1)
+        Tag_ABI_align8_needed = Code was permitted to depend on the 8-byte alignment of 8-byte data items (=1)
+        Tag_ABI_align8_preserved = Code was required to preserve 8-byte alignment of 8-byte data objects (=1)
+        Tag_ABI_VFP_args = FP parameter/result passing conforms to the VFP variant of the AAPCS (=1)
+        Tag_CPU_unaligned_access = The producer was permitted to generate architecture v6-style unaligned data accesses (=1)
+        Tag_VFP_HP_extension = The producer was permitted to use the VFPv3/Advanced SIMD optional half-precision extension (=1)
+
+    'aeabi' section build attributes for sections:
+        .rev16_text (#1)
+        .revsh_text (#2)
+        .rrx_text (#3)
+    0x000000:   18 00 1e 04                                        ....
+        Tag_ABI_align8_needed = Code was not permitted to depend on the alignment of 8-byte data (=0)
+        Tag_ABI_optimization_goals = Optimized aggressively for small size, speed and debug illusion sacrificed (=4)
+
+    'aeabi' section build attributes for sections:
+        i.LED_GPIO_Config (#4)
+    0x000000:   43 32 2e 31 30 00 12 02 1a 01 1e 03                C2.10.......
+        Tag_conformance = "2.10"
+        Tag_ABI_PCS_wchar_t = Size of wchar_t is 2 (=2)
+        Tag_ABI_enum_size = Enum values occupy the smallest container big enough to hold all values (=1)
+        Tag_ABI_optimization_goals = Optimized for small size, but speed and debugging illusion preserved (=3)
+
+    'ARM' file build attributes:
+    0x000000:   12 01 14 09                                        ....
+
+    'ARM' section build attributes for sections:
+        .rev16_text (#1)
+        .revsh_text (#2)
+        .rrx_text (#3)
+    0x000000:   0e 01                                              ..
+
+
+====================================
+

@@ -15,7 +15,8 @@
   ******************************************************************************
   */
 #include "./sd_card/bsp_sdio_sd.h"
-#include "./led/bsp_led.h"   
+#include "./led/bsp_led.h" 
+#include "./usart/bsp_debug_usart.h"
 
 SD_HandleTypeDef uSdHandle;
 

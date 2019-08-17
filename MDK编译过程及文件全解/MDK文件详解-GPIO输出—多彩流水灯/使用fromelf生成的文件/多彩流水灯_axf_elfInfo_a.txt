@@ -1,0 +1,122 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: ¶à²ÊÁ÷Ë®µÆ.axf
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_EXEC (Executable) (2)
+    Machine: EM_ARM (ARM)
+
+    Image Entry point: 0x080001f9
+    Flags: EF_ARM_HASENTRY + 0x00000400 (0x05000402)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Built with
+    Component: ARM Compiler 5.06 update 3 (build 300) Tool: armasm [4d35c6]
+    Component: ARM Compiler 5.06 update 3 (build 300) Tool: armlink [4d35c9]
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 32 bytes (0x20)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 1
+    Section header entries: 16
+
+    Program header offset: 444672 (0x0006c900)
+    Section header offset: 444704 (0x0006c920)
+
+    Section header string table index: 15
+
+========================================================================
+
+** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
+    Size : 4428 bytes (3404 bytes in file)
+    Virtual address: 0x08000000 (Alignment 8)
+
+
+========================================================================
+
+** Section #1 'ER_IROM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
+    Size   : 3396 bytes (alignment 4)
+    Address: 0x08000000
+
+
+** Section #2 'RW_IRAM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 8 bytes (alignment 4)
+    Address: 0x20020000
+
+
+** Section #3 'RW_IRAM1' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 1024 bytes (alignment 8)
+    Address: 0x20020008
+
+
+** Section #4 '.debug_abbrev' (SHT_PROGBITS)
+    Size   : 1476 bytes
+
+
+** Section #5 '.debug_frame' (SHT_PROGBITS)
+    Size   : 1620 bytes
+
+
+** Section #6 '.debug_info' (SHT_PROGBITS)
+    Size   : 35380 bytes
+
+
+** Section #7 '.debug_line' (SHT_PROGBITS)
+    Size   : 7100 bytes
+
+
+** Section #8 '.debug_loc' (SHT_PROGBITS)
+    Size   : 1708 bytes
+
+
+** Section #9 '.debug_macinfo' (SHT_PROGBITS)
+    Size   : 366912 bytes
+
+
+** Section #10 '.debug_pubnames' (SHT_PROGBITS)
+    Size   : 1091 bytes
+
+
+** Section #11 '.symtab' (SHT_SYMTAB)
+    Size   : 4448 bytes (alignment 4)
+    String table #12 '.strtab'
+    Last local symbol no. 119
+
+
+** Section #12 '.strtab' (SHT_STRTAB)
+    Size   : 5240 bytes
+
+
+** Section #13 '.note' (SHT_NOTE)
+    Size   : 28 bytes (alignment 4)
+
+
+** Section #14 '.comment' (SHT_PROGBITS)
+    Size   : 16056 bytes
+
+
+** Section #15 '.shstrtab' (SHT_STRTAB)
+    Size   : 156 bytes
+
+
+address     size       variable name                            type
+0x20020004  0x4        uwTick                                   volatile uint32_t
+
+address     size       variable name                            type
+0x08000d14  0x10       AHBPrescTable                            array[16] of const uint8_t
+
+address     size       variable name                            type
+0x00000000  0x8        APBPrescTable                            array[8] of const uint8_t
+
+address     size       variable name                            type
+0x20020000  0x4        SystemCoreClock                          uint32_t
+

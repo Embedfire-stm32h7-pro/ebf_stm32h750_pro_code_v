@@ -1,0 +1,8 @@
+
+========================================================================
+
+** Object/Image Component Sizes
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       182         12          0          0          0     931219   bsp_led.o

@@ -52,7 +52,7 @@ static void CPU_CACHE_Enable(void)
   SCB_EnableDCache();
 
   //将Cache设置write-through方式
-  //SCB->CACR|=1<<2;
+  SCB->CACR|=1<<2;
 }
 /**
   * @brief  主函数
@@ -100,8 +100,8 @@ int main(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)

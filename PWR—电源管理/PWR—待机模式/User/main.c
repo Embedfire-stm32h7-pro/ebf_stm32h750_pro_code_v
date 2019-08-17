@@ -3,7 +3,7 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2016-xx-xx
+  * @date    2019-xx-xx
   * @brief   野火H750 PWR—待机模式
   ******************************************************************************
   * @attention
@@ -103,7 +103,6 @@ static uint8_t KEY2_LongPress(void)
 		{
 			downCnt++;	//记录按下次数
 			upCnt=0;	//清除按键释放记录
-			printf("downCnt = %d\n",downCnt);
 			if(downCnt>=50)	//按下时间足够
 			{
 				return 1; 		//检测到按键被时间长按下
@@ -124,8 +123,8 @@ static uint8_t KEY2_LongPress(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)

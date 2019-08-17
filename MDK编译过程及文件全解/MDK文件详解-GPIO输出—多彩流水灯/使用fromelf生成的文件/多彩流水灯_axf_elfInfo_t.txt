@@ -1,0 +1,368 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: ¶à²ÊÁ÷Ë®µÆ.axf
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_EXEC (Executable) (2)
+    Machine: EM_ARM (ARM)
+
+    Image Entry point: 0x080001f9
+    Flags: EF_ARM_HASENTRY + 0x00000400 (0x05000402)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Built with
+    Component: ARM Compiler 5.06 update 3 (build 300) Tool: armasm [4d35c6]
+    Component: ARM Compiler 5.06 update 3 (build 300) Tool: armlink [4d35c9]
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 32 bytes (0x20)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 1
+    Section header entries: 16
+
+    Program header offset: 444672 (0x0006c900)
+    Section header offset: 444704 (0x0006c920)
+
+    Section header string table index: 15
+
+========================================================================
+
+** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
+    Size : 4428 bytes (3404 bytes in file)
+    Virtual address: 0x08000000 (Alignment 8)
+
+
+========================================================================
+
+** Section #1 'ER_IROM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
+    Size   : 3396 bytes (alignment 4)
+    Address: 0x08000000
+
+
+** Section #2 'RW_IRAM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 8 bytes (alignment 4)
+    Address: 0x20020000
+
+
+** Section #3 'RW_IRAM1' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 1024 bytes (alignment 8)
+    Address: 0x20020008
+
+
+** Section #4 '.debug_abbrev' (SHT_PROGBITS)
+    Size   : 1476 bytes
+
+
+** Section #5 '.debug_frame' (SHT_PROGBITS)
+    Size   : 1620 bytes
+
+
+** Section #6 '.debug_info' (SHT_PROGBITS)
+    Size   : 35380 bytes
+
+
+** Section #7 '.debug_line' (SHT_PROGBITS)
+    Size   : 7100 bytes
+
+
+** Section #8 '.debug_loc' (SHT_PROGBITS)
+    Size   : 1708 bytes
+
+
+** Section #9 '.debug_macinfo' (SHT_PROGBITS)
+    Size   : 366912 bytes
+
+
+** Section #10 '.debug_pubnames' (SHT_PROGBITS)
+    Size   : 1091 bytes
+
+
+** Section #11 '.symtab' (SHT_SYMTAB)
+    Size   : 4448 bytes (alignment 4)
+    String table #12 '.strtab'
+    Last local symbol no. 119
+
+
+** Section #12 '.strtab' (SHT_STRTAB)
+    Size   : 5240 bytes
+
+            #  Offset String
+        ====================================
+
+            1      1: $d.realdata
+            2     13: $t
+            3     16: $d
+            4     19: ..\..\Libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\arm\startup_stm32f767xx.s
+            5    104: STACK
+            6    110: RESET
+            7    116: .text
+            8    122: $v0
+            9    126: ..\\..\\Libraries\\CMSIS\\Device\\ST\\STM32F7xx\\Source\\Templates\\system_stm32f7xx.c
+           10    213: ..\..\Libraries\CMSIS\Device\ST\STM32F7xx\Source\Templates\system_stm32f7xx.c
+           11    291: i.SystemInit
+           12    304: .constdata
+           13    315: .data
+           14    321: ..\\..\\Libraries\\STM32F7xx_HAL_Driver\\Src\\stm32f7xx_hal.c
+           15    383: ..\..\Libraries\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal.c
+           16    440: i.HAL_Delay
+           17    452: i.HAL_GetTick
+           18    466: i.HAL_IncTick
+           19    480: i.HAL_InitTick
+           20    495: ..\\..\\Libraries\\STM32F7xx_HAL_Driver\\Src\\stm32f7xx_hal_cortex.c
+           21    564: ..\..\Libraries\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_cortex.c
+           22    628: i.HAL_NVIC_SetPriority
+           23    651: i.HAL_SYSTICK_Config
+           24    672: i.NVIC_SetPriority
+           25    691: NVIC_SetPriority
+           26    708: ..\\..\\Libraries\\STM32F7xx_HAL_Driver\\Src\\stm32f7xx_hal_gpio.c
+           27    775: ..\..\Libraries\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_gpio.c
+           28    837: i.HAL_GPIO_Init
+           29    853: i.HAL_GPIO_WritePin
+           30    873: ..\\..\\Libraries\\STM32F7xx_HAL_Driver\\Src\\stm32f7xx_hal_pwr.c
+           31    939: ..\..\Libraries\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr.c
+           32   1000: ..\\..\\Libraries\\STM32F7xx_HAL_Driver\\Src\\stm32f7xx_hal_pwr_ex.c
+           33   1069: ..\..\Libraries\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr_ex.c
+           34   1133: i.HAL_PWREx_EnableOverDrive
+           35   1161: ..\\..\\Libraries\\STM32F7xx_HAL_Driver\\Src\\stm32f7xx_hal_rcc.c
+           36   1227: ..\..\Libraries\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc.c
+           37   1288: i.HAL_RCC_ClockConfig
+           38   1310: i.HAL_RCC_GetSysClockFreq
+           39   1336: i.HAL_RCC_OscConfig
+           40   1356: ..\\..\\Libraries\\STM32F7xx_HAL_Driver\\Src\\stm32f7xx_hal_rcc_ex.c
+           41   1425: ..\..\Libraries\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc_ex.c
+           42   1489: ..\\..\\User\\main.c
+           43   1510: ..\..\User\main.c
+           44   1528: i.main
+           45   1535: ..\\..\\User\\stm32f7xx_it.c
+           46   1564: ..\..\User\stm32f7xx_it.c
+           47   1590: i.BusFault_Handler
+           48   1609: i.DebugMon_Handler
+           49   1628: i.HardFault_Handler
+           50   1648: i.MemManage_Handler
+           51   1668: i.NMI_Handler
+           52   1682: i.PendSV_Handler
+           53   1699: i.SVC_Handler
+           54   1713: i.SysTick_Handler
+           55   1731: i.UsageFault_Handler
+           56   1752: ..\\..\\User\\led\\bsp_led.c
+           57   1781: ..\..\User\led\bsp_led.c
+           58   1806: i.LED_GPIO_Config
+           59   1824: ../clib/microlib/init/entry.s
+           60   1854: .ARM.Collect$$$$00000000
+           61   1879: dc.s
+           62   1884: .ARM.Collect$$$$00000001
+           63   1909: .ARM.Collect$$$$00002712
+           64   1934: __lit__00000000
+           65   1950: .ARM.Collect$$$$00000004
+           66   1975: .ARM.Collect$$$$00000008
+           67   2000: .ARM.Collect$$$$0000000A
+           68   2025: .ARM.Collect$$$$0000000B
+           69   2050: .ARM.Collect$$$$0000000D
+           70   2075: .ARM.Collect$$$$0000000F
+           71   2100: init.s
+           72   2107: handlers.s
+           73   2118: i.__scatterload_copy
+           74   2139: i.__scatterload_null
+           75   2160: i.__scatterload_zeroinit
+           76   2185: BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPv5_D16$PE$PLD8$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2
+           77   2353: __ARM_use_no_argv
+           78   2371: __Vectors_Size
+           79   2386: __Vectors
+           80   2396: __Vectors_End
+           81   2410: __main
+           82   2417: _main_stk
+           83   2427: _main_scatterload
+           84   2445: __main_after_scatterload
+           85   2470: _main_clock
+           86   2482: _main_cpp_init
+           87   2497: _main_init
+           88   2508: __rt_final_cpp
+           89   2523: __rt_final_exit
+           90   2539: Reset_Handler
+           91   2553: ADC_IRQHandler
+           92   2568: CAN1_RX0_IRQHandler
+           93   2588: CAN1_RX1_IRQHandler
+           94   2608: CAN1_SCE_IRQHandler
+           95   2628: CAN1_TX_IRQHandler
+           96   2647: CAN2_RX0_IRQHandler
+           97   2667: CAN2_RX1_IRQHandler
+           98   2687: CAN2_SCE_IRQHandler
+           99   2707: CAN2_TX_IRQHandler
+          100   2726: CAN3_RX0_IRQHandler
+          101   2746: CAN3_RX1_IRQHandler
+          102   2766: CAN3_SCE_IRQHandler
+          103   2786: CAN3_TX_IRQHandler
+          104   2805: CEC_IRQHandler
+          105   2820: DCMI_IRQHandler
+          106   2836: DFSDM1_FLT0_IRQHandler
+          107   2859: DFSDM1_FLT1_IRQHandler
+          108   2882: DFSDM1_FLT2_IRQHandler
+          109   2905: DFSDM1_FLT3_IRQHandler
+          110   2928: DMA1_Stream0_IRQHandler
+          111   2952: DMA1_Stream1_IRQHandler
+          112   2976: DMA1_Stream2_IRQHandler
+          113   3000: DMA1_Stream3_IRQHandler
+          114   3024: DMA1_Stream4_IRQHandler
+          115   3048: DMA1_Stream5_IRQHandler
+          116   3072: DMA1_Stream6_IRQHandler
+          117   3096: DMA1_Stream7_IRQHandler
+          118   3120: DMA2D_IRQHandler
+          119   3137: DMA2_Stream0_IRQHandler
+          120   3161: DMA2_Stream1_IRQHandler
+          121   3185: DMA2_Stream2_IRQHandler
+          122   3209: DMA2_Stream3_IRQHandler
+          123   3233: DMA2_Stream4_IRQHandler
+          124   3257: DMA2_Stream5_IRQHandler
+          125   3281: DMA2_Stream6_IRQHandler
+          126   3305: DMA2_Stream7_IRQHandler
+          127   3329: ETH_IRQHandler
+          128   3344: ETH_WKUP_IRQHandler
+          129   3364: EXTI0_IRQHandler
+          130   3381: EXTI15_10_IRQHandler
+          131   3402: EXTI1_IRQHandler
+          132   3419: EXTI2_IRQHandler
+          133   3436: EXTI3_IRQHandler
+          134   3453: EXTI4_IRQHandler
+          135   3470: EXTI9_5_IRQHandler
+          136   3489: FLASH_IRQHandler
+          137   3506: FMC_IRQHandler
+          138   3521: FPU_IRQHandler
+          139   3536: I2C1_ER_IRQHandler
+          140   3555: I2C1_EV_IRQHandler
+          141   3574: I2C2_ER_IRQHandler
+          142   3593: I2C2_EV_IRQHandler
+          143   3612: I2C3_ER_IRQHandler
+          144   3631: I2C3_EV_IRQHandler
+          145   3650: I2C4_ER_IRQHandler
+          146   3669: I2C4_EV_IRQHandler
+          147   3688: JPEG_IRQHandler
+          148   3704: LPTIM1_IRQHandler
+          149   3722: LTDC_ER_IRQHandler
+          150   3741: LTDC_IRQHandler
+          151   3757: MDIOS_IRQHandler
+          152   3774: OTG_FS_IRQHandler
+          153   3792: OTG_FS_WKUP_IRQHandler
+          154   3815: OTG_HS_EP1_IN_IRQHandler
+          155   3840: OTG_HS_EP1_OUT_IRQHandler
+          156   3866: OTG_HS_IRQHandler
+          157   3884: OTG_HS_WKUP_IRQHandler
+          158   3907: PVD_IRQHandler
+          159   3922: QUADSPI_IRQHandler
+          160   3941: RCC_IRQHandler
+          161   3956: RNG_IRQHandler
+          162   3971: RTC_Alarm_IRQHandler
+          163   3992: RTC_WKUP_IRQHandler
+          164   4012: SAI1_IRQHandler
+          165   4028: SAI2_IRQHandler
+          166   4044: SDMMC1_IRQHandler
+          167   4062: SDMMC2_IRQHandler
+          168   4080: SPDIF_RX_IRQHandler
+          169   4100: SPI1_IRQHandler
+          170   4116: SPI2_IRQHandler
+          171   4132: SPI3_IRQHandler
+          172   4148: SPI4_IRQHandler
+          173   4164: SPI5_IRQHandler
+          174   4180: SPI6_IRQHandler
+          175   4196: TAMP_STAMP_IRQHandler
+          176   4218: TIM1_BRK_TIM9_IRQHandler
+          177   4243: TIM1_CC_IRQHandler
+          178   4262: TIM1_TRG_COM_TIM11_IRQHandler
+          179   4292: TIM1_UP_TIM10_IRQHandler
+          180   4317: TIM2_IRQHandler
+          181   4333: TIM3_IRQHandler
+          182   4349: TIM4_IRQHandler
+          183   4365: TIM5_IRQHandler
+          184   4381: TIM6_DAC_IRQHandler
+          185   4401: TIM7_IRQHandler
+          186   4417: TIM8_BRK_TIM12_IRQHandler
+          187   4443: TIM8_CC_IRQHandler
+          188   4462: TIM8_TRG_COM_TIM14_IRQHandler
+          189   4492: TIM8_UP_TIM13_IRQHandler
+          190   4517: UART4_IRQHandler
+          191   4534: UART5_IRQHandler
+          192   4551: UART7_IRQHandler
+          193   4568: UART8_IRQHandler
+          194   4585: USART1_IRQHandler
+          195   4603: USART2_IRQHandler
+          196   4621: USART3_IRQHandler
+          197   4639: USART6_IRQHandler
+          198   4657: WWDG_IRQHandler
+          199   4673: __scatterload
+          200   4687: __scatterload_rt2
+          201   4705: BusFault_Handler
+          202   4722: DebugMon_Handler
+          203   4739: HAL_Delay
+          204   4749: HAL_GPIO_Init
+          205   4763: HAL_GPIO_WritePin
+          206   4781: HAL_GetTick
+          207   4793: HAL_IncTick
+          208   4805: HAL_InitTick
+          209   4818: HAL_NVIC_SetPriority
+          210   4839: HAL_PWREx_EnableOverDrive
+          211   4865: HAL_RCC_ClockConfig
+          212   4885: HAL_RCC_GetSysClockFreq
+          213   4909: HAL_RCC_OscConfig
+          214   4927: HAL_SYSTICK_Config
+          215   4946: HardFault_Handler
+          216   4964: LED_GPIO_Config
+          217   4980: MemManage_Handler
+          218   4998: NMI_Handler
+          219   5010: PendSV_Handler
+          220   5025: SVC_Handler
+          221   5037: SysTick_Handler
+          222   5053: SystemInit
+          223   5064: UsageFault_Handler
+          224   5083: __scatterload_copy
+          225   5102: __scatterload_null
+          226   5121: __scatterload_zeroinit
+          227   5144: main
+          228   5149: AHBPrescTable
+          229   5163: Region$$Table$$Base
+          230   5183: Region$$Table$$Limit
+          231   5204: SystemCoreClock
+          232   5220: uwTick
+          233   5227: __initial_sp
+
+
+** Section #13 '.note' (SHT_NOTE)
+    Size   : 28 bytes (alignment 4)
+
+
+** Section #14 '.comment' (SHT_PROGBITS)
+    Size   : 16056 bytes
+
+
+** Section #15 '.shstrtab' (SHT_STRTAB)
+    Size   : 156 bytes
+
+            #  Offset String
+        ====================================
+
+            1      1: ER_IROM1
+            2     10: RW_IRAM1
+            3     19: .debug_abbrev
+            4     33: .debug_frame
+            5     46: .debug_info
+            6     58: .debug_line
+            7     70: .debug_loc
+            8     81: .debug_macinfo
+            9     96: .debug_pubnames
+           10    112: .symtab
+           11    120: .strtab
+           12    128: .note
+           13    134: .comment
+           14    143: .shstrtab
+           15    153: 
+           16    154: 
+           17    155: 
+
+
