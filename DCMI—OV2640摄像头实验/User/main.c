@@ -55,7 +55,7 @@ int main(void)
 	printf("\r\n 欢迎使用野火  STM32 H750 开发板。\r\n");		 
 	printf("\r\n野火STM32H750 OV2640摄像头测试例程\r\n");
 	/*蓝灯亮，表示正在读写SDRAM测试*/
-	//LED_BLUE;
+	LED_BLUE;
 	/* LCD 端口初始化 */ 
 	LCD_Init();
 	/* LCD 第一层初始化 */ 
@@ -82,7 +82,7 @@ int main(void)
 	LCD_SetTransparency(1, 255);
 	
 	LCD_SetColors(LCD_COLOR_WHITE,TRANSPARENCY);
-	LCD_DisplayStringLine_EN_CH(1,(uint8_t* )" 模式:UXGA 800x480");
+	LCD_DisplayStringLine_EN_CH(1,(uint8_t* )" mode:UXGA 800x480");
 	CAMERA_DEBUG("STM32H750 DCMI 驱动OV2640例程");
 		
 	//初始化 I2C
@@ -99,7 +99,7 @@ int main(void)
 	else
 	{
 		LCD_SetColors(LCD_COLOR_WHITE,TRANSPARENCY);
-		LCD_DisplayStringLine_EN_CH(8,(uint8_t*) "         没有检测到OV2640，请重新检查连接。");
+		LCD_DisplayStringLine_EN_CH(8,(uint8_t*) "         no check OV2640，please check the connect。");
 		CAMERA_DEBUG("没有检测到OV2640摄像头，请重新检查连接。");
 		while(1);  
 	}
@@ -142,15 +142,11 @@ int main(void)
 	*            PLL_M                = 5
 	*            PLL_N                = 192
 	*            PLL_P                = 2
-	*            PLL_Q                = 4
+	*            PLL_Q                = 2
 	*            PLL_R                = 2
 	*            VDD(V)               = 3.3
 	*            Flash Latency(WS)    = 4
   * @param  None
-  * @retval None
-  */
-/**
-  * @brief System Clock Configuration
   * @retval None
   */
 void SystemClock_Config(void)
@@ -166,40 +162,45 @@ void SystemClock_Config(void)
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
 
   while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
-  /** 初始化CPU、AHB和APB总线时钟
-  */
+ 
+  /* 启用HSE振荡器并使用HSE作为源激活PLL */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSIState = RCC_HSI_OFF;
+  RCC_OscInitStruct.CSIState = RCC_CSI_OFF;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+
   RCC_OscInitStruct.PLL.PLLM = 5;
   RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 2;
   RCC_OscInitStruct.PLL.PLLR = 2;
-  RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
+  RCC_OscInitStruct.PLL.PLLQ = 2;
+ 
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;
-  RCC_OscInitStruct.PLL.PLLFRACN = 0;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
+  if(HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
-		while(1);
+    while(1) { ; }
   }
-  /** 初始化CPU、AHB和APB总线时钟
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2
-                              |RCC_CLOCKTYPE_D3PCLK1|RCC_CLOCKTYPE_D1PCLK1;
+  
+	/* 选择PLL作为系统时钟源并配置总线时钟分频器 */
+  RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK  | \
+																 RCC_CLOCKTYPE_HCLK    | \
+																 RCC_CLOCKTYPE_D1PCLK1 | \
+																 RCC_CLOCKTYPE_PCLK1   | \
+                                 RCC_CLOCKTYPE_PCLK2   | \
+																 RCC_CLOCKTYPE_D3PCLK1);
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.SYSCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV2;
-  RCC_ClkInitStruct.APB3CLKDivider = RCC_APB3_DIV2;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV2;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV2;
-  RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV2;
-
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
+  RCC_ClkInitStruct.APB3CLKDivider = RCC_APB3_DIV2;  
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV2; 
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV2; 
+  RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV2; 
+  if(HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
-		while(1);
+    while(1) { ; }
   }
 }
 /****************************END OF FILE***************************/

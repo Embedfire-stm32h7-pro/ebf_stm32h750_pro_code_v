@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火  STM32 H743 开发板  
+  * 实验平台:秉火  STM32 H750 开发板  
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :http://firestm32.taobao.com
   *
@@ -18,6 +18,8 @@
 #include "./led/bsp_led.h"   
 #include "./delay/core_delay.h" 
 #include "./usart/bsp_debug_usart.h"
+
+
 SD_HandleTypeDef uSdHandle;
 
 
@@ -81,7 +83,7 @@ static HAL_StatusTypeDef BSP_SD_Init(void)
     /* 关闭硬件流控制 */
     uSdHandle.Init.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
     /* 时钟分频因子为0 */
-    uSdHandle.Init.ClockDiv            = 0;
+    uSdHandle.Init.ClockDiv            = 8;
     
     /* 初始化SD底层驱动 */
     BSP_SD_MspInit();
@@ -154,7 +156,7 @@ void SD_SingleBlockTest(void)
     if(Status == HAL_OK)
     {
         /* 起始地址为0，写入512个字节的内容 */
-        Status = HAL_SD_WriteBlocks_DMA(&uSdHandle, Buffer_Block_Tx, 0x00, 1);
+        Status = HAL_SD_WriteBlocks_DMA(&uSdHandle, Buffer_Block_Tx, 0x00,1);
         while(TX_Flag == 0);
     } 
     /* Fill the buffer to reception */
@@ -198,7 +200,8 @@ void SD_MultiBlockTest(void)
     if(Status == HAL_OK)
     {
         /* 起始地址为0，写入NUMBER_OF_BLOCKS*512个字节的内容  */
-        Status = HAL_SD_WriteBlocks_DMA(&uSdHandle, (uint8_t *)Buffer_Block_Tx, 0,  NUMBER_OF_BLOCKS);
+        Status = HAL_SD_WriteBlocks_DMA(&uSdHandle, (uint8_t *)Buffer_Block_Tx, 0,NUMBER_OF_BLOCKS);
+			  CPU_TS_Tmr_Delay_US(10000);
         while(TX_Flag == 0);
     } 
     /* Fill the buffer to reception */
@@ -207,7 +210,8 @@ void SD_MultiBlockTest(void)
     if(Status == HAL_OK)
     {
         /* 起始地址为0，读取NUMBER_OF_BLOCKS*512个字节的内容  */
-        Status = HAL_SD_ReadBlocks_DMA(&uSdHandle, (uint8_t *)Buffer_Block_Rx,0, NUMBER_OF_BLOCKS);
+         Status = HAL_SD_ReadBlocks_DMA(&uSdHandle, Buffer_Block_Rx,0, NUMBER_OF_BLOCKS);
+				  CPU_TS_Tmr_Delay_US(10000);
         //等待DMA传输完成
         while(RX_Flag == 0);
     }    

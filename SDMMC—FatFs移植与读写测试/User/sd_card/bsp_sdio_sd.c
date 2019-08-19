@@ -8,14 +8,16 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火  STM32 H743 开发板  
+  * 实验平台:秉火  STM32 H750 开发板  
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :http://firestm32.taobao.com
   *
   ******************************************************************************
   */
 #include "./sd_card/bsp_sdio_sd.h"
-#include "./led/bsp_led.h"   
+#include "./led/bsp_led.h"  
+#include "./usart/bsp_debug_usart.h"
+#include "./delay/core_delay.h" 
 
 SD_HandleTypeDef uSdHandle;
 
@@ -72,7 +74,7 @@ HAL_StatusTypeDef BSP_SD_Init(void)
     uSdHandle.Init.ClockPowerSave      = SDMMC_CLOCK_POWER_SAVE_DISABLE;
     uSdHandle.Init.BusWide             = SDMMC_BUS_WIDE_4B;
     uSdHandle.Init.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
-    uSdHandle.Init.ClockDiv            = 0;
+    uSdHandle.Init.ClockDiv            = 8;
     
     /* 初始化SD底层驱动 */
     BSP_SD_MspInit();

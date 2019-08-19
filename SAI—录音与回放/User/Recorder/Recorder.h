@@ -53,5 +53,6 @@ void RecorderDemo(void);
 void MusicPlayer_I2S_DMA_TX_Callback(void);
 void Recorder_I2S_DMA_RX_Callback(void);
 void MusicPlayer_SAI_DMA_TX_Callback(void);
+void MusicPlayer_SAI_DMA_RX_Callback(void);
 #endif  /* __RECORD_H__   */
 

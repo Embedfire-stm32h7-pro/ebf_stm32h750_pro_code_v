@@ -1615,7 +1615,11 @@ int GetGBKCode_from_EXFlash( uint8_t * pBuffer, uint16_t c)
 	int offset, GBKCODE_START_ADDRESS;
 	
 	static uint8_t everRead=0;
-	
+	if(everRead == 0)
+	{
+		QSPI_FLASH_Init();
+		everRead = 1;
+	}
 	High8bit= c >> 8;     /* 取高8位数据 */
 	Low8bit= c & 0x00FF;  /* 取低8位数据 */		
 

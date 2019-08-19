@@ -5,7 +5,7 @@
 
 /* 获取内核时钟频率 */
 #define GET_CPU_ClkFreq()       HAL_RCC_GetSysClockFreq()
-#define SysClockFreq            (400000000)
+#define SysClockFreq            (480000000)
 /* 为方便使用，在延时函数内部调用CPU_TS_TmrInit函数初始化时间戳寄存器，
    这样每次调用函数都会初始化一遍。
    把本宏值设置为0，然后在main函数刚运行时调用CPU_TS_TmrInit可避免每次都初始化 */  

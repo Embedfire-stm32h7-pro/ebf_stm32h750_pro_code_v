@@ -207,8 +207,8 @@
             <Ra1Chk>0</Ra1Chk>
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
-            <Im1Chk>1</Im1Chk>
-            <Im2Chk>0</Im2Chk>
+            <Im1Chk>0</Im1Chk>
+            <Im2Chk>1</Im2Chk>
             <OnChipMemories>
               <Ocm1>
                 <Type>0</Type>
@@ -310,7 +310,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -825,11 +825,6 @@
               <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_dac.c</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_ll_delayblock.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_delayblock.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32h7xx_ll_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_dma.c</FilePath>
@@ -965,14 +960,19 @@
               <FilePath>..\..\User\mpu\bsp_mpu.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_sdio_sd.c</FileName>
+              <FileName>bsp_ov2640.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\sd_card\bsp_sdio_sd.c</FilePath>
+              <FilePath>..\..\User\camera\bsp_ov2640.c</FilePath>
             </File>
             <File>
-              <FileName>fatfs_sd_sdio.c</FileName>
+              <FileName>bsp_qspi_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\drivers\fatfs_sd_sdio.c</FilePath>
+              <FilePath>..\..\User\flash\bsp_qspi_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\i2c\bsp_i2c.c</FilePath>
             </File>
             <File>
               <FileName>bsp_lcd.c</FileName>
@@ -985,34 +985,9 @@
               <FilePath>..\..\User\sdram\bsp_sdram.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_debug_usart.c</FileName>
+              <FileName>bsp_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\usart\bsp_debug_usart.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>FATFS</GroupName>
-          <Files>
-            <File>
-              <FileName>diskio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\diskio.c</FilePath>
-            </File>
-            <File>
-              <FileName>ff.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\ff.c</FilePath>
-            </File>
-            <File>
-              <FileName>ff_gen_drv.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\ff_gen_drv.c</FilePath>
-            </File>
-            <File>
-              <FileName>cc936.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\option\cc936.c</FilePath>
+              <FilePath>..\..\User\usart\bsp_usart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1229,8 +1204,8 @@
             <Ra1Chk>0</Ra1Chk>
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
-            <Im1Chk>1</Im1Chk>
-            <Im2Chk>0</Im2Chk>
+            <Im1Chk>0</Im1Chk>
+            <Im2Chk>1</Im2Chk>
             <OnChipMemories>
               <Ocm1>
                 <Type>0</Type>
@@ -1355,7 +1330,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32H750xx,APPLICATION_ADDRESS=0x90000000</Define>
+              <Define>USE_HAL_DRIVER,STM32H750xx,APPLICATION_ADDRESS=0x90000000,</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32H7xx\Include;..\..\Libraries\STM32H7xx_HAL_Driver\Inc;..\..\User</IncludePath>
             </VariousControls>
@@ -1847,11 +1822,6 @@
               <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_dac.c</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_ll_delayblock.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_delayblock.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32h7xx_ll_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_dma.c</FilePath>
@@ -1987,14 +1957,19 @@
               <FilePath>..\..\User\mpu\bsp_mpu.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_sdio_sd.c</FileName>
+              <FileName>bsp_ov2640.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\sd_card\bsp_sdio_sd.c</FilePath>
+              <FilePath>..\..\User\camera\bsp_ov2640.c</FilePath>
             </File>
             <File>
-              <FileName>fatfs_sd_sdio.c</FileName>
+              <FileName>bsp_qspi_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\drivers\fatfs_sd_sdio.c</FilePath>
+              <FilePath>..\..\User\flash\bsp_qspi_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\i2c\bsp_i2c.c</FilePath>
             </File>
             <File>
               <FileName>bsp_lcd.c</FileName>
@@ -2007,34 +1982,9 @@
               <FilePath>..\..\User\sdram\bsp_sdram.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_debug_usart.c</FileName>
+              <FileName>bsp_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\usart\bsp_debug_usart.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>FATFS</GroupName>
-          <Files>
-            <File>
-              <FileName>diskio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\diskio.c</FilePath>
-            </File>
-            <File>
-              <FileName>ff.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\ff.c</FilePath>
-            </File>
-            <File>
-              <FileName>ff_gen_drv.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\ff_gen_drv.c</FilePath>
-            </File>
-            <File>
-              <FileName>cc936.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\option\cc936.c</FilePath>
+              <FilePath>..\..\User\usart\bsp_usart.c</FilePath>
             </File>
           </Files>
         </Group>

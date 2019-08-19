@@ -7,7 +7,7 @@
 //块的大小（以字节为单位）
 #define BLOCK_SIZE            512 
 //块的数目
-#define NUMBER_OF_BLOCKS      50
+#define NUMBER_OF_BLOCKS      10
 //块的数据大小
 #define MULTI_BUFFER_SIZE    (BLOCK_SIZE * NUMBER_OF_BLOCKS)
 

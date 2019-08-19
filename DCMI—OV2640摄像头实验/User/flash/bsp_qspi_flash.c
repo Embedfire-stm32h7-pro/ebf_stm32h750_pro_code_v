@@ -38,14 +38,7 @@ void QSPI_FLASH_Init(void)
 	QSPI_FLASH_BK1_IO3_CLK_ENABLE();
 	QSPI_FLASH_CS_GPIO_CLK_ENABLE();
 
-#if USE_DUAL_ExtFLASH
-	/* 使能 QSPI BANK2时钟 */
-	QSPI_FLASH_BK2_IO0_CLK_ENABLE();
-	QSPI_FLASH_BK2_IO1_CLK_ENABLE();
-	QSPI_FLASH_BK2_IO2_CLK_ENABLE();
-	QSPI_FLASH_BK2_IO3_CLK_ENABLE();
-#endif
-	
+
 	//设置引脚
 	/*!< 配置 QSPI_FLASH 引脚: CLK */
 	GPIO_InitStruct.Pin = QSPI_FLASH_CLK_PIN;
@@ -81,27 +74,6 @@ void QSPI_FLASH_Init(void)
 	GPIO_InitStruct.Alternate = QSPI_FLASH_CS_GPIO_AF;
 	HAL_GPIO_Init(QSPI_FLASH_CS_GPIO_PORT, &GPIO_InitStruct);
 
-#if USE_DUAL_ExtFLASH
-  /*!< 配置 QSPI_FLASH_BK2 引脚: IO0 */
-	GPIO_InitStruct.Pin = QSPI_FLASH_BK2_IO0_PIN;
-	GPIO_InitStruct.Alternate = QSPI_FLASH_BK2_IO0_AF;
-	HAL_GPIO_Init(QSPI_FLASH_BK2_IO0_PORT, &GPIO_InitStruct);
-
-	/*!< 配置 QSPI_FLASH_BK2 引脚: IO1 */
-	GPIO_InitStruct.Pin = QSPI_FLASH_BK2_IO1_PIN;
-	GPIO_InitStruct.Alternate = QSPI_FLASH_BK2_IO1_AF;
-	HAL_GPIO_Init(QSPI_FLASH_BK2_IO1_PORT, &GPIO_InitStruct);
-
-	/*!< 配置 QSPI_FLASH_BK2 引脚: IO2 */
-	GPIO_InitStruct.Pin = QSPI_FLASH_BK2_IO2_PIN;
-	GPIO_InitStruct.Alternate = QSPI_FLASH_BK2_IO2_AF;
-	HAL_GPIO_Init(QSPI_FLASH_BK2_IO2_PORT, &GPIO_InitStruct);
-
-	/*!< 配置 QSPI_FLASH_BK2 引脚: IO3 */
-	GPIO_InitStruct.Pin = QSPI_FLASH_BK2_IO3_PIN;
-	GPIO_InitStruct.Alternate = QSPI_FLASH_BK2_IO3_AF;
-	HAL_GPIO_Init(QSPI_FLASH_BK2_IO3_PORT, &GPIO_InitStruct);
-#endif
 	
 	/* QSPI_FLASH 模式配置 */
 	QSPIHandle.Instance = QUADSPI;
@@ -124,10 +96,7 @@ void QSPI_FLASH_Init(void)
 	QSPIHandle.Init.ClockMode = QSPI_CLOCK_MODE_0;
 	/*根据硬件连接选择第一片Flash*/
 	QSPIHandle.Init.FlashID = QSPI_FLASH_ID_1;
-#if USE_DUAL_ExtFLASH
-	/*使能双闪存模式*/
-	QSPIHandle.Init.DualFlash= QSPI_DUALFLASH_ENABLE;
-#endif
+
 	HAL_QSPI_Init(&QSPIHandle);
 	/*初始化QSPI接口*/
 	BSP_QSPI_Init();

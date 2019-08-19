@@ -52,7 +52,7 @@ static void CPU_CACHE_Enable(void)
   SCB_EnableDCache();
 
   //将Cache设置write-through方式
-  SCB->CACR|=1<<2;
+  //SCB->CACR|=1<<2;
 }
 /**
   * @brief  主函数
@@ -111,7 +111,7 @@ int main(void)
 	*            PLL_M                = 5
 	*            PLL_N                = 192
 	*            PLL_P                = 2
-	*            PLL_Q                = 2
+	*            PLL_Q                = 4
 	*            PLL_R                = 2
 	*            VDD(V)               = 3.3
 	*            Flash Latency(WS)    = 4
@@ -144,7 +144,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 5;
   RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 2;
+  RCC_OscInitStruct.PLL.PLLQ = 4;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;

@@ -3,7 +3,7 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2018-xx-xx
+  * @date    2019-xx-xx
   * @brief   SDMMC-FatFS移植与读写测试
   ******************************************************************
   * @attention
@@ -32,9 +32,9 @@
   ******************************************************************************
   */
 char SDPath[4]; /* SD逻辑驱动器路径 */
-FATFS fs;													/* FatFs文件系统对象 */
-FIL fnew;													/* 文件对象 */
-FRESULT res_sd;                /* 文件操作结果 */
+static FATFS fs;													/* FatFs文件系统对象 */
+static FIL fnew;													/* 文件对象 */
+static FRESULT res_sd;                /* 文件操作结果 */
 UINT fnum;            			  /* 文件成功读写数量 */
 BYTE ReadBuffer[1024]={0};        /* 读缓冲区 */
 BYTE WriteBuffer[] =              /* 写缓冲区*/
@@ -67,19 +67,17 @@ int main(void)
 {
     /* 系统时钟初始化成480MHz */
     SystemClock_Config();
-  
-  /* 配置 MPU*/
-  Board_MPU_Config(0, MPU_Normal_WT, 0xD0000000, MPU_32MB);
-  Board_MPU_Config(1, MPU_Normal_WT, 0x24000000, MPU_512KB);
-  
-  SCB_EnableICache();    // 使能指令 Cache
-  SCB_EnableDCache();    // 使能数据 Cache
+		/* 配置 MPU*/
+		Board_MPU_Config(0, MPU_Normal_WT, 0xD0000000, MPU_32MB);
+		Board_MPU_Config(1, MPU_Normal_WT, 0x24000000, MPU_512KB);
+		
+		SCB_EnableICache();    // 使能指令 Cache
+		SCB_EnableDCache();    // 使能数据 Cache
   
     LED_GPIO_Config();
     LED_BLUE;	
     /* 初始化USART1 配置模式为 115200 8-N-1 */
     DEBUG_USART_Config();	
-    /* 初始化独立按键 */
     printf("****** 这是一个SD卡文件系统实验 ******\r\n");
     //链接驱动器，创建盘符
     FATFS_LinkDriver(&SD_Driver, SDPath);
@@ -229,7 +227,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 5;
   RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 2;
+  RCC_OscInitStruct.PLL.PLLQ = 4;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;

@@ -17,7 +17,7 @@
 #include "./usart/bsp_debug_usart.h"
 #include "./key/bsp_key.h" 
 #include "./wm8978/bsp_wm8978.h"
-//#include "./touch_pad/bsp_touchpad.h"
+#include "./touch_pad/bsp_touchpad.h"
 //#include "./systick/bsp_SysTick.h"
 #include "ff.h" 
 #include "./Recorder/Recorder.h"
@@ -34,9 +34,10 @@ static uint32_t wavsize=0;         /* wav音频数据大小 */
 FIL file;											/* file objects */
 FRESULT result; 
 UINT bw;            					/* File R/W count */
-uint16_t buffer0[RECBUFFER_SIZE];  /* 数据缓存区1 ，实际占用字节数：RECBUFFER_SIZE*2 */
-uint16_t buffer1[RECBUFFER_SIZE];  /* 数据缓存区2 ，实际占用字节数：RECBUFFER_SIZE*2 */
-
+__align(4) uint16_t buffer0[RECBUFFER_SIZE];  /* 数据缓存区1 ，实际占用字节数：RECBUFFER_SIZE*2 */
+__align(4) uint16_t buffer1[RECBUFFER_SIZE];  /* 数据缓存区2 ，实际占用字节数：RECBUFFER_SIZE*2 */
+///* 录音文件路径全称：初始化为rec001.wav */
+static char recfilename[25]={"0:/recorder/rec001.wav"};   
 uint32_t g_FmtList[FMT_COUNT][3] =
 {
 	{SAI_I2S_STANDARD, SAI_PROTOCOL_DATASIZE_16BIT, SAI_AUDIO_FREQUENCY_44K},
@@ -46,7 +47,7 @@ uint32_t g_FmtList[FMT_COUNT][3] =
 	{SAI_I2S_STANDARD, SAI_PROTOCOL_DATASIZE_16BIT, SAI_AUDIO_FREQUENCY_44K},
 	{SAI_I2S_STANDARD, SAI_PROTOCOL_DATASIZE_16BIT, SAI_AUDIO_FREQUENCY_44K},
 };
-
+ uint16_t recplaybuf[4]={0X0000,0X0000};//2个16位数据,用于录音时I2S Master发送.循环发送0.
 /**
   * @brief   WAV格式音频播放主程序
 	* @note   
@@ -99,11 +100,13 @@ static void DispStatus(void)
 	sprintf(buf, "耳机音量 = %d \r", Recorder.ucVolume);
 	printf("%s\n",buf);
 }
+
+
 void StartPlay(const char *filename)
 {
 	printf("当前播放文件 -> %s\n",filename);
 	
-	result=f_open(&file, "0:FatFs读写测试文件.wav", FA_OPEN_EXISTING | FA_READ);
+	result=f_open(&file, filename, FA_OPEN_EXISTING | FA_READ);
 	if(result!=FR_OK)
 	{
 		printf("打开音频文件失败!!!->%d\r\n",result);
@@ -114,8 +117,8 @@ void StartPlay(const char *filename)
 	//读取WAV文件头
 	result = f_read(&file,&rec_wav,sizeof(rec_wav),&bw);
 	//先读取音频数据到缓冲区
-	result = f_read(&file,(uint16_t *)buffer0,RECBUFFER_SIZE*2,&bw);
-	result = f_read(&file,(uint16_t *)buffer1,RECBUFFER_SIZE*2,&bw);
+	result = f_read(&file,(uint16_t *)buffer0,RECBUFFER_SIZE,&bw);
+	result = f_read(&file,(uint16_t *)buffer1,RECBUFFER_SIZE,&bw);
 	
 	HAL_Delay(10);	/* 延迟一段时间，等待I2S中断结束 */
 	SAI_Play_Stop();			/* 停止I2S录音和放音 */
@@ -124,7 +127,7 @@ void StartPlay(const char *filename)
 	Recorder.ucStatus = STA_PLAYING;		/* 放音状态 */
 
 	/* 配置WM8978芯片，输入为DAC，输出为耳机 */
-	wm8978_CfgAudioPath(DAC_ON, EAR_LEFT_ON | EAR_RIGHT_ON);
+	wm8978_CfgAudioPath(DAC_ON, EAR_LEFT_ON | EAR_RIGHT_ON);//SPK_ON
 	/* 调节音量，左右相同音量 */
 	wm8978_SetOUT1Volume(Recorder.ucVolume);
 	/* 配置WM8978音频接口为飞利浦标准I2S接口，16bit */
@@ -132,7 +135,7 @@ void StartPlay(const char *filename)
 	
 	SAIxA_Tx_Config(g_FmtList[Recorder.ucFmtIdx][0],g_FmtList[Recorder.ucFmtIdx][1],g_FmtList[Recorder.ucFmtIdx][2]);
 //	I2Sxext_Mode_Config(g_FmtList[Recorder.ucFmtIdx][0],g_FmtList[Recorder.ucFmtIdx][1],g_FmtList[Recorder.ucFmtIdx][2]);
-	
+//	
 //	I2Sxext_RX_DMA_Init((uint32_t)&recplaybuf[0],(uint32_t)&recplaybuf[1],1);
 //	
 //  I2Sxext_Recorde_Stop();
@@ -140,12 +143,78 @@ void StartPlay(const char *filename)
 	SAIA_TX_DMA_Init((uint32_t)buffer0,(uint32_t)buffer1,RECBUFFER_SIZE);		
 	SAI_Play_Start();
 }
+
+/**
+  * @brief  配置WM8978和STM32的I2S开始录音。
+  * @param  无
+  * @retval 无
+  */
+static void StartRecord(const char *filename)
+{
+	printf("当前录音文件 -> %s\n",filename);
+	result = f_close (&file);  
+	result=f_open(&file,filename,FA_CREATE_ALWAYS|FA_WRITE);
+	if(result!=FR_OK)
+	{
+		printf("Open wavfile fail!!!->%d\r\n",result);
+		result = f_close (&file);
+		Recorder.ucStatus = STA_ERR;
+		return;
+	}
+	
+	// 写入WAV文件头，这里必须写入写入后文件指针自动偏移到sizeof(rec_wav)位置，
+	// 接下来写入音频数据才符合格式要求。
+	result=f_write(&file,(const void *)&rec_wav,sizeof(rec_wav),&bw);
+	
+	HAL_Delay(10);		/* 延迟一段时间，等待I2S中断结束 */
+	SAI_Rec_Stop();			/* 停止I2S录音和放音 */
+  SAI_Play_Stop();
+	wm8978_Reset();		/* 复位WM8978到复位状态 */
+	wm8978_CtrlGPIO1(0);
+	Recorder.ucStatus = STA_RECORDING;		/* 录音状态 */
+		
+	/* 调节放音音量，左右相同音量 */
+	wm8978_SetOUT1Volume(Recorder.ucVolume);
+
+	if(Recorder.ucInput == 1)   /* 线输入 */
+	{
+		/* 配置WM8978芯片，输入为线输入，输出为耳机 */
+		wm8978_CfgAudioPath(LINE_ON | ADC_ON, EAR_LEFT_ON | EAR_RIGHT_ON);
+		wm8978_SetLineGain(Recorder.ucGain);
+	}
+	else   /* MIC输入 */
+	{
+		/* 配置WM8978芯片，输入为Mic，输出为耳机 */
+//		wm8978_CfgAudioPath(MIC_LEFT_ON | ADC_ON, EAR_LEFT_ON | EAR_RIGHT_ON);
+//		wm8978_CfgAudioPath(MIC_RIGHT_ON | ADC_ON, EAR_LEFT_ON | EAR_RIGHT_ON);
+		wm8978_CfgAudioPath(MIC_LEFT_ON | MIC_RIGHT_ON | ADC_ON, EAR_LEFT_ON | EAR_RIGHT_ON);	
+		wm8978_SetMicGain(Recorder.ucGain);	
+	}
+		
+	/* 配置WM8978音频接口为飞利浦标准I2S接口，16bit */
+	wm8978_CfgAudioIF(SAI_I2S_STANDARD, 16);
+   
+  
+   SAIA_TX_DMA_Init((uint32_t)&recplaybuf[0],(uint32_t)&recplaybuf[1],1);
+   __HAL_DMA_DISABLE_IT(&h_txdma,DMA_IT_TC);
+   SAIB_RX_DMA_Init((uint32_t)buffer0,(uint32_t)buffer1,RECBUFFER_SIZE);
+//  
+
+// 
+  SAI_Rec_Start();
+  SAI_Play_Start();
+  
+  
+  
+}
+
+
 void RecorderDemo(void)
 {
 	uint8_t i;
 	uint8_t ucRefresh;	/* 通过串口打印相关信息标志 */
 	DIR dir;
-	
+
 	Recorder.ucStatus=STA_IDLE;    /* 开始设置为空闲状态  */
 	Recorder.ucInput=0;            /* 缺省MIC输入  */
 	Recorder.ucFmtIdx=3;           /* 缺省飞利浦I2S标准，16bit数据长度，44K采样率  */
@@ -179,22 +248,24 @@ void RecorderDemo(void)
 	
 	rec_wav.data=0x61746164;       /* “data”; 数据标记符 */
 	rec_wav.datasize=0;            /* 语音数据大小 目前未确定*/
-  
+
 	/*  如果路径不存在，创建文件夹  */
-	//result = f_opendir(&dir,RECORDERDIR);
-//	while(result != FR_OK)
-//	{
-//		f_mkdir(RECORDERDIR);
-//		result = f_opendir(&dir,RECORDERDIR);
-//	}	
+	result = f_opendir(&dir,RECORDERDIR);
+	while(result != FR_OK)
+	{
+		f_mkdir(RECORDERDIR);
+		result = f_opendir(&dir,RECORDERDIR);
+	}	
+
   SAI_GPIO_Config();
   //SAI_Play_Stop();
   SAIxA_Tx_Config(g_FmtList[Recorder.ucFmtIdx][0],g_FmtList[Recorder.ucFmtIdx][1],g_FmtList[Recorder.ucFmtIdx][2]);
-	
-  SAI_DMA_TX_Callback=MusicPlayer_SAI_DMA_TX_Callback;
+	SAIxB_Rx_Config(g_FmtList[Recorder.ucFmtIdx][0],g_FmtList[Recorder.ucFmtIdx][1],g_FmtList[Recorder.ucFmtIdx][2]);
+  //SAI_DMA_TX_Callback=MusicPlayer_SAI_DMA_TX_Callback;
   ucRefresh = 1;
 	bufflag=0;
 	Isread=0;
+  
 	/* 进入主程序循环体 */
 	while (1)
 	{
@@ -206,69 +277,72 @@ void RecorderDemo(void)
 		}
 		if(Recorder.ucStatus == STA_IDLE)
 		{				
-//			/*  KEY2开始录音  */
-//			if(Key_Scan(KEY2_GPIO_PORT,KEY2_PIN)==KEY_ON)
-//			{
-//				/* 寻找合适文件名 */
-//				for(i=1;i<0xff;++i)
-//				{
-//					sprintf(recfilename,"0:/recorder/rec%03d.wav",i);
-//					result=f_open(&file,(const TCHAR *)recfilename,FA_READ);
-//					if(result==FR_NO_FILE)break;					
-//				}
-//				f_close(&file);
-//				
-//				if(i==0xff)
-//				{
-//					Recorder.ucStatus =STA_ERR;
-//					continue;
-//				}
-//				/* 开始录音 */
-//				StartRecord(recfilename);
-//				ucRefresh = 1;
-//			}
-//			/*  TouchPAD开始回放录音  */
-//			if(TPAD_Scan(0))
-//			{			
-//				/* 开始回放 */
-        StartPlay("0:rec002.wav");
+			/*  KEY2开始录音  */
+			if(Key_Scan(KEY2_GPIO_PORT,KEY2_PIN)==KEY_ON)
+			{
+				/* 寻找合适文件名 */
+				for(i=1;i<0xff;++i)
+				{
+					sprintf(recfilename,"0:/recorder/rec%03d.wav",i);
+					result=f_open(&file,(const TCHAR *)recfilename,FA_READ);
+					if(result==FR_NO_FILE)break;					
+				}
+				f_close(&file);
+				
+				if(i==0xff)
+				{
+					Recorder.ucStatus =STA_ERR;
+					continue;
+				}
+				/* 开始录音 */
+				StartRecord(recfilename);
+				ucRefresh = 1;
+			}
+			/*  TouchPAD开始回放录音  */
+			if(TPAD_Scan(0)==1)
+			{			
+				/* 开始回放 */
+        StartPlay(recfilename);
 				ucRefresh = 1;				
-//			}
+			}
 		}
-//		else
-//		{			
-//			/*  KEY1停止录音或回放  */
-//			if(Key_Scan(KEY1_GPIO_PORT,KEY1_PIN)==KEY_ON)
-//			{
-//				/* 对于录音，需要把WAV文件内容填充完整 */
-//				if(Recorder.ucStatus == STA_RECORDING)
-//				{
-//					I2Sxext_Recorde_Stop();
-//					I2S_Play_Stop();
-//					rec_wav.size_8=wavsize+36;
-//					rec_wav.datasize=wavsize;
-//					result=f_lseek(&file,0);
-//					result=f_write(&file,(const void *)&rec_wav,sizeof(rec_wav),&bw);
-//					result=f_close(&file);
-//					printf("录音结束\r\n");
-//				}
-//				ucRefresh = 1;
-//				Recorder.ucStatus = STA_IDLE;		/* 待机状态 */
-//				I2S_Stop();		/* 停止I2S录音和放音 */
-//				wm8978_Reset();	/* 复位WM8978到复位状态 */
-//			}
-//		}
+		else
+		{			
+			/*  KEY1停止录音或回放  */
+			if(Key_Scan(KEY1_GPIO_PORT,KEY1_PIN)==KEY_ON)
+			{
+				/* 对于录音，需要把WAV文件内容填充完整 */
+				if(Recorder.ucStatus == STA_RECORDING)
+				{
+
+					rec_wav.size_8=wavsize+36;
+					rec_wav.datasize=wavsize;
+					result=f_lseek(&file,0);
+					result=f_write(&file,(const void *)&rec_wav,sizeof(rec_wav),&bw);
+					result=f_close(&file);
+					printf("录音结束\r\n");
+				}
+				ucRefresh = 1;
+				Recorder.ucStatus = STA_IDLE;		/* 待机状态 */
+				SAI_Rec_Stop();
+				SAI_Play_Stop();		/* 停止I2S录音和放音 */
+				wm8978_Reset();	/* 复位WM8978到复位状态 */
+			}
+		}
 		/* DMA传输完成 */
 		if(Isread==1)
 		{
 			Isread=0;
 			switch (Recorder.ucStatus)
 			{
-				case STA_RECORDING:  // 录音功能，写入数据到文件           
+				case STA_RECORDING:  // 录音功能，写入数据到文件  
+              
 						if(bufflag==0){
+              SCB_InvalidateDCache_by_Addr((uint32_t*)buffer0, RECBUFFER_SIZE*2);
               result=f_write(&file,buffer0,RECBUFFER_SIZE*2,(UINT*)&bw);//写入文件
             }              
 						else{  
+              SCB_InvalidateDCache_by_Addr((uint32_t*)buffer1, RECBUFFER_SIZE*2);
               result=f_write(&file,buffer1,RECBUFFER_SIZE*2,(UINT*)&bw);//写入文件.         
             }
 						wavsize+=RECBUFFER_SIZE*2;	
@@ -311,6 +385,21 @@ void MusicPlayer_SAI_DMA_TX_Callback(void)
 	if(Recorder.ucStatus == STA_PLAYING)
 	{
 		if(DMA_Instance->CR&(1<<19)) //当前使用Memory1数据
+		{
+			bufflag=0;                       //可以将数据读取到缓冲区0
+		}
+		else                               //当前使用Memory0数据
+		{
+			bufflag=1;                       //可以将数据读取到缓冲区1
+		}
+		Isread=1;                          // DMA传输完成标志
+	}
+}
+void MusicPlayer_SAI_DMA_RX_Callback(void)
+{
+	if(Recorder.ucStatus == STA_RECORDING)
+	{
+		if(DMA1_Stream3->CR&(1<<19)) //当前使用Memory1数据
 		{
 			bufflag=0;                       //可以将数据读取到缓冲区0
 		}

@@ -310,7 +310,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -950,11 +950,6 @@
               <FilePath>..\..\User\stm32h7xx_it.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\led\bsp_led.c</FilePath>
-            </File>
-            <File>
               <FileName>core_delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\delay\core_delay.c</FilePath>
@@ -965,14 +960,19 @@
               <FilePath>..\..\User\mpu\bsp_mpu.c</FilePath>
             </File>
             <File>
+              <FileName>bsp_advance_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\tim\bsp_advance_tim.c</FilePath>
+            </File>
+            <File>
               <FileName>bsp_debug_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\usart\bsp_debug_usart.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_adc.c</FileName>
+              <FileName>bsp_led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\adc\bsp_adc.c</FilePath>
+              <FilePath>..\..\User\led\bsp_led.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1315,7 +1315,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32H750xx,APPLICATION_ADDRESS=0x90000000,</Define>
+              <Define>USE_HAL_DRIVER,STM32H750xx,APPLICATION_ADDRESS=0x90000000</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32H7xx\Include;..\..\Libraries\STM32H7xx_HAL_Driver\Inc;..\..\User</IncludePath>
             </VariousControls>
@@ -1932,11 +1932,6 @@
               <FilePath>..\..\User\stm32h7xx_it.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\led\bsp_led.c</FilePath>
-            </File>
-            <File>
               <FileName>core_delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\delay\core_delay.c</FilePath>
@@ -1947,14 +1942,19 @@
               <FilePath>..\..\User\mpu\bsp_mpu.c</FilePath>
             </File>
             <File>
+              <FileName>bsp_advance_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\tim\bsp_advance_tim.c</FilePath>
+            </File>
+            <File>
               <FileName>bsp_debug_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\usart\bsp_debug_usart.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_adc.c</FileName>
+              <FileName>bsp_led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\adc\bsp_adc.c</FilePath>
+              <FilePath>..\..\User\led\bsp_led.c</FilePath>
             </File>
           </Files>
         </Group>

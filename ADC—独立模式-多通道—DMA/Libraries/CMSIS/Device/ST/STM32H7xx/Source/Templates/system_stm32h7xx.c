@@ -229,7 +229,7 @@ void SystemInit (void)
 #ifdef VECT_TAB_SRAM
   SCB->VTOR = D1_AXISRAM_BASE  | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal ITCMSRAM */
 #else
-  SCB->VTOR = APPLICATION_ADDRESS | VECT_TAB_OFFSET;       /* Vector Table Relocation in EXternal FLASH */
+  SCB->VTOR = APPLICATION_ADDRESS | VECT_TAB_OFFSET;       /* Vector Table Relocation in Internal FLASH */
 #endif
 #endif
 

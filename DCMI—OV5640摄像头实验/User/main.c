@@ -48,7 +48,7 @@ int main(void)
 {  
 	OV5640_IDTypeDef OV5640_Camera_ID;
 	
-	/* 系统时钟初始化成400MHz */
+	/* 系统时钟初始化成480MHz */
 	SystemClock_Config();
 	
   /* 默认不配置 MPU，若需要更高性能，当配置 MPU 后，使用 
@@ -150,16 +150,16 @@ int main(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
-	*            D1 APB3 Prescaler    = 2 (APB3 Clock  100MHz)
-	*            D2 APB1 Prescaler    = 2 (APB1 Clock  100MHz)
-	*            D2 APB2 Prescaler    = 2 (APB2 Clock  100MHz)
-	*            D3 APB4 Prescaler    = 2 (APB4 Clock  100MHz)
+	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
+	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)
+	*            D2 APB2 Prescaler    = 2 (APB2 Clock  120MHz)
+	*            D3 APB4 Prescaler    = 2 (APB4 Clock  120MHz)
 	*            HSE Frequency(Hz)    = 25000000
 	*            PLL_M                = 5
-	*            PLL_N                = 160
+	*            PLL_N                = 192
 	*            PLL_P                = 2
 	*            PLL_Q                = 4
 	*            PLL_R                = 2
@@ -168,18 +168,17 @@ int main(void)
   * @param  None
   * @retval None
   */
-static void SystemClock_Config(void)
+void SystemClock_Config(void)
 {
-  RCC_ClkInitTypeDef RCC_ClkInitStruct;
-  RCC_OscInitTypeDef RCC_OscInitStruct;
-  HAL_StatusTypeDef ret = HAL_OK;
-  
-  /*使能供电配置更新 */
-  MODIFY_REG(PWR->CR3, PWR_CR3_SCUEN, 0);
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /* 当器件的时钟频率低于最大系统频率时，电压调节可以优化功耗，
-		 关于系统频率的电压调节值的更新可以参考产品数据手册。  */
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+  /** 启用电源配置更新
+  */
+  HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
+  /** 配置主内稳压器输出电压
+  */
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
 
   while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
  
@@ -192,15 +191,14 @@ static void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
 
   RCC_OscInitStruct.PLL.PLLM = 5;
-  RCC_OscInitStruct.PLL.PLLN = 160;
+  RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
   RCC_OscInitStruct.PLL.PLLR = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 2;
+  RCC_OscInitStruct.PLL.PLLQ = 4;
  
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
-  ret = HAL_RCC_OscConfig(&RCC_OscInitStruct);
-  if(ret != HAL_OK)
+  if(HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     while(1) { ; }
   }
@@ -219,8 +217,7 @@ static void SystemClock_Config(void)
   RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV2; 
   RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV2; 
   RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV2; 
-  ret = HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4);
-  if(ret != HAL_OK)
+  if(HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
     while(1) { ; }
   }

@@ -3,7 +3,7 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2018-xx-xx
+  * @date    2019-xx-xx
   * @brief   GPIO输出--使用固件库点亮LED灯
   ******************************************************************
   * @attention
