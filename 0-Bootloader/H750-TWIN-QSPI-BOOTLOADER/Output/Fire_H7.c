@@ -1,23 +1,4 @@
-/************************************************************************
-*                                                                       *
-*               Generated C-File                                        *
-*                                                                       *
-*              (c) 1995 - 2018 SEGGER Microcontroller GmbH              *
-*                                                                       *
-*************************************************************************
-
-Please note:
-
-SEGGER Microcontroller has provided the feature of being able to save a file
-in ANSI "C" format as convenience feature.
-You may use this feature at your own risc, SEGGER assumes no liability
-in any form.
-//size:
-Memory image: 0x8000000 - 0x80018F7
-*/
-
-const unsigned char BootloaderImage[] = {
-248,4,0,36,173,2,0,8,51,36,0,8,97,35,0,8,
+char Fire_H7[]={248,4,0,36,173,2,0,8,51,36,0,8,97,35,0,8,
 49,36,0,8,165,4,0,8,105,61,0,8,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,13,44,0,8,
 69,6,0,8,0,0,0,0,53,36,0,8,15,44,0,8,
@@ -1046,12 +1027,4 @@ const unsigned char BootloaderImage[] = {
 28,0,0,0,174,61,0,8,84,64,0,8,28,0,0,36,
 220,4,0,0,190,61,0,8,0,144,208,3,0,144,208,3,
 1,0,0,0,16,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0
-};
-
-unsigned int Bootloader_size(void)
-{
-  return sizeof(BootloaderImage);
-}
-
-/*** end of file ***/
+0,0,0,0};

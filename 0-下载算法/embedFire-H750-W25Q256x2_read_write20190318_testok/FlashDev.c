@@ -30,7 +30,7 @@
 
 struct FlashDevice const FlashDevice  =  {
    FLASH_DRV_VERS,             // Driver Version, do not modify!
-   "embedFire-H750-W25Q256-SDRAM",  		// Device Name
+   "H750V",  		// Device Name
    EXTSPI,                     // Device Type
    0x90000000,                 // Device Start Address
    0x02000000,                 // Device Size (64MB)

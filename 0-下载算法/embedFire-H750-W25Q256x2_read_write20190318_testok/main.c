@@ -54,98 +54,98 @@ TestStatus Buffercmp(uint8_t* pBuffer1, uint8_t* pBuffer2, uint16_t BufferLength
   * @param  无
   * @retval 无
   */
-//int main(void)
-//{
-//	int i=0;
-//	/* 使能指令缓存 */
-//	SCB_EnableICache();
-//  /* 使能数据缓存 */
-//  SCB_EnableDCache();
-//	/* 系统时钟初始化成400MHz */
-////	SystemClock_Config();
-////	/* LED 端口初始化 */
-////	LED_GPIO_Config();	
-////	LED_BLUE;
-//	
-//	/* 配置串口1为：115200 8-N-1 */
-//	DEBUG_USART_Config();
-//  
-//	printf("\r\n这是一个64M串行flash(W25Q256)实验(QSPI驱动) \r\n");
-//	
-//	/* 64M串行flash W25Q256初始化 */
-//	QSPI_Init();
+int main(void)
+{
+	int i=0;
+	/* 使能指令缓存 */
+	SCB_EnableICache();
+  /* 使能数据缓存 */
+  SCB_EnableDCache();
+	/* 系统时钟初始化成400MHz */
+//	SystemClock_Config();
+//	/* LED 端口初始化 */
+//	LED_GPIO_Config();	
+//	LED_BLUE;
+	
+	/* 配置串口1为：115200 8-N-1 */
+	DEBUG_USART_Config();
+  
+	printf("\r\n这是一个64M串行flash(W25Q256)实验(QSPI驱动) \r\n");
+	
+	/* 64M串行flash W25Q256初始化 */
+	QSPI_Init();
 
-////	/* 获取 Flash Device ID */
-////	DeviceID = QSPI_FLASH_ReadDeviceID();
-////	
-////	Delay( 200 );
-////	
-////	/* 获取 SPI Flash ID */
-////	FlashID = QSPI_FLASH_ReadID();
-////	
-////	printf("\r\nFlashID is 0x%X,  Manufacturer Device ID is 0x%X\r\n", FlashID, DeviceID);
-////	
-////	/* 检验 SPI Flash ID */
-////	if (FlashID == sFLASH_ID) 
-//	{	
-//			/* Flash进入四字节地址模式 */
-////		QSPI_EnterFourBytesAddress();
-////		printf("\r\n检测到QSPI FLASH W25Q256 !\r\n");
-//		/* 擦除将要写入的 QSPI FLASH 扇区，FLASH写入前要先擦除 */
-////		for(i=0;i<32;i++)
-////		BSP_QSPI_Erase_Block(i*0x1000);
-////		FlashErase(FLASH_WriteAddress,NULL);	
-//  	QSPI_EraseSector((uint32_t)FLASH_WriteAddress);		
-////		Delay(1000);
-//		for(i=0;i<256;i++)
-//		Rx_Buffer[i]=0;
-////		QSPI_FLASH_Init();
-//		/* 将擦除后的数据读出来放到接收缓冲区中 */
-//		QSPI_ReadPage(FLASH_WriteAddress, BufferSize,Rx_Buffer);
-//		printf("\r\n擦除后数据为：\r\n");
-//		for(i=0;i<256;i++)
-//		printf("0x%x ", Rx_Buffer[i]);
-////		QSPI_FLASH_Init();
-//		printf("\r\n写入的数据为：\r\n");
-//		for(i=0;i<256;i++)
-//		{	
-//			Tx_Buffer[i]=0xab;
-//			printf("0x%x ", Tx_Buffer[i]);
-//		}
-//		
-//		/* 将发送缓冲区的数据写到flash中 */
-//		QSPI_WritePage(FLASH_WriteAddress, BufferSize,Tx_Buffer);
-////		FlashWrite(FLASH_WriteAddress,0,256,Tx_Buffer);
-////		printf("\r\n写入的数据为：\r\n%s", Tx_Buffer);
-////		QSPI_FLASH_Init();
-//		/* 将刚刚写入的数据读出来放到接收缓冲区中 */
-//		QSPI_ReadPage(FLASH_ReadAddress, BufferSize,Rx_Buffer);
-////		printf("\r\n读出的数据为：\r\n%s", Rx_Buffer);
-//		printf("\r\n读出的数据为：\r\n");
-//		for(i=0;i<256;i++)
-//		printf("0x%x ", Rx_Buffer[i]);		
-//		/* 检查写入的数据与读出的数据是否相等 */
-//		TransferStatus1 = Buffercmp(Tx_Buffer, Rx_Buffer, BufferSize);
-//		
-//		if( PASSED == TransferStatus1 )
-//		{    
-////			LED_GREEN;
-//			printf("\r\n64M串行flash(W25Q256)测试成功!\n\r");
-//		}
-//		else
-//		{        
-////			LED_RED;
-//			printf("\r\n64M串行flash(W25Q256)测试失败!\n\r");
-//		}
-//	}// if (FlashID == sFLASH_ID)
-////	else
-////	{    
-////		LED_RED;
-////		printf("\r\n获取不到 W25Q256 ID!\n\r");
-////	}
+//	/* 获取 Flash Device ID */
+//	DeviceID = QSPI_FLASH_ReadDeviceID();
 //	
-//	while(1);  
-//}
+//	Delay( 200 );
+//	
+//	/* 获取 SPI Flash ID */
+//	FlashID = QSPI_FLASH_ReadID();
+//	
+//	printf("\r\nFlashID is 0x%X,  Manufacturer Device ID is 0x%X\r\n", FlashID, DeviceID);
+//	
+//	/* 检验 SPI Flash ID */
+//	if (FlashID == sFLASH_ID) 
+	{	
+			/* Flash进入四字节地址模式 */
+//		QSPI_EnterFourBytesAddress();
+//		printf("\r\n检测到QSPI FLASH W25Q256 !\r\n");
+		/* 擦除将要写入的 QSPI FLASH 扇区，FLASH写入前要先擦除 */
+//		for(i=0;i<32;i++)
+//		BSP_QSPI_Erase_Block(i*0x1000);
+//		FlashErase(FLASH_WriteAddress,NULL);	
+  	QSPI_EraseSector((uint32_t)FLASH_WriteAddress);		
+//		Delay(1000);
+		for(i=0;i<256;i++)
+		Rx_Buffer[i]=0;
+//		QSPI_FLASH_Init();
+		/* 将擦除后的数据读出来放到接收缓冲区中 */
+		QSPI_ReadPage(FLASH_WriteAddress, BufferSize,Rx_Buffer);
+		printf("\r\n擦除后数据为：\r\n");
+		for(i=0;i<256;i++)
+		printf("0x%x ", Rx_Buffer[i]);
+//		QSPI_FLASH_Init();
+		printf("\r\n写入的数据为：\r\n");
+		for(i=0;i<256;i++)
+		{	
+			Tx_Buffer[i]=0xab;
+			printf("0x%x ", Tx_Buffer[i]);
+		}
+		
+		/* 将发送缓冲区的数据写到flash中 */
+		QSPI_WritePage(FLASH_WriteAddress, BufferSize,Tx_Buffer);
+//		FlashWrite(FLASH_WriteAddress,0,256,Tx_Buffer);
+//		printf("\r\n写入的数据为：\r\n%s", Tx_Buffer);
+//		QSPI_FLASH_Init();
+		/* 将刚刚写入的数据读出来放到接收缓冲区中 */
+		QSPI_ReadPage(FLASH_ReadAddress, BufferSize,Rx_Buffer);
+//		printf("\r\n读出的数据为：\r\n%s", Rx_Buffer);
+		printf("\r\n读出的数据为：\r\n");
+		for(i=0;i<256;i++)
+		printf("0x%x ", Rx_Buffer[i]);		
+		/* 检查写入的数据与读出的数据是否相等 */
+		TransferStatus1 = Buffercmp(Tx_Buffer, Rx_Buffer, BufferSize);
+		
+		if( PASSED == TransferStatus1 )
+		{    
+//			LED_GREEN;
+			printf("\r\n64M串行flash(W25Q256)测试成功!\n\r");
+		}
+		else
+		{        
+//			LED_RED;
+			printf("\r\n64M串行flash(W25Q256)测试失败!\n\r");
+		}
+	}// if (FlashID == sFLASH_ID)
+//	else
+//	{    
+//		LED_RED;
+//		printf("\r\n获取不到 W25Q256 ID!\n\r");
+//	}
+	
+	while(1);  
+}
 /*
  * 函数名：Buffercmp
  * 描述  ：比较两个缓冲区中的数据是否相等

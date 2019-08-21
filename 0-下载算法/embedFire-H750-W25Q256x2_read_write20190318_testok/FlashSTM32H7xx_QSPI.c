@@ -20,8 +20,6 @@
 //#include <stdlib.h>
 #include <string.h>
 #include "stm32h7xx_hal.h"
-#include "bsp_debug_usart.h"
-
 uint32_t QSPI_EnterQPI(void);
 #define RESULT_OK 		0
 #define RESULT_ERROR  0xff

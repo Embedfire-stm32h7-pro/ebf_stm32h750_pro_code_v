@@ -1847,7 +1847,11 @@ int main(void)
 	
 	/* 32M串行flash W25Q256初始化 */
 	QSPI_FLASH_Init();
-	
+	QSPI_FLASH_WriteStatusReg(1,0X00);
+    QSPI_FLASH_WriteStatusReg(2,0X00);
+				printf("\r\nFlash Status Reg1 is 0x%02X", QSPI_FLASH_ReadStatusReg(1)); 
+      printf("\r\nFlash Status Reg2 is 0x%02X", QSPI_FLASH_ReadStatusReg(2));
+      printf("\r\nFlash Status Reg3 is 0x%02X", QSPI_FLASH_ReadStatusReg(3)); 
 	if (1)
 	{	
 		printf("\r\n检测到QSPI FLASH W25Q256 !\r\n");

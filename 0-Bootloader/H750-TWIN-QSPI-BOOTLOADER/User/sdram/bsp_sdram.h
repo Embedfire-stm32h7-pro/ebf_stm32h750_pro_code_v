@@ -64,7 +64,7 @@
 
 
 /*ÐÅÏ¢Êä³ö*/
-#define SDRAM_DEBUG_ON         1
+#define SDRAM_DEBUG_ON         0
 
 #define SDRAM_INFO(fmt,arg...)           printf("<<-SDRAM-INFO->> "fmt"\n",##arg)
 #define SDRAM_ERROR(fmt,arg...)          printf("<<-SDRAM-ERROR->> "fmt"\n",##arg)

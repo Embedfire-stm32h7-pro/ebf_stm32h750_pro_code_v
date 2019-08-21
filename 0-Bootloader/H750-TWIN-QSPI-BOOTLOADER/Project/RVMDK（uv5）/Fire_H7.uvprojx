@@ -333,7 +333,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32H743xx</Define>
+              <Define>USE_HAL_DRIVER,STM32H750xx</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32H7xx\Include;..\..\Libraries\STM32H7xx_HAL_Driver\Inc;..\..\User</IncludePath>
             </VariousControls>
@@ -803,31 +803,6 @@
               <FileName>bsp_sdram.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\sdram\bsp_sdram.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\lcd\bsp_lcd.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_i2c_touch.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\touch\bsp_i2c_touch.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_touch_gtxx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\touch\bsp_touch_gtxx.c</FilePath>
-            </File>
-            <File>
-              <FileName>palette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\touch\palette.c</FilePath>
-            </File>
-            <File>
-              <FileName>core_delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\delay\core_delay.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1641,31 +1616,6 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\sdram\bsp_sdram.c</FilePath>
             </File>
-            <File>
-              <FileName>bsp_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\lcd\bsp_lcd.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_i2c_touch.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\touch\bsp_i2c_touch.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_touch_gtxx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\touch\bsp_touch_gtxx.c</FilePath>
-            </File>
-            <File>
-              <FileName>palette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\touch\palette.c</FilePath>
-            </File>
-            <File>
-              <FileName>core_delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\delay\core_delay.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -2477,31 +2427,6 @@
               <FileName>bsp_sdram.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\sdram\bsp_sdram.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\lcd\bsp_lcd.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_i2c_touch.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\touch\bsp_i2c_touch.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_touch_gtxx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\touch\bsp_touch_gtxx.c</FilePath>
-            </File>
-            <File>
-              <FileName>palette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\touch\palette.c</FilePath>
-            </File>
-            <File>
-              <FileName>core_delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\delay\core_delay.c</FilePath>
             </File>
           </Files>
         </Group>

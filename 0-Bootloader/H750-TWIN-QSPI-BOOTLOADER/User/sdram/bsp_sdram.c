@@ -322,10 +322,11 @@ void SDRAM_Init(void)
 
   FMC_SDRAM_TimingTypeDef SdramTiming;
 	RCC_PeriphCLKInitTypeDef RCC_PeriphClkInit;
-	
+	  /* 使能 FMC 时钟 */
+  __FMC_CLK_ENABLE();
+  //RCC->AHB3ENR &= ~(1 << 12);
   /* 配置FMC接口相关的 GPIO*/
   SDRAM_GPIO_Config();
-
 	/* 配置SDRAM时钟源*/
   RCC_PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_FMC;
   RCC_PeriphClkInit.PLL2.PLL2M = 5;
@@ -339,11 +340,8 @@ void SDRAM_Init(void)
   RCC_PeriphClkInit.FmcClockSelection = RCC_FMCCLKSOURCE_PLL2;
   if (HAL_RCCEx_PeriphCLKConfig(&RCC_PeriphClkInit) != HAL_OK)
   {
-    while(1);
+    while(1); 
   }
-  /* 使能 FMC 时钟 */
-  __FMC_CLK_ENABLE();
-
   /*执行SDRAM1的内存初始化序列 */
   hsdram1.Instance = FMC_SDRAM_DEVICE;
   /* hsdram1结构体初始化*/
@@ -365,11 +363,11 @@ void SDRAM_Init(void)
   SdramTiming.WriteRecoveryTime = 2;//写入命令到预充电命令之间的延迟
   SdramTiming.RPDelay = 2;//预充电与行有效命令之间的延迟
   SdramTiming.RCDDelay = 2;//行有效与列读写命令之间的延迟
-
+  HAL_SDRAM_DeInit(&hsdram1);  
   HAL_SDRAM_Init(&hsdram1, &SdramTiming);  
+	 
   /* FMC SDRAM 设备时序初始化 */
   SDRAM_InitSequence(); 
-  
 }
 
 

@@ -150,7 +150,7 @@ uint8_t QSPI_EnterFourBytesAddress(void)
   
   /* ¥´ ‰√¸¡Ó */
   if (HAL_QSPI_Command(&QSPIHandle, &s_command,HAL_QPSI_TIMEOUT_DEFAULT_VALUE) != HAL_OK)
-  {
+  {          
     return QSPI_ERROR;
   }
 
