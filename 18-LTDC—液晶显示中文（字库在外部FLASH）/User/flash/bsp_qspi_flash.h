@@ -163,26 +163,7 @@ typedef struct {
 #define QSPI_FLASH_CS_GPIO_CLK_ENABLE()   __GPIOG_CLK_ENABLE()
 #define QSPI_FLASH_CS_GPIO_AF             GPIO_AF10_QUADSPI
 
-/*QSPI BANK2接口定义-开头****************************/
-#define QSPI_FLASH_BK2_IO0_PIN             GPIO_PIN_2                
-#define QSPI_FLASH_BK2_IO0_PORT            GPIOH                   
-#define QSPI_FLASH_BK2_IO0_CLK_ENABLE()    __GPIOH_CLK_ENABLE()
-#define QSPI_FLASH_BK2_IO0_AF              GPIO_AF9_QUADSPI
 
-#define QSPI_FLASH_BK2_IO1_PIN             GPIO_PIN_3                
-#define QSPI_FLASH_BK2_IO1_PORT            GPIOH                      
-#define QSPI_FLASH_BK2_IO1_CLK_ENABLE()    __GPIOH_CLK_ENABLE()
-#define QSPI_FLASH_BK2_IO1_AF              GPIO_AF9_QUADSPI
-
-#define QSPI_FLASH_BK2_IO2_PIN             GPIO_PIN_9                
-#define QSPI_FLASH_BK2_IO2_PORT            GPIOG                      
-#define QSPI_FLASH_BK2_IO2_CLK_ENABLE()    __GPIOG_CLK_ENABLE()
-#define QSPI_FLASH_BK2_IO2_AF              GPIO_AF9_QUADSPI
-
-#define QSPI_FLASH_BK2_IO3_PIN             GPIO_PIN_14                
-#define QSPI_FLASH_BK2_IO3_PORT            GPIOG                      
-#define QSPI_FLASH_BK2_IO3_CLK_ENABLE()    __GPIOG_CLK_ENABLE()
-#define QSPI_FLASH_BK2_IO3_AF              GPIO_AF9_QUADSPI
 
 
 void QSPI_FLASH_Init(void);

@@ -340,7 +340,7 @@ void BSP_SD_MspInit(void)
     HAL_NVIC_SetPriority(SDMMC1_IRQn,0,0);  //配置SDMMC1中断
     HAL_NVIC_EnableIRQ(SDMMC1_IRQn);        //使能SDMMC1中断
     
-    HAL_NVIC_SetPriority(SysTick_IRQn, 0x0E ,0);
+//    HAL_NVIC_SetPriority(SysTick_IRQn, 0x0E ,0);
 }
 
 //SDMMC1发送完成回调函数

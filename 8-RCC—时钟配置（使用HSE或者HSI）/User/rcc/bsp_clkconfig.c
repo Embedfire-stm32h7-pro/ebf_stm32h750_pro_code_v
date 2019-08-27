@@ -122,7 +122,7 @@ void SystemClock_Config(void)
   *            D3 APB4 Prescaler              = 2 (APB4 Clock  120MHz)
   *            HSE Frequency(Hz)              = 25000000
   *            PLL_M                          = 5
-  *            PLL_N                          = 92
+  *            PLL_N                          = 192
   *            PLL_P                          = 2
   *            PLL_Q                          = 4
   *            PLL_R                          = 2

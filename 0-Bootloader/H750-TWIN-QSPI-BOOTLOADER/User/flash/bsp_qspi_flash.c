@@ -82,7 +82,7 @@ void QSPI_FLASH_Init(void)
 	QSPIHandle.Init.FifoThreshold = 1;
 	/*采样移位半个周期*/
 	QSPIHandle.Init.SampleShifting = QSPI_SAMPLE_SHIFTING_HALFCYCLE;
-	/*Flash大小为64M字节，2^26，所以取权值26-1=25*/
+	/*Flash大小32M字节，2^25，所以取权值25-1=24*/
 	QSPIHandle.Init.FlashSize = 24;
 	/*片选高电平保持时间，至少50ns，对应周期数6*9.2ns =55.2ns*/
 	QSPIHandle.Init.ChipSelectHighTime = QSPI_CS_HIGH_TIME_6_CYCLE;

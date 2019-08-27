@@ -75,7 +75,7 @@ void QSPI_FLASH_Init(void)
 	HAL_QSPI_DeInit(&QSPIHandle);
 	/* QSPI_FLASH 模式配置 */
 	QSPIHandle.Instance = QUADSPI;
-	/*二分频，时钟为216/(1+1)=108MHz */
+	/*二分频，时钟为240/(1+1)=120MHz */
 	QSPIHandle.Init.ClockPrescaler = 1;
 	/*FIFO 阈值为 4 个字节*/
 	QSPIHandle.Init.FifoThreshold = 24;

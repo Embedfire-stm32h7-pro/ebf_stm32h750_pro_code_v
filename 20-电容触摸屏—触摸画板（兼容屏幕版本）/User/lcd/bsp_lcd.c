@@ -312,7 +312,7 @@ void LCD_Init(void)
     /* 初始化LCD引脚 */
     LCD_GPIO_Config();
     /* 初始化SDRAM 用作LCD 显存*/
-    SDRAM_Init();
+ //   SDRAM_Init();
     /* 配置LTDC参数 */
     Ltdc_Handler.Instance = LTDC;  
     /* 配置行同步信号宽度(HSW-1) */

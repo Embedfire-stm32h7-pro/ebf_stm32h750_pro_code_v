@@ -11,8 +11,7 @@
 #error This file is not needed in current configuration. Remove from the project.
 #endif
 
-static
-const WCHAR uni2oem[] = {
+WCHAR uni2oem[] = {
 /*  Unicode - OEM,  Unicode - OEM,  Unicode - OEM,  Unicode - OEM */
 	0x00A4, 0xA1E8, 0x00A7, 0xA1EC, 0x00A8, 0xA1A7, 0x00B0, 0xA1E3,
 	0x00B1, 0xA1C0, 0x00B7, 0xA1A4, 0x00D7, 0xA1C1, 0x00E0, 0xA8A4,

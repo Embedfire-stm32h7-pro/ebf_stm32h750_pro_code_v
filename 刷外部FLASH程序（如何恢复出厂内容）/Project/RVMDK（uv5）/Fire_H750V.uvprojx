@@ -185,12 +185,12 @@
             <RvdsVP>3</RvdsVP>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
-            <StupSel>8</StupSel>
+            <StupSel>16</StupSel>
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
-            <RoSelD>3</RoSelD>
+            <RoSelD>4</RoSelD>
             <RwSelD>4</RwSelD>
             <CodeSel>0</CodeSel>
             <OptFeed>0</OptFeed>
@@ -202,8 +202,8 @@
             <Ro1Chk>0</Ro1Chk>
             <Ro2Chk>0</Ro2Chk>
             <Ro3Chk>0</Ro3Chk>
-            <Ir1Chk>1</Ir1Chk>
-            <Ir2Chk>0</Ir2Chk>
+            <Ir1Chk>0</Ir1Chk>
+            <Ir2Chk>1</Ir2Chk>
             <Ra1Chk>0</Ra1Chk>
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
@@ -277,8 +277,8 @@
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
-                <StartAddress>0x0</StartAddress>
-                <Size>0x0</Size>
+                <StartAddress>0x24000000</StartAddress>
+                <Size>0x100000</Size>
               </OCR_RVCT5>
               <OCR_RVCT6>
                 <Type>0</Type>
@@ -302,15 +302,15 @@
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
-                <StartAddress>0x24000000</StartAddress>
-                <Size>0x80000</Size>
+                <StartAddress>0x30000000</StartAddress>
+                <Size>0x20000</Size>
               </OCR_RVCT10>
             </OnChipMemories>
             <RvctStartVector></RvctStartVector>
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -333,7 +333,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32H750xx,APPLICATION_ADDRESS = 0x8000000</Define>
+              <Define>USE_HAL_DRIVER,STM32H750xx,VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32H7xx\Include;..\..\Libraries\STM32H7xx_HAL_Driver\Inc;..\..\User;..\..\User\FATFS;..\..\User\res_mgr</IncludePath>
             </VariousControls>
@@ -357,7 +357,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>1</umfTarg>
+            <umfTarg>0</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -366,7 +366,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile></ScatterFile>
+            <ScatterFile>.\SDARAM.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -825,11 +825,6 @@
               <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_dac.c</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_ll_delayblock.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_delayblock.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32h7xx_ll_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_dma.c</FilePath>
@@ -873,11 +868,6 @@
               <FileName>stm32h7xx_ll_lpuart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_lpuart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_ll_mdma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_mdma.c</FilePath>
             </File>
             <File>
               <FileName>stm32h7xx_ll_opamp.c</FileName>
@@ -930,9 +920,9 @@
               <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_usart.c</FilePath>
             </File>
             <File>
-              <FileName>stm32h7xx_ll_usb.c</FileName>
+              <FileName>stm32h7xx_ll_delayblock.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_usb.c</FilePath>
+              <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_delayblock.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -958,11 +948,6 @@
               <FileName>core_delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\delay\core_delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_mpu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\mpu\bsp_mpu.c</FilePath>
             </File>
             <File>
               <FileName>bsp_qspi_flash.c</FileName>

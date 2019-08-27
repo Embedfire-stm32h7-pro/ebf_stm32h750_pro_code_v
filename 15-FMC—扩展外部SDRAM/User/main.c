@@ -64,9 +64,11 @@ int main(void)
 		
 	/*初始化SDRAM模块*/
 	SDRAM_Init();
+   
+  
 	/*蓝灯亮，表示正在读写SDRAM测试*/
 	LED_BLUE;
-
+   
   /*选择PLL输出作为RNG时钟源 */
   
   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_RNG;

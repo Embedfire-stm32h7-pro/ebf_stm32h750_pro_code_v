@@ -3,8 +3,8 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2018-xx-xx
-  * @brief   ADC-
+  * @date    2019-xx-xx
+  * @brief   ADC-采集
   ******************************************************************
   * @attention
   *
@@ -92,19 +92,19 @@ int main(void)
 	*            VDD(V)               = 3.3
 	*            Flash Latency(WS)    = 4
   * @param  None
-  * @retval None
+  * @retval None`
   */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-
+ 
   /** 启用电源配置更新
   */
   HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
   /** 配置主内稳压器输出电压
   */
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
   while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
  

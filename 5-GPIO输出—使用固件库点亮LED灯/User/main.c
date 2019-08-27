@@ -21,6 +21,8 @@
 #include "./mpu/bsp_mpu.h" 
 #include "./usart/bsp_debug_usart.h"
 
+
+
 void SystemClock_Config(void);
 /**
   * @brief  Ö÷º¯Êý
@@ -51,39 +53,39 @@ int main(void)
 		LED1( OFF );		  // Ãð
 		HAL_Delay(1000);
 
-		LED2( ON );			// ÁÁ 
-		HAL_Delay(1000);
-		LED2( OFF );		  // Ãð
+//		LED2( ON );			// ÁÁ 
+//		HAL_Delay(1000);
+//		LED2( OFF );		  // Ãð
 
-		LED3( ON );			 // ÁÁ 
-		HAL_Delay(1000);
-		LED3( OFF );		  // Ãð	
-		
-		/*ÂÖÁ÷ÏÔÊ¾ ºìÂÌÀ¶»Æ×ÏÇà°× ÑÕÉ«*/
-		LED_RED;
-		HAL_Delay(1000);
-		
-		LED_GREEN;
-		HAL_Delay(1000);
-		
-		LED_BLUE;
-		HAL_Delay(1000);
-		
-		LED_YELLOW;
-		HAL_Delay(1000);
-		
-		LED_PURPLE;
-		HAL_Delay(1000);
-						
-		LED_CYAN;
-		HAL_Delay(1000);
-		
-		LED_WHITE;
-		HAL_Delay(1000);
-		
-		LED_RGBOFF;
-		HAL_Delay(1000);
-		
+//		LED3( ON );			 // ÁÁ 
+//		HAL_Delay(1000);
+//		LED3( OFF );		  // Ãð	
+//		
+//		/*ÂÖÁ÷ÏÔÊ¾ ºìÂÌÀ¶»Æ×ÏÇà°× ÑÕÉ«*/
+//		LED_RED;
+//		HAL_Delay(1000);
+//		
+//		LED_GREEN;
+//		HAL_Delay(1000);
+//		
+//		LED_BLUE;
+//		HAL_Delay(1000);
+//		
+//		LED_YELLOW;
+//		HAL_Delay(1000);
+//		
+//		LED_PURPLE;
+//		HAL_Delay(1000);
+//						
+//		LED_CYAN;
+//		HAL_Delay(1000);
+//		
+//		LED_WHITE;
+//		HAL_Delay(1000);
+//		
+//		LED_RGBOFF;
+//		HAL_Delay(1000);
+//		
 	}
 }
 

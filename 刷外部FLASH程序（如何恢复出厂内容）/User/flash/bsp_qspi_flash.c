@@ -73,21 +73,21 @@ void QSPI_FLASH_Init(void)
 	GPIO_InitStruct.Pin = QSPI_FLASH_CS_PIN;
 	GPIO_InitStruct.Alternate = QSPI_FLASH_CS_GPIO_AF;
 	HAL_GPIO_Init(QSPI_FLASH_CS_GPIO_PORT, &GPIO_InitStruct);
-  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_QSPI;
-    //QSPI freq = osc/PLL2M*PLL2N/PLL2R/（ClockPrescaler+1）
-  PeriphClkInitStruct.PLL2.PLL2M = 5;
-  PeriphClkInitStruct.PLL2.PLL2N = 144;
-  PeriphClkInitStruct.PLL2.PLL2P = 2;
-  PeriphClkInitStruct.PLL2.PLL2Q = 2;
-  PeriphClkInitStruct.PLL2.PLL2R = 3;
-  PeriphClkInitStruct.PLL2.PLL2RGE = RCC_PLL2VCIRANGE_2;
-  PeriphClkInitStruct.PLL2.PLL2VCOSEL = RCC_PLL2VCOWIDE;
-  PeriphClkInitStruct.PLL2.PLL2FRACN = 0;
-  PeriphClkInitStruct.QspiClockSelection = RCC_QSPICLKSOURCE_PLL2;
-  HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct);
+//  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_QSPI;
+//    //QSPI freq = osc/PLL2M*PLL2N/PLL2R/（ClockPrescaler+1）
+//  PeriphClkInitStruct.PLL2.PLL2M = 5;
+//  PeriphClkInitStruct.PLL2.PLL2N = 144;
+//  PeriphClkInitStruct.PLL2.PLL2P = 2;
+//  PeriphClkInitStruct.PLL2.PLL2Q = 2;
+//  PeriphClkInitStruct.PLL2.PLL2R = 3;
+//  PeriphClkInitStruct.PLL2.PLL2RGE = RCC_PLL2VCIRANGE_2;
+//  PeriphClkInitStruct.PLL2.PLL2VCOSEL = RCC_PLL2VCOWIDE;
+//  PeriphClkInitStruct.PLL2.PLL2FRACN = 0;
+//  PeriphClkInitStruct.QspiClockSelection = RCC_QSPICLKSOURCE_PLL2;
+//  HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct);
 	/* QSPI_FLASH 模式配置 */
 	QSPIHandle.Instance = QUADSPI;
-	/*二分频，时钟为216/(1+1)=108MHz */
+	/*二分频，时钟为240/(1+1)=120MHz */
 	QSPIHandle.Init.ClockPrescaler = 1;
 	/*FIFO 阈值为 4 个字节*/
 	QSPIHandle.Init.FifoThreshold = 24;

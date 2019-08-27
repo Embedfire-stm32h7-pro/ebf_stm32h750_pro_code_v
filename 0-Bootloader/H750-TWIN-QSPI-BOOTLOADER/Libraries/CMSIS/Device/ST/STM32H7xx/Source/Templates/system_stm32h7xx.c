@@ -194,7 +194,7 @@ void SystemInit (void)
   /* Disable all interrupts */
   RCC->CIER = 0x00000000;
 
-	SystemInit_ExtMemCtl();
+//	SystemInit_ExtMemCtl();
 #if defined (DATA_IN_D2_SRAM)
   /* in case of initialized data in D2 SRAM (AHB SRAM) , enable the D2 SRAM clock ((AHB SRAM clock) */
 #if defined(RCC_AHB2ENR_D2SRAM1EN)
