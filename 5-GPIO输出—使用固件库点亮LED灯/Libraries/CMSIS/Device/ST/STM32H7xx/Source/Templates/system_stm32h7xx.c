@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    system_stm32h7xx.c
   * @author  MCD Application Team
-  * @version V1.2.0
+  * @version V1.5.0
   * @date    29-December-2017
   * @brief   CMSIS Cortex-Mx Device Peripheral Access Layer System Source File.
   *
