@@ -3,7 +3,7 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2018-xx-xx
+  * @date    2019-xx-xx
   * @brief   TIM-高级定时器互补输出
   ******************************************************************
   * @attention
