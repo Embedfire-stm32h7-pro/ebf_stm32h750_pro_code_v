@@ -1250,7 +1250,7 @@
               <OCR_RVCT5>
                 <Type>1</Type>
                 <StartAddress>0x24010000</StartAddress>
-                <Size>0x80000</Size>
+                <Size>0x70000</Size>
               </OCR_RVCT5>
               <OCR_RVCT6>
                 <Type>0</Type>
