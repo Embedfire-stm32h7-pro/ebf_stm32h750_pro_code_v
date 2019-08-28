@@ -53,7 +53,7 @@ int main(void)
 	printf("\r\n 实验步骤：\r\n");
 	printf("\r\n 1.本实验为回环测试，只需一块开发板即可\r\n");
 	printf("\r\n 2.跳线帽5v --- C/4-5V 也不用接（多机需要）\r\n");
-  printf("\r\n 3.按下 KEY1 可以发送报文，然后开发板会自己收到报文\r\n");
+    printf("\r\n 3.按下 KEY1 可以发送报文，然后开发板会自己收到报文\r\n");
   
 	while(1)
 	{	

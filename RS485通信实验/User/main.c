@@ -3,7 +3,7 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2018-xx-xx
+  * @date    2019-xx-xx
   * @brief   RS485通信实验
   ******************************************************************
   * @attention
@@ -58,7 +58,7 @@ int main(void)
 	Key_GPIO_Config();
 	
 	printf("\r\n 欢迎使用野火 STM32H750-挑战者 开发板。\r\n");
-  printf("\r\n 野火 STM32H750 485通讯实验例程\r\n");
+    printf("\r\n 野火 STM32H750 485通讯实验例程\r\n");
 	
 	printf("\r\n 实验步骤：\r\n");
 
