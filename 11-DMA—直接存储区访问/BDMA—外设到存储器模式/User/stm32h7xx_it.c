@@ -74,10 +74,6 @@ void HardFault_Handler(void)
   /* USER CODE END HardFault_IRQn 1 */
 }
 
-__asm void wait()
-{
-  BX lr;
-}
 
 /**
 * @brief This function handles Memory management fault.

@@ -3,7 +3,7 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2018-xx-xx
+  * @date    2019-xx-xx
   * @brief   BDMA——外设到存储器模式
   ******************************************************************
   * @attention
@@ -43,15 +43,15 @@ int main(void)
 //  Board_MPU_Config(0, MPU_Normal_WT, 0xD0000000, MPU_32MB);
 //  Board_MPU_Config(1, MPU_Normal_WT, 0x24000000, MPU_512KB);
   
-  SCB_EnableICache();    // 使能指令 Cache
-//SCB_EnableDCache();    // 使能数据 Cache
+//    SCB_EnableICache();    // 使能指令 Cache
+//    SCB_EnableDCache();    // 使能数据 Cache
 
-	/* 配置串口1为：115200 8-N-1 */
-	DEBUG_USART_Config();
-  
-  /* ADC初始化子程序 */ 
-  ADC_Init();
-  
+    /* 配置串口1为：115200 8-N-1 */
+    DEBUG_USART_Config();
+
+    /* ADC初始化子程序 */ 
+    ADC_Init();
+
   while(1)
 	{	
       Delay(0xffffee);
