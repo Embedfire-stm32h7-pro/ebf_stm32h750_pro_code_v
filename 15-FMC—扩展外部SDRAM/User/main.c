@@ -40,7 +40,7 @@ RNG_HandleTypeDef hrng;
 int main(void)
 {
 	long long count=0;
-  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct;
+    RCC_PeriphCLKInitTypeDef PeriphClkInitStruct;
 	/* 系统时钟初始化成480MHz */
 	SystemClock_Config();
   
@@ -50,13 +50,13 @@ int main(void)
 //  Board_MPU_Config(0, MPU_Normal_WT, 0xD0000000, MPU_32MB);
 //  Board_MPU_Config(1, MPU_Normal_WT, 0x24000000, MPU_512KB);
   
-  SCB_EnableICache();    // 使能指令 Cache
+    SCB_EnableICache();    // 使能指令 Cache
 	SCB_EnableDCache();    // 使能数据 Cache
   
 	/* LED 端口初始化 */
 	LED_GPIO_Config();
-  /* 串口初始化 */
-  DEBUG_USART_Config();
+    /* 串口初始化 */
+    DEBUG_USART_Config();
   
 	printf("\r\n 欢迎使用野火  STM32 H750 开发板。\r\n");		 
 

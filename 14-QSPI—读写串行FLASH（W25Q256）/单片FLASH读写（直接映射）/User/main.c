@@ -3,7 +3,7 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2018-xx-xx
+  * @date    2019-xx-xx
   * @brief   QSPI FLASH基本读写例程
   ******************************************************************
   * @attention
@@ -1832,8 +1832,8 @@ int main(void)
 	int state = QSPI_ERROR;
 	/* 使能指令缓存 */
 	SCB_EnableICache();
-  /* 使能数据缓存 */
-  SCB_EnableDCache();
+    /* 使能数据缓存 */
+    SCB_EnableDCache();
 	/* 系统时钟初始化成480MHz */
 	SystemClock_Config();
 	/* LED 端口初始化 */
@@ -1847,11 +1847,6 @@ int main(void)
 	
 	/* 32M串行flash W25Q256初始化 */
 	QSPI_FLASH_Init();
-	QSPI_FLASH_WriteStatusReg(1,0X00);
-  QSPI_FLASH_WriteStatusReg(2,0X00);
-	printf("\r\nFlash Status Reg1 is 0x%02X", QSPI_FLASH_ReadStatusReg(1)); 
-	printf("\r\nFlash Status Reg2 is 0x%02X", QSPI_FLASH_ReadStatusReg(2));
-	printf("\r\nFlash Status Reg3 is 0x%02X", QSPI_FLASH_ReadStatusReg(3)); 
 	if (1)
 	{	
 		printf("\r\n检测到QSPI FLASH W25Q256 !\r\n");
