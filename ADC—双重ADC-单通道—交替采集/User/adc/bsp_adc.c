@@ -3,7 +3,7 @@
   * @file    bsp_adcd.c
   * @author  fire
   * @version V1.1
-  * @date    2018-xx-xx
+  * @date    2019xx-xx
   * @brief   adc应用函数接口
   ******************************************************************
   * @attention
@@ -64,7 +64,7 @@ static void ADC_Mode_Config(void)
     /*         PLL_Q                = 2     */
     /*         PLL_R                = 2     */
     /*     ADC_ker_clk         = 32000000   */
-		RCC_PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+	RCC_PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
     RCC_PeriphClkInit.PLL2.PLL2FRACN = 0;
     RCC_PeriphClkInit.PLL2.PLL2M = 5;
     RCC_PeriphClkInit.PLL2.PLL2N = 160;
@@ -74,7 +74,7 @@ static void ADC_Mode_Config(void)
     RCC_PeriphClkInit.PLL2.PLL2RGE = RCC_PLL2VCIRANGE_2;
     RCC_PeriphClkInit.PLL2.PLL2VCOSEL = RCC_PLL2VCOWIDE;
     RCC_PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_PLL2; 
-		HAL_RCCEx_PeriphCLKConfig(&RCC_PeriphClkInit);  
+	HAL_RCCEx_PeriphCLKConfig(&RCC_PeriphClkInit);  
   
     /* 使能ADC时钟 */
     RHEOSTAT_ADC_MASTER_CLK_ENABLE();
@@ -83,6 +83,7 @@ static void ADC_Mode_Config(void)
     /* 使能ADC_SLAVE时钟 */
     RHEOSTAT_ADC_SLAVE_CLK_ENABLE();
     
+    SYSCFG->PMCR |= (1 << 8);
     //选择DMA1的Stream1
     hdma_adc.Instance = RHEOSTAT_ADC_DMA_Base;
     //ADC1的DMA请求
