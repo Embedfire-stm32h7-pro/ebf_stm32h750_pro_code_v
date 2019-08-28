@@ -3,8 +3,8 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2018-xx-xx
-  * @brief   USART—USART1接发例程
+  * @date    2019-xx-xx
+  * @brief   USART—USART2接发例程
   ******************************************************************
   * @attention
   *
@@ -72,6 +72,7 @@ int main(void)
 				usRxCount = 0;
 			}
 			Rxflag=0;
+            __HAL_UART_ENABLE_IT(&UartHandle,UART_IT_RXNE);    
 		}
 	}  
 }

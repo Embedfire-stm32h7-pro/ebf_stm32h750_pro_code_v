@@ -85,6 +85,7 @@ int main(void)
 				usRxCount = 0;
 			}
 			Rxflag=0;
+            __HAL_UART_ENABLE_IT(&UartHandle,UART_IT_RXNE);    
 		}
 	}
 }

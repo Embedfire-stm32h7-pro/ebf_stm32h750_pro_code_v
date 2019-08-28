@@ -3,8 +3,8 @@
   * @file    bsp_RS232_USART.c
   * @author  fire
   * @version V1.0
-  * @date    2016-xx-xx
-  * @brief   使用串口2，重定向c库printf函数到usart端口，中断接收模式
+  * @date    2019-xx-xx
+  * @brief   使用串口5 ，重定向c库printf函数到usart端口，中断接收模式
   ******************************************************************************
   * @attention
   *
@@ -33,10 +33,10 @@ void RS232_USART_Config(void)
     RS232_USART_RX_GPIO_CLK_ENABLE();
     RS232_USART_TX_GPIO_CLK_ENABLE();
     
-    /* 配置串口2时钟源*/
-		RCC_PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_UARTx;
-		RCC_PeriphClkInit.Usart234578ClockSelection = RCC_UARTxCLKSOURCE_SYSCLK;
-		HAL_RCCEx_PeriphCLKConfig(&RCC_PeriphClkInit);
+    /* 配置串口5时钟源*/
+    RCC_PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_UARTx;
+    RCC_PeriphClkInit.Usart234578ClockSelection = RCC_UARTxCLKSOURCE_SYSCLK;
+    HAL_RCCEx_PeriphCLKConfig(&RCC_PeriphClkInit);
     /* 使能 UART 时钟 */
     RS232_USART_CLK_ENABLE();
 

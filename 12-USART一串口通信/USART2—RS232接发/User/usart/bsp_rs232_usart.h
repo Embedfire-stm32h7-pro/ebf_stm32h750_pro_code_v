@@ -26,7 +26,7 @@
 #define RS232_USART_TX_AF                       GPIO_AF7_USART2
 
 #define RS232_USART_IRQHandler                  USART2_IRQHandler
-#define RS232_USART_IRQ                 				USART2_IRQn
+#define RS232_USART_IRQ                 		USART2_IRQn
 /************************************************************/
 
 

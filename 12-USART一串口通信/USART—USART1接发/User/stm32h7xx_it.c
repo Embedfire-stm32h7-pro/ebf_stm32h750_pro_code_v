@@ -198,7 +198,7 @@ void DEBUG_USART_IRQHandler(void)
         HAL_UART_Receive(&UartHandle, (uint8_t *)&ucTemp, 1, 1000);        
 	}
     
-    HAL_UART_IRQHandler(&UartHandle);	 
+    HAL_UART_IRQHandler(&UartHandle);	  
 }
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

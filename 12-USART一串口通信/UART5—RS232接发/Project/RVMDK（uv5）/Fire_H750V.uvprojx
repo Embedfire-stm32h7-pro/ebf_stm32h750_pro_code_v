@@ -208,7 +208,7 @@
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
             <Im1Chk>1</Im1Chk>
-            <Im2Chk>0</Im2Chk>
+            <Im2Chk>1</Im2Chk>
             <OnChipMemories>
               <Ocm1>
                 <Type>0</Type>
@@ -333,7 +333,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32H743xx,APPLICATION_ADDRESS = 0x8000000</Define>
+              <Define>USE_HAL_DRIVER,STM32H750xx,APPLICATION_ADDRESS = 0x8000000</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\Libraries\CMSIS\Include;..\..\Libraries\CMSIS\Device\ST\STM32H7xx\Include;..\..\Libraries\STM32H7xx_HAL_Driver\Inc;..\..\User</IncludePath>
             </VariousControls>
@@ -923,11 +923,6 @@
               <FileName>stm32h7xx_ll_tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_ll_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_usart.c</FilePath>
             </File>
             <File>
               <FileName>stm32h7xx_ll_usb.c</FileName>
@@ -1900,11 +1895,6 @@
               <FileName>stm32h7xx_ll_tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_ll_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_usart.c</FilePath>
             </File>
             <File>
               <FileName>stm32h7xx_ll_usb.c</FileName>

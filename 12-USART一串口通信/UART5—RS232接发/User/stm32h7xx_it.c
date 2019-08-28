@@ -174,7 +174,7 @@ void PendSV_Handler(void)
 extern uint8_t Rxflag;
 extern uint8_t ucTemp;
 
-void UART5_IRQHandler(void)
+void RS232_USART_IRQHandler(void)
 {
 	if(__HAL_UART_GET_IT( &UartHandle, UART_IT_RXNE ) != RESET)
 	{		

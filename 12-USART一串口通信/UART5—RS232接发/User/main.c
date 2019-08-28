@@ -3,8 +3,8 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2018-xx-xx
-  * @brief   USART—USART1接发例程
+  * @date    2019-xx-xx
+  * @brief   USART—USART5接发例程
   ******************************************************************
   * @attention
   *
@@ -40,7 +40,7 @@ int main(void)
 //  Board_MPU_Config(1, MPU_Normal_WT, 0x24000000, MPU_512KB);
   
   SCB_EnableICache();    // 使能指令 Cache
-//  SCB_EnableDCache();    // 使能数据 Cache
+ // SCB_EnableDCache();    // 使能数据 Cache
 
 	/* 配置串口2为：115200 8-N-1 */
 	RS232_USART_Config();
@@ -81,6 +81,7 @@ int main(void)
 				usRxCount = 0;
 			}
 			Rxflag=0;
+             __HAL_UART_ENABLE_IT(&UartHandle,UART_IT_RXNE);    
 		}
 	}  
 }
@@ -89,8 +90,8 @@ int main(void)
   * @brief  System Clock 配置
   *         system Clock 配置如下: 
 	*            System Clock source  = PLL (HSE)
-	*            SYSCLK(Hz)           = 400000000 (CPU Clock)
-	*            HCLK(Hz)             = 200000000 (AXI and AHBs Clock)
+	*            SYSCLK(Hz)           = 480000000 (CPU Clock)
+	*            HCLK(Hz)             = 240000000 (AXI and AHBs Clock)
 	*            AHB Prescaler        = 2
 	*            D1 APB3 Prescaler    = 2 (APB3 Clock  120MHz)
 	*            D2 APB1 Prescaler    = 2 (APB1 Clock  120MHz)
@@ -133,7 +134,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 5;
   RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 2;
+  RCC_OscInitStruct.PLL.PLLQ = 4;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;

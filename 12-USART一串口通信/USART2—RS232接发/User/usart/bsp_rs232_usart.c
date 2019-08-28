@@ -3,12 +3,12 @@
   * @file    bsp_RS232_USART.c
   * @author  fire
   * @version V1.0
-  * @date    2016-xx-xx
+  * @date    2019-xx-xx
   * @brief   使用串口2，重定向c库printf函数到usart端口，中断接收模式
   ******************************************************************************
   * @attention
   *
-  * 实验平台:野火 STM32 H743 开发板  
+  * 实验平台:野火 STM32 H750 开发板  
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :http://firestm32.taobao.com
   *
@@ -34,9 +34,9 @@ void RS232_USART_Config(void)
     RS232_USART_TX_GPIO_CLK_ENABLE();
     
     /* 配置串口2时钟源*/
-		RCC_PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_UARTx;
-		RCC_PeriphClkInit.Usart234578ClockSelection = RCC_UARTxCLKSOURCE_SYSCLK;
-		HAL_RCCEx_PeriphCLKConfig(&RCC_PeriphClkInit);
+    RCC_PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_UARTx;
+    RCC_PeriphClkInit.Usart234578ClockSelection = RCC_UARTxCLKSOURCE_SYSCLK;
+    HAL_RCCEx_PeriphCLKConfig(&RCC_PeriphClkInit);
     /* 使能 UART 时钟 */
     RS232_USART_CLK_ENABLE();
 
@@ -64,10 +64,10 @@ void RS232_USART_Config(void)
     UartHandle.Init.StopBits = UART_STOPBITS_1;
     UartHandle.Init.Parity = UART_PARITY_NONE;
     UartHandle.Init.Mode = UART_MODE_TX_RX;
-    UartHandle.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-    UartHandle.Init.OverSampling = UART_OVERSAMPLING_16;
-    UartHandle.Init.OneBitSampling = UART_ONEBIT_SAMPLING_DISABLED;
-    UartHandle.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+//    UartHandle.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+//    UartHandle.Init.OverSampling = UART_OVERSAMPLING_16;
+//    UartHandle.Init.OneBitSampling = UART_ONEBIT_SAMPLING_DISABLED;
+//    UartHandle.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
     HAL_UART_Init(&UartHandle);
 
     /*串口中断初始化 */
