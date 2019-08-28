@@ -83,7 +83,6 @@ static void ADC_Mode_Config(void)
     /* 使能ADC_SLAVE时钟 */
     RHEOSTAT_ADC_SLAVE_CLK_ENABLE();
     
-    SYSCFG->PMCR |= (1 << 8);
     //选择DMA1的Stream1
     hdma_adc.Instance = RHEOSTAT_ADC_DMA_Base;
     //ADC1的DMA请求
@@ -94,9 +93,9 @@ static void ADC_Mode_Config(void)
     hdma_adc.Init.PeriphInc = DMA_PINC_DISABLE;
     //内存地址不自增
     hdma_adc.Init.MemInc = DMA_PINC_DISABLE;
-    //外设数据宽度：半字
+    //外设数据宽度：字
     hdma_adc.Init.PeriphDataAlignment = DMA_PDATAALIGN_WORD;
-    //内存数据宽度：半字
+    //内存数据宽度：字
     hdma_adc.Init.MemDataAlignment = DMA_PDATAALIGN_WORD;
     //DMA循环传输
     hdma_adc.Init.Mode = DMA_CIRCULAR;
@@ -107,10 +106,10 @@ static void ADC_Mode_Config(void)
     //DMA初始化
     HAL_DMA_Init(&hdma_adc);
     //hdma_adc和ADC_Handle.DMA_Handle链接
-    __HAL_LINKDMA(&ADC_Handle,DMA_Handle,hdma_adc);    
-      
+    __HAL_LINKDMA(&ADC_Handle,DMA_Handle,hdma_adc);     
     
     ADC_Handle.Instance = RHEOSTAT_ADC_MASTER;
+
     //ADC时钟1分频
     ADC_Handle.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
     //使能连续转换模式
@@ -148,8 +147,13 @@ static void ADC_Mode_Config(void)
     ADC_Config.SamplingTime = ADC_SAMPLETIME_64CYCLES_5;
     //不使用差分输入的功能
     ADC_Config.SingleDiff = ADC_SINGLE_ENDED ;
+    //设置ADC选择的偏移量
+    ADC_Config.OffsetNumber = ADC_OFFSET_NONE;
+    
     //配置ADC_MASTER通道
-    HAL_ADC_ConfigChannel(&ADC_Handle, &ADC_Config);    
+    HAL_ADC_ConfigChannel(&ADC_Handle, &ADC_Config); 
+    
+    ADC_Config.Channel =RHEOSTAT_ADC_SLAVE_CHANNEL; 
     //配置ADC_SLAVE通道
     HAL_ADC_ConfigChannel(&ADC_SLAVE_Handle, &ADC_Config);
     
@@ -176,7 +180,7 @@ static void ADC_Mode_Config(void)
   */  
 void Rheostat_ADC_NVIC_Config(void)
 {
-    HAL_NVIC_SetPriority(Rheostat_ADC12_IRQ, 0, 0);
+    HAL_NVIC_SetPriority(Rheostat_ADC12_IRQ, 1, 0);
     HAL_NVIC_EnableIRQ(Rheostat_ADC12_IRQ);
 }
 

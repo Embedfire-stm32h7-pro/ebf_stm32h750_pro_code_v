@@ -2,7 +2,7 @@
   ******************************************************************************
   * @file    system_stm32h7xx.c
   * @author  MCD Application Team
-  * @version V1.2.0
+  * @version V1.5.0
   * @date    29-December-2017
   * @brief   CMSIS Cortex-Mx Device Peripheral Access Layer System Source File.
   *
@@ -229,7 +229,7 @@ void SystemInit (void)
 #ifdef VECT_TAB_SRAM
   SCB->VTOR = D1_AXISRAM_BASE  | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal ITCMSRAM */
 #else
-  SCB->VTOR = APPLICATION_ADDRESS | VECT_TAB_OFFSET;       /* Vector Table Relocation in EXternal FLASH */
+  SCB->VTOR = APPLICATION_ADDRESS | VECT_TAB_OFFSET;       /* Vector Table Relocation in Internal FLASH */
 #endif
 #endif
 

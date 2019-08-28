@@ -3,7 +3,7 @@
   * @file    bsp_debug_usart.c
   * @author  fire
   * @version V1.0
-  * @date    2016-xx-xx
+  * @date    2019-xx-xx
   * @brief   使用串口1，重定向c库printf函数到usart端口，中断接收模式
   ******************************************************************************
   * @attention
