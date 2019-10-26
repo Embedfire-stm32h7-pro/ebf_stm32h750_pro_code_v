@@ -1,0 +1,23 @@
+--create ..\..\Output\Fire_H7.lib
+..\..\output\stm32h7xx_hal_sdram.o
+..\..\output\qr_decoder_user.o
+..\..\output\config.o
+..\..\output\convert.o
+..\..\output\decoder.o
+..\..\output\error.o
+..\..\output\image.o
+..\..\output\img_scanner.o
+..\..\output\qr_decoder_user_1.o
+..\..\output\refcnt.o
+..\..\output\scanner.o
+..\..\output\symbol.o
+..\..\output\code128.o
+..\..\output\ean.o
+..\..\output\qr_finder.o
+..\..\output\bch15_5.o
+..\..\output\binarize.o
+..\..\output\isaac.o
+..\..\output\qrdec.o
+..\..\output\qrdectxt.o
+..\..\output\rs.o
+..\..\output\util.o
