@@ -72,6 +72,7 @@ typedef enum
 	GT9157=0,
 	GT911=1,
   GT5688=2,
+	GT917S=3,
 }TOUCH_IC;
 
 extern TOUCH_IC touchIC;
