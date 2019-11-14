@@ -736,6 +736,8 @@ int32_t GTP_Init_Panel(void)
 		HAL_Delay(100);
 		//获取触摸IC的型号
     GTP_Read_Version(); 
+    
+#if UPDATE_CONFIG
 
 		config = (uint8_t *)malloc (GTP_CONFIG_MAX_LENGTH + GTP_ADDR_LENGTH);
 
@@ -870,14 +872,14 @@ if(touchIC == GT9157)
 	    		GTP_DEBUG("Config success ! i = %d ",i);
 	}
 #endif
+
+    free(config);
 	
-		
+#endif
 	 /* emXGUI示例中不使能中断 */
 		I2C_GTP_IRQEnable();
 	
     GTP_Get_Info();
-		
-		free(config);
 
     return 0;
 }
