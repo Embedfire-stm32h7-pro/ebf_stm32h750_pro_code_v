@@ -58,7 +58,8 @@ uint8_t zoomBuff[ZOOMMAXBUFF] = {0};	//用于缩放的缓存，最大支持到128*128
 #define HSW   1		//HSYNC宽度
 #define VSW   1		//VSYNC宽度
 
-#define HFP  10		//HSYNC前的无效像素
+
+#define HFP  22		//HSYNC前的无效像素
 #define VFP  22		//VSYNC前的无效行数
 
 static void DrawChar(uint16_t Xpos, uint16_t Ypos, const uint8_t *c);
