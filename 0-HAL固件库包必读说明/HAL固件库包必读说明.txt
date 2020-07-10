@@ -1,0 +1,6 @@
+完整的HAL固件包非常大，请从官网下载或者参考下面帖子用CUBEMX工具方便下载
+
+https://www.firebbs.cn/forum.php?mod=viewthread&tid=27711&extra=
+
+
+下载H7   1.50版本
