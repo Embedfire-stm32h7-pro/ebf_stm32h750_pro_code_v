@@ -46,7 +46,7 @@ tmp/
 *.bin
 *.hex
 *.dep
-*.FLM
+#*.FLM
 *.iex
 
 # JLink files
