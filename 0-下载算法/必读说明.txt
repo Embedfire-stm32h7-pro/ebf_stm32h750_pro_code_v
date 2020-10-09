@@ -1,6 +1,8 @@
 embedFire-H750V-W25Q256-SDRAM
 把上面下载算法文件复制并放在keil安装目录这个路径下：Keil_v5\ARM\Flash
 
+文件夹里面为源码
+
 
 参考教程新建固件库工程章节说明和例程。
 如果是新建工程，请区分好Select Target下选择和Flash Download对应，下载内部对应下载内部的下载算法，下载外部对应下载外部下载算法。
