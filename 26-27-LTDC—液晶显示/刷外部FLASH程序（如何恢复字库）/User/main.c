@@ -63,6 +63,7 @@ static void CPU_CACHE_Enable(void)
 uint8_t state = QSPI_ERROR;
 int main(void)
 {
+    HAL_Init();
     /* 系统时钟初始化成480MHz */
     SystemClock_Config();
   
@@ -73,17 +74,17 @@ int main(void)
     DEBUG_USART_Config();	
   
     Key_GPIO_Config();
-//    QSPI_FLASH_Init();
-//    QSPI_Set_WP_High();
-//    /*写状态寄存器*/
-//    /*对flash解锁，一般用不上*/
-//    QSPI_FLASH_WriteStatusReg(1,0X00);
-//    QSPI_FLASH_WriteStatusReg(2,0X00);
-//    QSPI_FLASH_WriteStatusReg(3,0X60);
-//    printf("\r\nFlash Status Reg1 is 0x%02X,\r\n", QSPI_FLASH_ReadStatusReg(1));	
-//    printf("\r\nFlash Status Reg2 is 0x%02X,\r\n", QSPI_FLASH_ReadStatusReg(2));
-//    printf("\r\nFlash Status Reg3 is 0x%02X,\r\n", QSPI_FLASH_ReadStatusReg(3));
-//    QSPI_Set_WP_TO_QSPI_IO();  
+    QSPI_FLASH_Init();
+    QSPI_Set_WP_High();
+    /*写状态寄存器*/
+    /*对flash解锁，一般用不上*/
+    QSPI_FLASH_WriteStatusReg(1,0X00);
+    QSPI_FLASH_WriteStatusReg(2,0X00);
+    QSPI_FLASH_WriteStatusReg(3,0X60);
+    printf("\r\nFlash Status Reg1 is 0x%02X,\r\n", QSPI_FLASH_ReadStatusReg(1));	
+    printf("\r\nFlash Status Reg2 is 0x%02X,\r\n", QSPI_FLASH_ReadStatusReg(2));
+    printf("\r\nFlash Status Reg3 is 0x%02X,\r\n", QSPI_FLASH_ReadStatusReg(3));
+    QSPI_Set_WP_TO_QSPI_IO();  
 //    //FMC_Bank1_R->BTCR[0] |= (1 << 24);
     //链接驱动器，创建盘符
     FATFS_LinkDriver(&SD_Driver, SDPath);
@@ -105,14 +106,14 @@ int main(void)
     printf("\r\n 正在进行整片擦除，时间很长，请耐心等候...\r\n"); 
     
    // BSP_QSPI_Erase_Chip();
-     for(int i = 16; i < 32; i++)
-     {    
-       state = BSP_QSPI_Erase_Block(i*16);
-       if(state != QSPI_OK)
-         printf("擦除Block失败\n");
-       else
-         printf("OK\n");
-     }
+//     for(int i = 16; i < 32; i++)
+//     {    
+//       state = BSP_QSPI_Erase_Block(i*16);
+//       if(state != QSPI_OK)
+//         printf("擦除Block失败\n");
+//       else
+//         printf("OK\n");
+//     }
     
     /* 生成烧录目录信息文件 */
     Make_Catalog(src_dir,0);
