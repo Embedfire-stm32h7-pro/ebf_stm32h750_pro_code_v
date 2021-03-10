@@ -22,7 +22,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>Fire_H7_extFlash</TargetName>
+    <TargetName>Fire_H7_InFlash</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>

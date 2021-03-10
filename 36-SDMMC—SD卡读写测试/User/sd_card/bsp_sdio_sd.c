@@ -91,7 +91,7 @@ static HAL_StatusTypeDef BSP_SD_Init(void)
     /* HAL SD 初始化 */
     if(HAL_SD_Init(&uSdHandle) != HAL_OK)
     {
-      sd_state = HAL_OK;
+      sd_state = HAL_ERROR;
     }
     
     /* 配置SD总线位宽 */
