@@ -1,21 +1,24 @@
-embedFire-H750-W25Q256下载算法为源码 仅供参考 构建该程序时会自动在文件embedFire-H750-W25Q256下生成下载算法的FLM文件
+embedFire-H750-W25Q256文件夹为下载算法源码  仅供参考 构建该程序时会自动在文件embedFire-H750-W25Q256下生成下载算法的FLM文件
 下载算法源码结合BootLoader源码生成的二进制数据生成FLM文件
 当工程配置选择为下载外部时，下载算法将BootLoader下载至芯片内部，用户代码下载至外部FLASH，
 芯片从内部启动后，由BootLoader完成跳转外部运行。
 
 
-
-embedFire-H750V-W25Q256-SDRAM
+embedFire-H750V-W25Q256-SDRAM.FLM
 把上面下载算法文件复制并放在keil安装目录这个路径下：Keil_v5\ARM\Flash
 当把下载算法拷贝好后打开配套例程时，配置已经互相对应好，不用改动。
-请区分好Select Target下选择和Flash Download对应，
-下载内部对应下载内部的下载算法，下载外部对应下载外部下载算法，切换的Select Target需要重新编译。
 
+请区分好Select Target下选择和Flash Download对应，
+下载内部（Fire_H7_InFlash）对应下载内部的下载算法 STM32H750xx
+下载外部（Fire_H7_ExtFlash_Single）对应下载外部下载算法 embedFire-H750V-W25Q256-SDRAM.FLM
+
+切换的Select Target需要重新编译。
 
 如果是自己新建工程，参考教程新建固件库工程章节说明和例程有介绍怎么添加配置下载内外部工程。
 
 
 
 
-
+下载程序到外部FLASH时，若出现下载失败，请在Keil工程中顶部的《Project》选项中，点击《Clean target》，并重新构建程序，
+将开发板重新《上电》后再尝试下载程序。若下载多次报错，以重新给开发板上电之后，实际程序能否运行为准。
 
