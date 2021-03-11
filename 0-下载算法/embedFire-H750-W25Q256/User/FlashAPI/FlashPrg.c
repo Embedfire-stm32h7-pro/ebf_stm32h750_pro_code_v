@@ -28,6 +28,7 @@
 #include "FlashOS.H"        // FlashOS Structures
 #include "stm32h7xx.h"
 #include "bsp_qspi_flash.h"
+#include "bsp_led.h"   
 
 typedef uint32_t  u32;
 typedef uint16_t u16;
@@ -37,7 +38,7 @@ typedef volatile uint32_t  vu32;
 typedef volatile uint16_t vu16;
 typedef volatile uint8_t  vu8; 
 
-#define PAGE_SIZE            4096
+#define PAGE_SIZE            512
 
 /*
  *  Initialize Flash Programming Functions
@@ -102,6 +103,7 @@ int Init (unsigned long adr, unsigned long clk, unsigned long fnc) {
 
     SystemClock_Config();
 
+    LED_GPIO_Config();
     /* 检查BootLoader完整性 */
 		if (ISBootloadrOK() != 0)
 		{
@@ -241,22 +243,41 @@ int ProgramPage (unsigned long adr, unsigned long sz, unsigned char *buf) {
  */
 unsigned long Verify (unsigned long adr, unsigned long sz, unsigned char *buf) {
 
-  int i;
+  int numWR;// 实际读取的数量
+  int oriAddr=adr,oriSize=sz;// 记录原地址和大小
   uint8_t res = QSPI_ERROR;
-	res = BSP_QSPI_Read(aux_buf,adr-base_adr,sz);
-  if(res == QSPI_OK)
-	{
-		for (i = 0; i< sz; i++) 
-		{
-			if (aux_buf[i] != buf[i]) 
-				return (adr+i);                 // Verification Failed (return address)
-		}
-		return (adr+sz);                      // Done successfully
-	}
-	else
-	{
-		return (0x0badc0de);// failed
-	}
+
+  while(sz!=0)
+  {
+    // 如果传入的sz大于PAGE_SIZE，拆分读取，一次读PAGE_SIZE个数据，待读取数据为sz-=numWR个
+    if(sz>PAGE_SIZE)
+    {
+      numWR=PAGE_SIZE;
+      sz-=numWR;
+    }
+    else
+    {
+      numWR=sz;// 否则就是小于等于PAGE_SIZE，直接读取numWR个数据，剩余读取数据sz为0个
+      sz=0;
+    }
+    
+    res = BSP_QSPI_FastRead(aux_buf,adr-base_adr,numWR);
+    if(res == QSPI_OK)
+    {
+      for (int i = 0; i< numWR; i++) 
+      {
+        if (aux_buf[i] != buf[i]) 
+          return (adr+i);                 // Verification Failed (return address)
+      }
+      adr+=numWR;// 递增读取的地址
+    }
+    else
+    {
+      return (0x0badc0de);// failed
+    }
+  }
+
+  return (oriAddr+oriSize);                      // Done successfully
 }
 
 static void SystemClock_Config(void)
