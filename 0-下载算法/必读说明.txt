@@ -12,15 +12,14 @@ embedFire-H750V-W25Q256-SDRAM.FLM
 下载内部（Fire_H7_InFlash）对应下载内部的下载算法 STM32H750xx
 下载外部（Fire_H7_ExtFlash_Single）对应下载外部下载算法 embedFire-H750V-W25Q256-SDRAM.FLM
 
-切换的Select Target需要重新编译。
+切换Select Target后需要重新编译。
 
 如果是自己新建工程，参考教程新建固件库工程章节说明和例程有介绍怎么添加配置下载内外部工程。
 
 
 
 目前问题：
-在确认放置好外部下载算法能成功下载过程序后，如果出现下载程序到外部FLASH时 “Contents mismatch ，
-请在Keil工程中顶部的 Project 选项中，点击 Clean target  ，并重新构建程序，
-将开发板重新上电后再尝试下载程序，
-若下载多次报错，以重新给开发板上电之后，实际程序能否运行为准或者在Flash Download界面取消 Verify 的勾
+在确认放置好外部下载算法能成功下载过程序后，偶尔出现不能下载，下载超时问题，
+将开发板重新上电后再尝试下载程序。
+
 
