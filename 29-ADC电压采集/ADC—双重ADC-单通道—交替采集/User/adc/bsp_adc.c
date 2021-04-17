@@ -134,10 +134,17 @@ static void ADC_Mode_Config(void)
     ADC_Handle.Init.ScanConvMode = DISABLE;
     //初始化 ADC_MASTER
     HAL_ADC_Init(&ADC_Handle);
+		
+		//ADC校准
+    HAL_ADCEx_Calibration_Start(&ADC_Handle,ADC_CALIB_OFFSET,ADC_SINGLE_ENDED); 
+		
     //初始化 ADC_SLAVE
     ADC_SLAVE_Handle.Instance = RHEOSTAT_ADC_SLAVE;
     ADC_SLAVE_Handle.Init = ADC_Handle.Init;
     HAL_ADC_Init(&ADC_SLAVE_Handle);
+		
+		//ADC校准
+    HAL_ADCEx_Calibration_Start(&ADC_SLAVE_Handle,ADC_CALIB_OFFSET,ADC_SINGLE_ENDED); 
                   
     //使用通道18
     ADC_Config.Channel = RHEOSTAT_ADC_MASTER_CHANNEL;

@@ -129,6 +129,9 @@ static void ADC_Mode_Config(void)
     ADC1_Handle.Init.NbrOfConversion = 4;
     //初始化 ADC1
     HAL_ADC_Init(&ADC1_Handle);
+		
+		//ADC校准
+    HAL_ADCEx_Calibration_Start(&ADC1_Handle,ADC_CALIB_OFFSET,ADC_SINGLE_ENDED); 
           
     //使用通道18
     ADC_Config.Channel = RHEOSTAT_ADC_CHANNEL1;

@@ -131,6 +131,9 @@ static void ADC_Mode_Config(void)
     //初始化 ADC
     HAL_ADC_Init(&ADC_Handle);
           
+		//ADC校准
+    HAL_ADCEx_Calibration_Start(&ADC_Handle,ADC_CALIB_OFFSET,ADC_SINGLE_ENDED); 
+		
     //使用通道18
     ADC_Config.Channel = RHEOSTAT_ADC_CHANNEL;
     //转换顺序为1
